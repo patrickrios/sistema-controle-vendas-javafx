@@ -27,7 +27,14 @@
             <VBox layoutX="50.0" layoutY="50.0" prefHeight="200.0" prefWidth="185.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Label style="-fx-font-family: &quot;Lato&quot;, sans-serif; -fx-font-size: 15; -fx-text-fill: #747474;" styleClass="main-menu-section-label" text="Abas" />
-                  <Button alignment="BASELINE_LEFT" graphicTextGap="12.0" mnemonicParsing="false" style="-fx-pref-width: 168;" styleClass="main-menu-buttons" text="Página Inicial" />
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="12.0" mnemonicParsing="false" prefWidth="151.0" style="-fx-pref-width: 168;" styleClass="main-menu-buttons" text="Página Inicial">
+                     <graphic>
+                        <ImageView fitHeight="14.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/main-menu-icon-home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
                   <Label style="-fx-font-family: &quot;Lato&quot;, sans-serif; -fx-font-size: 15; -fx-text-fill: #747474;" styleClass="main-menu-section-label" text="Modulos" />
                   <Accordion>
                     <panes>
@@ -35,9 +42,9 @@
                            <content>
                               <AnchorPane prefHeight="145.0" prefWidth="168.0" style="-fx-padding: 0;">
                                  <children>
-                                    <Button alignment="BASELINE_LEFT" layoutX="5.0" mnemonicParsing="false" onAction="#loadNewCashRegister" prefHeight="39.0" prefWidth="153.0" styleClass="main-menu-subitens" text="Abrir novo caixa" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Button alignment="BASELINE_LEFT" layoutX="11.0" layoutY="37.0" mnemonicParsing="false" onAction="#loadSalesHistoryScreen" prefHeight="39.0" prefWidth="153.0" styleClass="main-menu-subitens" text="Historico de vendas" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0" />
-                                    <Button alignment="BASELINE_LEFT" layoutX="15.0" layoutY="86.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="153.0" styleClass="main-menu-subitens" text="Relatorio de vendas" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="76.0" />
+                                    <Button alignment="BASELINE_LEFT" layoutX="5.0" mnemonicParsing="false" onAction="#loadOpenNewCashRegister" prefHeight="39.0" styleClass="main-menu-subitens" text="Abrir novo caixa" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Button alignment="BASELINE_LEFT" layoutX="11.0" layoutY="37.0" mnemonicParsing="false" onAction="#loadSalesHistoryScreen" prefHeight="39.0" prefWidth="153.0" styleClass="main-menu-subitens" text="Historico de vendas" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0" />
+                                    <Button alignment="BASELINE_LEFT" layoutX="15.0" layoutY="86.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="153.0" styleClass="main-menu-subitens" text="Relatorio de vendas" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="76.0" />
                                  </children>
                               </AnchorPane>
                            </content>
