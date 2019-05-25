@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="795.0" style="-fx-background-color: #FFF;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="29.0" layoutY="13.0" styleClass="h3" text="codigo" />
+      <Label layoutX="126.0" layoutY="13.0" styleClass="h3" text="caixa" />
+      <Label layoutX="231.0" layoutY="13.0" styleClass="h3" text="operador" />
+      <Label layoutX="398.0" layoutY="13.0" styleClass="h3" text="R$ 00,00" />
+      <Label layoutX="548.0" layoutY="13.0" styleClass="h3" text="data e hora" />
+   </children>
+</AnchorPane>
