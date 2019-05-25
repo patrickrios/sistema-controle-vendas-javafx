@@ -3,7 +3,7 @@ package model.dao;
 import controller.ItemController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import model.bean.Paginable;
+import model.util.Paginable;
 import java.io.IOException;
 import java.util.ArrayList;
 

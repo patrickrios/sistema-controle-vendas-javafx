@@ -1,7 +1,7 @@
 package model.dao;
 
 import javafx.scene.Parent;
-import model.bean.Paginable;
+import model.util.Paginable;
 import java.util.ArrayList;
 import java.util.Random;
 

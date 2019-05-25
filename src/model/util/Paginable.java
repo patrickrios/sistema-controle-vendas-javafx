@@ -1,4 +1,4 @@
-package model.bean;
+package model.util;
 
 import javafx.scene.Parent;
 import java.util.ArrayList;
