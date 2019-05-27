@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import model.bean.Product;
@@ -52,6 +53,7 @@ public class ItemResultProductSearchController implements Initializable
         SaleItem item = new SaleItem(this.product);
         this.sale.addItem(item);
         addSaleItemOnView(item);
+        updateTotalValueLabelView();
         closeResultSearch();
     }
 
@@ -78,8 +80,15 @@ public class ItemResultProductSearchController implements Initializable
 
     private void closeResultSearch()
     {
-        ScrollPane searchScroll = (ScrollPane)paneItemResultSearchContent.getScene().lookup("#scrollpaneSearch");
+        AnchorPane searchScroll = (AnchorPane) paneItemResultSearchContent.getScene().lookup("#anchorpaneSearchItens");
         searchScroll.setVisible(false);
+    }
+
+
+    private void updateTotalValueLabelView()
+    {
+        Label label = (Label)paneItemResultSearchContent.getScene().lookup("#labelSaleTotalValue");
+        label.setText(this.sale.getTotalValueFormatted());
     }
 
 }

@@ -36,7 +36,7 @@
          </image>
       </ImageView>
       <TextField layoutX="350.0" layoutY="319.0" prefHeight="45.0" prefWidth="260.0" promptText="R$ 00,00" />
-      <Label layoutX="350.0" layoutY="294.0" styleClass="h2-label" text="PREÇO DE CUSTO" />
+      <Label layoutX="350.0" layoutY="294.0" styleClass="h2-label" text="PREÇO DE VENDA" />
       <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="583.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/coin-icon-light.png" />

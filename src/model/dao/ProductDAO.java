@@ -32,18 +32,17 @@ public class ProductDAO implements Paginable
     {
         //Somente para testes
         Random rand = new Random();
-        int randomNum = rand.nextInt(300);
-
-        return randomNum;
+        return rand.nextInt(300);
     }
 
     public ArrayList<Product> findAll()
     {
         ArrayList<Product> list = new ArrayList<>();
 
-        list.add(new Product(1,"01D704", "Xícara de cafe", 0.35f, 1.25f, 4));
-        list.add(new Product(2,"03DSC2", "Bolo de banana", 1.00f, 2.25f, 3));
-        list.add(new Product(3,"0X702D", "Torta de maçã", 1.05f, 2.50f, 5));
+        list.add(new Product(1,"01D704", "Xícara de cafe", 0.35f, 1.00f, 4));
+        list.add(new Product(2,"03DSC2", "Bolo de banana", 1.00f, 2.00f, 3));
+        list.add(new Product(3,"0X702D", "Torta de maçã", 1.05f, 3.00f, 5));
+        list.add(new Product(5,"0XXT2D", "Hot dog", 1.05f, 1.50f, 10));
 
         return list;
     }

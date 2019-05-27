@@ -1,5 +1,7 @@
 package model.bean;
 
+import view.util.StringToReal;
+
 import java.security.Timestamp;
 import java.util.ArrayList;
 
@@ -36,14 +38,14 @@ public class Sale
         }
     }
 
-    public void updateRemoveTotalValue(SaleItem item)
+    public void updateRemoveTotalValue(float value)
     {
-        this.totalValue -= (item.getSalePriceProduct()*item.getQuantity());
+        this.totalValue -= value;
     }
 
-    public void updateAddTotalValue(SaleItem item)
+    public void updateAddTotalValue(float value)
     {
-        this.totalValue += (item.getSalePriceProduct()*item.getQuantity());
+        this.totalValue += value;
     }
 
     public void finishSale()
@@ -66,11 +68,18 @@ public class Sale
         return true;
     }
 
+
+
+    public String getTotalValueFormatted()
+    {
+        return StringToReal.floatToReal(this.totalValue);
+    }
+
     public void status()
     {
         System.out.println("Sale{ sale="+this.toString()+", itens="+this.numberOfItens+" total="+this.totalValue+"}");
 
-       for(SaleItem i : this.itensList)
+        for(SaleItem i : this.itensList)
             System.out.println("\titem{name="+i.getNameItem()+", quant="+i.getQuantity()+", subtotal="+i.getSubtotalFormatted()+"}");
 
         System.out.println("\n");

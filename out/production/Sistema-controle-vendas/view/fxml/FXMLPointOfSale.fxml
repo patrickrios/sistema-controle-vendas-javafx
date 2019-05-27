@@ -26,7 +26,7 @@
       </AnchorPane>
       <AnchorPane layoutX="300.0" layoutY="44.0" prefHeight="200.0" prefWidth="750.0" style="-fx-background-color: #FFF;" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="44.0">
          <children>
-            <TextField layoutX="20.0" onKeyReleased="#findItemToSale" prefHeight="10.0" promptText="buscar item" AnchorPane.topAnchor="5.0" />
+            <TextField layoutX="50.0" layoutY="11.0" onKeyReleased="#findItemToSale" prefHeight="28.0" prefWidth="211.0" promptText="buscar item" style="-fx-padding: 4 5; -fx-font-size: 1.1em;" AnchorPane.topAnchor="11.0" />
             <Button layoutX="67.0" layoutY="63.0" mnemonicParsing="false" style="-fx-background-color: #FFF; -fx-border-color: #DDD;" text="Add Cliente" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0" />
             <AnchorPane prefWidth="700.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-border-radius: 5; -fx-background-radius: 5;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="45.0">
                <children>
@@ -43,13 +43,45 @@
                         <VBox fx:id="vboxSaleItensView" />
                      </content>
                   </ScrollPane>
+                  <AnchorPane prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #DDD; -fx-border-color: #DDD; -fx-border-width: 1 0 0 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label fx:id="labelSaleTotalValue" layoutX="20.0" layoutY="7.0" style="-fx-font-size: 2.8em;" styleClass="h1" text="total value" />
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
-            <ScrollPane fx:id="scrollpaneSearch" layoutX="20.0" layoutY="40.0" maxHeight="800.0" prefWidth="405.0" style="-fx-border-color: #DDD;">
-               <content>
-                  <VBox fx:id="vboxSearch" />
-               </content>
-            </ScrollPane>
+            <AnchorPane fx:id="anchorpaneSearchItens" layoutX="50.0" layoutY="40.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-padding: 1;" visible="false">
+               <children>
+                  <ScrollPane fx:id="scrollpaneSearch" maxHeight="800.0" prefWidth="405.0" AnchorPane.topAnchor="20.0">
+                     <content>
+                        <VBox fx:id="vboxSearch" />
+                     </content>
+                  </ScrollPane>
+                  <Pane prefHeight="20.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button contentDisplay="RIGHT" layoutX="345.0" mnemonicParsing="false" onAction="#closeSearchItensResult" style="-fx-padding: 0;" text="fechar">
+                           <graphic>
+                              <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/cancel-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="12.0" fitWidth="24.0" layoutX="20.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/lista-top-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="240.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/search-icon-dark.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

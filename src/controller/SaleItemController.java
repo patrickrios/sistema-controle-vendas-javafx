@@ -41,26 +41,28 @@ public class SaleItemController
     void removeItem()
     {
         this.sale.removeItem(this.item);
-        this.sale.status();
+        updateSaleTotalValueView();
         removeSaleItemFromView();
     }
 
     @FXML
     void decreaseQuantity()
     {
-        this.sale.updateRemoveTotalValue(this.item);
+        this.sale.updateRemoveTotalValue(this.item.getSubtotal());
         this.item.decreaseQuantity();
-        this.sale.updateAddTotalValue(this.item);
+        this.sale.updateAddTotalValue(this.item.getSubtotal());
         updateQuantityAndSubtotalView();
+        updateSaleTotalValueView();
     }
 
     @FXML
     void increaseQuantity()
     {
-        this.sale.updateRemoveTotalValue(this.item);
+        this.sale.updateRemoveTotalValue(this.item.getSubtotal());
         this.item.increaseQuantity();
-        this.sale.updateAddTotalValue(this.item);
+        this.sale.updateAddTotalValue(this.item.getSubtotal());
         updateQuantityAndSubtotalView();
+        updateSaleTotalValueView();
     }
 
     private void removeSaleItemFromView()
@@ -73,5 +75,11 @@ public class SaleItemController
     {
         this.labelSubtotal.setText(this.item.getSubtotalFormatted());
         this.textfieldItemQuantity.setText(""+this.item.getQuantity());
+    }
+
+    private void updateSaleTotalValueView()
+    {
+        Label label = (Label)anchorpaneSalteItemList.getScene().lookup("#labelSaleTotalValue");
+        label.setText(this.sale.getTotalValueFormatted());
     }
 }

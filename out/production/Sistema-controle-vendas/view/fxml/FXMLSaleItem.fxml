@@ -8,10 +8,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane fx:id="anchorpaneSalteItemList" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="700.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-border-width: 0 0 1 0;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SaleItemController">
+<AnchorPane fx:id="anchorpaneSalteItemList" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="705.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-border-width: 0 0 1 0;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SaleItemController">
    <children>
       <Label fx:id="labelItemName" layoutX="20.0" layoutY="13.0" prefHeight="20.0" prefWidth="298.0" styleClass="h3" text="item name" />
-      <HBox layoutX="340.0" layoutY="8.0">
+      <HBox layoutX="356.0" layoutY="8.0">
          <children>
             <Button mnemonicParsing="false" onAction="#decreaseQuantity" prefHeight="30.0" prefWidth="30.0" styleClass="button-quantity-left">
                <graphic>
@@ -34,7 +34,14 @@
             </Button>
          </children>
       </HBox>
-      <Label fx:id="labelSubtotal" layoutX="498.0" layoutY="13.0" styleClass="h3" text="subtotal" />
-      <Button layoutX="625.0" layoutY="11.0" mnemonicParsing="false" onAction="#removeItem" style="-fx-font-size: 13; -fx-background-color: #EE6969; -fx-text-fill: #FFF; -fx-padding: 3 5;" text="remover" />
+      <Label fx:id="labelSubtotal" layoutX="514.0" layoutY="13.0" styleClass="h3" text="subtotal" />
+      <Button layoutX="617.0" layoutY="11.0" mnemonicParsing="false" onAction="#removeItem" style="-fx-font-size: 13; -fx-background-color: #DDD; -fx-padding: 3 5;" text="remover">
+         <graphic>
+            <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/cancel-button.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
    </children>
 </AnchorPane>

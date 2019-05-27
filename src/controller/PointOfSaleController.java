@@ -2,35 +2,31 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import model.bean.CashRegister;
 import model.bean.Product;
 import model.bean.Sale;
-import model.bean.SaleItem;
 import model.dao.ProductDAO;
-import view.util.StringToReal;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.ResourceBundle;
 
-public class PointOfSaleController implements Initializable
+public class PointOfSaleController
 {
     @FXML
     private Label labelSaldo;
 
     @FXML
+    private Label labelSaleTotalValue;
+
+    @FXML
     private VBox vboxSearch;
 
     @FXML
-    private ScrollPane scrollpaneSearch;
+    private AnchorPane anchorpaneSearchItens;
 
     @FXML
     private VBox vboxSaleItensView;
@@ -39,17 +35,14 @@ public class PointOfSaleController implements Initializable
 
     private Sale sale;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle)
-    {
-        scrollpaneSearch.setVisible(false);
-    }
 
     public void inti(CashRegister cashRegister)
     {
         this.cashRegister = cashRegister;
         this.sale = new Sale();
         this.labelSaldo.setText(this.labelSaldo.getText().replace("$saldo", cashRegister.getInitialValueFormatted()));
+        this.labelSaleTotalValue.setText(this.sale.getTotalValueFormatted());
+        this.anchorpaneSearchItens.setVisible(false);
     }
 
     @FXML
@@ -77,7 +70,13 @@ public class PointOfSaleController implements Initializable
             }
         }
 
-        scrollpaneSearch.setVisible(true);
+        this.anchorpaneSearchItens.setVisible(true);
+    }
+
+    @FXML
+    void closeSearchItensResult()
+    {
+        this.anchorpaneSearchItens.setVisible(false);
     }
 
 }

@@ -23,7 +23,7 @@ public class MainController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-
+        loadHomepageScreen();
     }
 
     @FXML
@@ -84,6 +84,22 @@ public class MainController implements Initializable
 
             new FadeEffectTransition(parent);
 
+            anchorpaneMainContent.getChildren().setAll(parent);
+        }
+
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void loadHomepageScreen()
+    {
+        try
+        {
+            Parent parent = FXMLLoader.load(getClass().getResource("/view/fxml/FXMLHomepage.fxml"));
+            new FadeEffectTransition(parent);
             anchorpaneMainContent.getChildren().setAll(parent);
         }
 
