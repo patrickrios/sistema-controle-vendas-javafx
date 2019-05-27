@@ -46,7 +46,7 @@
          <children>
             <HBox>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="30.0" styleClass="button-quantity-left">
+                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="30.0" styleClass="button-quantity-left">
                      <graphic>
                         <ImageView fitHeight="2.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -55,8 +55,8 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <TextField alignment="CENTER" prefHeight="33.0" prefWidth="50.0" style="-fx-border-radius: 0; -fx-border-width: 1 0 1 0; -fx-border-color: #CCC;" text="1" />
-                  <Button mnemonicParsing="false" prefHeight="33.0" styleClass="button-quantity-right">
+                  <TextField alignment="CENTER" prefWidth="50.0" style="-fx-border-radius: 0; -fx-border-width: 1 0 1 0; -fx-border-color: #CCC;" text="1" />
+                  <Button mnemonicParsing="false" prefHeight="34.0" styleClass="button-quantity-right">
                      <graphic>
                         <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -70,6 +70,6 @@
          </children>
       </Group>
       <Label layoutX="30.0" layoutY="396.0" styleClass="h2-label" text="QUANTIDADE" />
-      <Button layoutX="30.0" layoutY="502.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="148.0" style="-fx-background-color: #2693FF; -fx-text-fill: #FFF; -fx-font-weight: bold;" text="SALVAR" />
+      <Button layoutX="30.0" layoutY="502.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="148.0" style="-fx-background-color: #2693FF; -fx-text-fill: #FFF; -fx-font-weight: bold; -fx-border-width: 0 0 1 0; -fx-border-color: #055d8c;" text="SALVAR" />
    </children>
 </AnchorPane>

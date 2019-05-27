@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="anchorpaneSalteItemList" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="700.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-border-width: 0 0 1 0;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SaleItemController">
+   <children>
+      <Label fx:id="labelItemName" layoutX="20.0" layoutY="13.0" prefHeight="20.0" prefWidth="298.0" styleClass="h3" text="item name" />
+      <HBox layoutX="340.0" layoutY="8.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#decreaseQuantity" prefHeight="30.0" prefWidth="30.0" styleClass="button-quantity-left">
+               <graphic>
+                  <ImageView fitHeight="2.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/minus-icon-dark.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField fx:id="textfieldItemQuantity" alignment="CENTER" prefHeight="30.0" prefWidth="39.0" style="-fx-border-radius: 0; -fx-border-width: 1 0 1 0; -fx-border-color: #CCC; -fx-padding: 4;" styleClass="sale-item-quant-textfield" text="1" />
+            <Button mnemonicParsing="false" onAction="#increaseQuantity" prefHeight="30.0" styleClass="button-quantity-right">
+               <graphic>
+                  <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/add-icon-dark.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <Label fx:id="labelSubtotal" layoutX="498.0" layoutY="13.0" styleClass="h3" text="subtotal" />
+      <Button layoutX="625.0" layoutY="11.0" mnemonicParsing="false" onAction="#removeItem" style="-fx-font-size: 13; -fx-background-color: #EE6969; -fx-text-fill: #FFF; -fx-padding: 3 5;" text="remover" />
+   </children>
+</AnchorPane>

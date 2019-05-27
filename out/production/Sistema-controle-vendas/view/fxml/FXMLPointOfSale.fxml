@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1366.0" style="-fx-background-color: #F5F6F7;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1366.0" style="-fx-background-color: #F5F6F7;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PointOfSaleController">
    <children>
       <AnchorPane layoutX="51.0" layoutY="14.0" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #50b275; -fx-border-color: #4e8463; -fx-border-width: 0 0 1 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -21,26 +21,36 @@
             </ImageView>
             <Label layoutX="325.0" layoutY="8.0" style="-fx-text-fill: #FFF; -fx-font-weight: bold;" styleClass="h3" text="Caixa:. ???" />
             <Label layoutX="525.0" layoutY="8.0" style="-fx-text-fill: #FFF;" styleClass="h3" text="Operador:. $Nome do operador" />
+            <Label fx:id="labelSaldo" layoutX="886.0" layoutY="8.0" style="-fx-text-fill: #FFF;" styleClass="h3" text="Saldo.: $saldo" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="189.0" layoutY="100.0" prefWidth="700.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-border-radius: 5; -fx-background-radius: 5;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="93.0">
+      <AnchorPane layoutX="300.0" layoutY="44.0" prefHeight="200.0" prefWidth="750.0" style="-fx-background-color: #FFF;" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="44.0">
          <children>
-            <Pane layoutX="101.0" layoutY="57.0" prefHeight="30.0" style="-fx-background-color: #516068; -fx-border-radius: 5; -fx-background-radius: 5 5 0 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TextField layoutX="20.0" onKeyReleased="#findItemToSale" prefHeight="10.0" promptText="buscar item" AnchorPane.topAnchor="5.0" />
+            <Button layoutX="67.0" layoutY="63.0" mnemonicParsing="false" style="-fx-background-color: #FFF; -fx-border-color: #DDD;" text="Add Cliente" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0" />
+            <AnchorPane prefWidth="700.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-border-radius: 5; -fx-background-radius: 5;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="45.0">
                <children>
-                  <Label layoutX="14.0" layoutY="8.0" style="-fx-text-fill: #FFF; -fx-font-weight: bold;" text="COD:." />
-                  <Label layoutX="129.0" layoutY="8.0" style="-fx-text-fill: #FFF; -fx-font-weight: bold;" text="ITEM:." />
-                  <Label layoutX="349.0" layoutY="8.0" style="-fx-text-fill: #FFF; -fx-font-weight: bold;" text="QUANT:." />
-                  <Label layoutX="507.0" layoutY="8.0" style="-fx-text-fill: #FFF; -fx-font-weight: bold;" text="SUBTOTAL:." />
+                  <Pane layoutX="101.0" layoutY="57.0" prefHeight="30.0" style="-fx-background-color: #516068; -fx-border-radius: 5; -fx-background-radius: 5 5 0 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="8.0" style="-fx-text-fill: #FFF; -fx-font-weight: bold;" text="COD:." />
+                        <Label layoutX="129.0" layoutY="8.0" style="-fx-text-fill: #FFF; -fx-font-weight: bold;" text="ITEM:." />
+                        <Label layoutX="349.0" layoutY="8.0" style="-fx-text-fill: #FFF; -fx-font-weight: bold;" text="QUANT:." />
+                        <Label layoutX="507.0" layoutY="8.0" style="-fx-text-fill: #FFF; -fx-font-weight: bold;" text="SUBTOTAL:." />
+                     </children>
+                  </Pane>
+                  <ScrollPane layoutX="1.0" layoutY="31.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
+                     <content>
+                        <VBox fx:id="vboxSaleItensView" />
+                     </content>
+                  </ScrollPane>
                </children>
-            </Pane>
-            <ScrollPane layoutX="1.0" layoutY="31.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
+            </AnchorPane>
+            <ScrollPane fx:id="scrollpaneSearch" layoutX="20.0" layoutY="40.0" maxHeight="800.0" prefWidth="405.0" style="-fx-border-color: #DDD;">
                <content>
-                  <VBox />
+                  <VBox fx:id="vboxSearch" />
                </content>
             </ScrollPane>
          </children>
       </AnchorPane>
-      <TextField layoutX="300.0" layoutY="44.0" prefHeight="33.0" prefWidth="225.0" promptText="buscar item" />
-      <Button layoutX="900.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #FFF; -fx-border-color: #DDD;" text="Add Cliente" />
    </children>
 </AnchorPane>

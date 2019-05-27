@@ -10,6 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import model.bean.CashRegister;
 import view.util.StringToReal;
 
 import java.io.IOException;
@@ -33,18 +34,18 @@ public class OpenNewCashRegisterController implements Initializable
     @FXML
     public void openNewCashRegister()
     {
-        String valueTextfield = textfieldInitialValue.getText();
+        float value = StringToReal.stringToFloat(textfieldInitialValue.getText());
 
-        float value = StringToReal.stringToFloat(valueTextfield);
-
-        System.out.println(value);
+        CashRegister cash = new CashRegister(value);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLPointOfSale.fxml"));
 
         try
         {
             Parent parent = loader.load();
-            //invocar o controldador aqui
+            PointOfSaleController controller = loader.getController();
+            controller.inti(cash);
+
             Scene scene = new Scene(parent);
 
             Stage stage = new Stage();

@@ -30,7 +30,7 @@
     /** Main menu*/
 	.main-menu-section-label{-fx-padding:15 0 0 0;}
 	.main-menu-buttons{-fx-padding:8 5; -fx-font-size:16;}
-	    .main-menu-subitens{-fx-font-size:14; -fx-background-color:#EEE; -fx-padding:8 8 8 18;}
+	.main-menu-subitens{-fx-font-size:14; -fx-background-color:#EEE; -fx-padding:8 8 8 18;}
 
 	.main-menu-buttons:hover, .main-menu-subitens:hover{-fx-background-color:#DDD;}
 
@@ -45,3 +45,5 @@
 	.h3{-fx-font-size:16;}
 	.h4{-fx-font-size:15;}
 	.h2-label{-fx-font-family:"Lato", sans-serif; -fx-font-size:15; -fx-text-fill:#515F66;}
+
+	.sale-item-quant-textfield{-fx-pref-height:28;}

@@ -8,4 +8,11 @@ public class StringToReal
 
         return Float.parseFloat(value);
     }
+
+    public static String floatToReal(float value)
+    {
+        String newValue = String.valueOf(value);
+        newValue = newValue.replace(".", ",");
+        return "R$ "+newValue;
+    }
 }
