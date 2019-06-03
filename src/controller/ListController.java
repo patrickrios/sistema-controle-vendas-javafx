@@ -14,7 +14,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class ListController implements Initializable
+public class ListController
 {
     @FXML
     private Label labelListName;
@@ -36,17 +36,11 @@ public class ListController implements Initializable
 
     private Pagination pagination;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle)
-    {
-
-    }
-
     public void init(Paginable paginable, String title)
     {
-        pagination = new Pagination(paginable);
-        labelListName.setText(title);
-        vboxItens.getChildren().clear();
+        this.pagination = new Pagination(paginable);
+        this.labelListName.setText(title);
+        this.vboxItens.getChildren().clear();
         loadList();
     }
 

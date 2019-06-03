@@ -1,8 +1,14 @@
 package model.dao;
 
+import controller.ItemProductListController;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import model.bean.Product;
 import model.util.Paginable;
+import view.util.FadeEffectTransition;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -14,6 +20,24 @@ public class ProductDAO implements Paginable
     {
         //Somente para testes
         ArrayList<Parent> products = new ArrayList<>();
+
+        for(Product p : findAll())
+        {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLListProductItem.fxml"));
+
+            try
+            {
+                Parent parent = loader.load();
+                ItemProductListController controller = loader.getController();
+                controller.init(p);
+                products.add(parent);
+            }
+
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
 
         return products;
     }
@@ -40,9 +64,9 @@ public class ProductDAO implements Paginable
         ArrayList<Product> list = new ArrayList<>();
 
         list.add(new Product(1,"01D704", "Xícara de cafe", 0.35f, 1.00f, 4));
-        list.add(new Product(2,"03DSC2", "Bolo de banana", 1.00f, 2.00f, 3));
-        list.add(new Product(3,"0X702D", "Torta de maçã", 1.05f, 3.00f, 5));
-        list.add(new Product(5,"0XXT2D", "Hot dog", 1.05f, 1.50f, 10));
+        list.add(new Product(2,"02D705", "Bolo de banana", 1.00f, 2.00f, 3));
+        list.add(new Product(3,"03D706", "Torta de maçã", 1.05f, 3.00f, 5));
+        list.add(new Product(5,"04D707", "Hot dog", 1.05f, 1.50f, 10));
 
         return list;
     }

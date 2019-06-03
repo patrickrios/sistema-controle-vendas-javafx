@@ -13,6 +13,7 @@ public class Sale
     private Timestamp hourOfSale;
     private ArrayList<SaleItem> itensList;
 
+
     public Sale()
     {
         this.numberOfItens = 0;
@@ -20,16 +21,24 @@ public class Sale
         itensList = new ArrayList<>();
     }
 
-    public void addItem(SaleItem item)
+
+    public boolean addItemToSale(SaleItem item)
     {
-        if(itensList.add(item))
+        boolean added = false;
+        if(!verifyExistenceOfItem(item))
         {
-            this.numberOfItens++;
-            addValueToTotal(item.getSubtotal());
+            if(itensList.add(item))
+            {
+                this.numberOfItens++;
+                addValueToTotal(item.getSubtotal());
+               added = true;
+            }
         }
+
+        return added;
     }
 
-    public void removeItem(SaleItem item)
+    public void removeItemFromSale(SaleItem item)
     {
         if(itensList.remove(item))
         {
@@ -65,14 +74,29 @@ public class Sale
 
     private boolean verifyExistenceOfItem(SaleItem item)
     {
-        return true;
+        boolean exists = false;
+
+        for(SaleItem i : itensList)
+        {
+            if(i.getNameItem().equals(item.getNameItem()))
+            {
+                exists = true;
+                break;
+            }
+        }
+        return exists;
     }
-
-
 
     public String getTotalValueFormatted()
     {
         return StringToReal.floatToReal(this.totalValue);
+    }
+
+    public void resetSale()
+    {
+        this.itensList.clear();
+        this.numberOfItens = 0;
+        this.totalValue = 0;
     }
 
     public void status()

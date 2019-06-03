@@ -4,9 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -51,9 +49,13 @@ public class ItemResultProductSearchController implements Initializable
     void addItemToSale()
     {
         SaleItem item = new SaleItem(this.product);
-        this.sale.addItem(item);
-        addSaleItemOnView(item);
-        updateTotalValueLabelView();
+
+        if(this.sale.addItemToSale(item))
+        {
+            addSaleItemOnView(item);
+            updateTotalValueLabelView();
+        }
+
         closeResultSearch();
     }
 

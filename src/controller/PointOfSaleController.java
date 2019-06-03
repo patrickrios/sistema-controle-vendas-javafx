@@ -45,6 +45,7 @@ public class PointOfSaleController
         this.anchorpaneSearchItens.setVisible(false);
     }
 
+
     @FXML
     public void findItemToSale()
     {
@@ -54,7 +55,7 @@ public class PointOfSaleController
 
         for(Product p : list)
         {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLItemResultProductSearch.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLResultProductSearchItem.fxml"));
 
             try
             {
@@ -73,10 +74,21 @@ public class PointOfSaleController
         this.anchorpaneSearchItens.setVisible(true);
     }
 
+
     @FXML
     void closeSearchItensResult()
     {
         this.anchorpaneSearchItens.setVisible(false);
+    }
+
+
+    @FXML
+    void resetCurrentSale()
+    {
+        this.sale.resetSale();
+        this.labelSaleTotalValue.setText(this.sale.getTotalValueFormatted());
+        this.anchorpaneSearchItens.setVisible(false);
+        this.vboxSaleItensView.getChildren().clear();
     }
 
 }

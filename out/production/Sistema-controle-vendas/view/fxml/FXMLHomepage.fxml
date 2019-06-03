@@ -3,10 +3,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" style="-fx-background-color: #FFF;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomepageController">
    <children>
-      <Label layoutX="23.0" layoutY="20.0" styleClass="h1" text="Caixa de entrada" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="25.0" />
+      <Label layoutX="23.0" layoutY="20.0" styleClass="h1" text="Pagina Inicial" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="25.0" />
       <Label fx:id="labelCurrentDate" layoutX="524.0" layoutY="30.0" styleClass="h3" text="current date" />
    </children>
 </AnchorPane>

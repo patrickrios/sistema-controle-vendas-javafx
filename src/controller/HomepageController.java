@@ -17,8 +17,8 @@ public class HomepageController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        Date dataAtual = new Date();
+        Date currentDate = new Date();
         DateFormat dff = DateFormat.getDateInstance(DateFormat.FULL);
-        labelCurrentDate.setText(dff.format(dataAtual));
+        labelCurrentDate.setText(dff.format(currentDate));
     }
 }

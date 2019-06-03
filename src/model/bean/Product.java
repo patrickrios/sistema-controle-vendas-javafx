@@ -8,6 +8,7 @@ public class Product
 {
     private int id;
     private String code;
+    private String barcode;
     private String name;
     private float costPrice;
     private float salePrice;
@@ -58,6 +59,10 @@ public class Product
 
     public String getName() {
         return name;
+    }
+
+    public String getCode() {
+        return code;
     }
 
     public String getSalePriceText()

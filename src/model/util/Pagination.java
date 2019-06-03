@@ -21,12 +21,12 @@ public class Pagination
         ArrayList<Parent> list = new ArrayList<>();
 
 
-        if(offset < p.numberOfRegisters())
-        {
+        //if(offset < p.numberOfRegisters())
+        //{
             list = p.nextPage(offset, limit);
             this.offset += 30;
             this.limit += 30;
-        }
+        //}
 
         return list;
     }

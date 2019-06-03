@@ -71,6 +71,11 @@ public class SaleItem
         return quantity;
     }
 
+    public String getProductCode()
+    {
+        return this.product.getCode();
+    }
+
 
     public void status()
     {

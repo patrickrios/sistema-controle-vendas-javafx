@@ -14,21 +14,20 @@
    <children>
       <AnchorPane layoutX="51.0" layoutY="14.0" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #50b275; -fx-border-color: #4e8463; -fx-border-width: 0 0 1 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="303.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="300.0">
+            <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="303.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="40.0">
                <image>
                   <Image url="@../img/logo-icon.png" />
                </image>
             </ImageView>
-            <Label layoutX="325.0" layoutY="8.0" style="-fx-text-fill: #FFF; -fx-font-weight: bold;" styleClass="h3" text="Caixa:. ???" />
-            <Label layoutX="525.0" layoutY="8.0" style="-fx-text-fill: #FFF;" styleClass="h3" text="Operador:. $Nome do operador" />
-            <Label fx:id="labelSaldo" layoutX="886.0" layoutY="8.0" style="-fx-text-fill: #FFF;" styleClass="h3" text="Saldo.: $saldo" />
+            <Label layoutX="505.0" layoutY="8.0" style="-fx-text-fill: #FFF; -fx-font-weight: bold;" styleClass="h3" text="Caixa:. ???" />
+            <Label layoutX="655.0" layoutY="8.0" style="-fx-text-fill: #FFF;" styleClass="h3" text="Operador:. $Nome do operador" />
+            <Label fx:id="labelSaldo" layoutX="1157.0" layoutY="8.0" style="-fx-text-fill: #FFF;" styleClass="h3" text="Saldo.: $saldo" />
+            <Label layoutX="67.0" layoutY="8.0" style="-fx-text-fill: #FFF;" styleClass="h3" text="DOMINUS ERP" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="300.0" layoutY="44.0" prefHeight="200.0" prefWidth="750.0" style="-fx-background-color: #FFF;" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="44.0">
+      <AnchorPane layoutX="505.0" layoutY="45.0" prefHeight="200.0" prefWidth="750.0" style="-fx-background-color: #FFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="505.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
          <children>
-            <TextField layoutX="50.0" layoutY="11.0" onKeyReleased="#findItemToSale" prefHeight="28.0" prefWidth="211.0" promptText="buscar item" style="-fx-padding: 4 5; -fx-font-size: 1.1em;" AnchorPane.topAnchor="11.0" />
-            <Button layoutX="67.0" layoutY="63.0" mnemonicParsing="false" style="-fx-background-color: #FFF; -fx-border-color: #DDD;" text="Add Cliente" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0" />
-            <AnchorPane prefWidth="700.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-border-radius: 5; -fx-background-radius: 5;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="45.0">
+            <AnchorPane prefWidth="700.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-border-radius: 5; -fx-background-radius: 5;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
                <children>
                   <Pane layoutX="101.0" layoutY="57.0" prefHeight="30.0" style="-fx-background-color: #516068; -fx-border-radius: 5; -fx-background-radius: 5 5 0 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
@@ -43,21 +42,38 @@
                         <VBox fx:id="vboxSaleItensView" />
                      </content>
                   </ScrollPane>
-                  <AnchorPane prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #DDD; -fx-border-color: #DDD; -fx-border-width: 1 0 0 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <AnchorPane prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-border-width: 1 0 0 0; -fx-background-radius: 0 0 5 5; -fx-border-radius: 0 0 5 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
-                        <Label fx:id="labelSaleTotalValue" layoutX="20.0" layoutY="7.0" style="-fx-font-size: 2.8em;" styleClass="h1" text="total value" />
+                        <Label fx:id="labelSaleTotalValue" layoutX="23.0" layoutY="7.0" prefWidth="178.0" style="-fx-font-size: 2.95em;" styleClass="h1" text="total value" AnchorPane.leftAnchor="25.0" />
+                        <Button disable="true" layoutX="581.0" layoutY="12.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="113.0" style="-fx-background-color: #00B285; -fx-text-fill: #FFF;" text="Finalizar" AnchorPane.rightAnchor="25.0" />
+                        <Button layoutX="422.0" layoutY="15.0" mnemonicParsing="false" onAction="#resetCurrentSale" text="Reiniciar venda" AnchorPane.rightAnchor="180.0" />
                      </children>
                   </AnchorPane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="anchorpaneSearchItens" layoutX="50.0" layoutY="40.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-padding: 1;" visible="false">
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="35.0" layoutY="44.0" prefHeight="200.0" prefWidth="505.0" style="-fx-border-color: #DDD; -fx-border-width: 0 1 0 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="35.0">
+         <children>
+            <TextField layoutX="75.0" layoutY="16.0" onKeyReleased="#findItemToSale" prefHeight="28.0" prefWidth="235.0" promptText="buscar item" style="-fx-padding: 4 5; -fx-font-size: 1.1em;" AnchorPane.topAnchor="16.0" />
+            <ImageView fitHeight="12.0" fitWidth="24.0" layoutX="39.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/lista-top-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="284.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/search-icon-dark.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="anchorpaneSearchItens" prefHeight="60.0" prefWidth="279.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-padding: 1;" visible="false" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
                <children>
-                  <ScrollPane fx:id="scrollpaneSearch" maxHeight="800.0" prefWidth="405.0" AnchorPane.topAnchor="20.0">
+                  <ScrollPane fx:id="scrollpaneSearch" maxHeight="800.0" AnchorPane.topAnchor="20.0">
                      <content>
                         <VBox fx:id="vboxSearch" />
                      </content>
                   </ScrollPane>
-                  <Pane prefHeight="20.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Pane layoutX="4.0" layoutY="4.0" prefHeight="21.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="2.0">
                      <children>
                         <Button contentDisplay="RIGHT" layoutX="345.0" mnemonicParsing="false" onAction="#closeSearchItensResult" style="-fx-padding: 0;" text="fechar">
                            <graphic>
@@ -72,16 +88,7 @@
                   </Pane>
                </children>
             </AnchorPane>
-            <ImageView fitHeight="12.0" fitWidth="24.0" layoutX="20.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/lista-top-icon.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="240.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/search-icon-dark.png" />
-               </image>
-            </ImageView>
+            <Button layoutX="391.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #FFF; -fx-border-color: #DDD;" text="Add Cliente" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
          </children>
       </AnchorPane>
    </children>

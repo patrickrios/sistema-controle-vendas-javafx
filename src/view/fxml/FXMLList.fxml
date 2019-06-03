@@ -24,34 +24,7 @@
             </ImageView>
          </children>
       </Group>
-      <Group layoutX="686.0" layoutY="71.0">
-         <children>
-            <HBox>
-               <children>
-                  <Button fx:id="buttonPagPreviousPage" mnemonicParsing="false" style="-fx-padding: 8 13;" styleClass="button-quantity-left">
-                     <graphic>
-                        <ImageView fitHeight="9.0" fitWidth="6.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/chevron-left-dark.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Label fx:id="labelPaginationInfo" style="-fx-font-family: &quot;Lato&quot;, sans-serif; -fx-font-size: 13; -fx-text-fill: #777; -fx-padding: 9 8; -fx-border-color: #CCC; -fx-border-width: 1 0 1 0;" text="? of ?" />
-                  <Button fx:id="buttonPagNextPage" mnemonicParsing="false" style="-fx-padding: 8 13;" styleClass="button-quantity-right">
-                     <graphic>
-                        <ImageView fitHeight="9.0" fitWidth="6.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/chevron-right-dark.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </HBox>
-         </children>
-      </Group>
-      <ScrollPane layoutX="32.0" layoutY="125.0" prefHeight="523.0" prefWidth="795.0" style="-fx-background-color: #EEE;">
+      <ScrollPane layoutX="32.0" layoutY="125.0" prefHeight="523.0" prefWidth="795.0" style="-fx-background-color: #EEE; -fx-border-color: #DDD;">
          <content>
             <VBox fx:id="vboxItens">
                <children>
@@ -100,7 +73,7 @@
                         <Label layoutX="548.0" layoutY="13.0" styleClass="h3" text="data e hora" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="793.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-border-width: 0 0 1 0;" stylesheets="@../css/app.css">
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="793.0" style="-fx-background-color: #FFF;" stylesheets="@../css/app.css">
                      <children>
                         <Label layoutX="29.0" layoutY="13.0" styleClass="h3" text="codigo" />
                         <Label layoutX="126.0" layoutY="13.0" styleClass="h3" text="caixa" />
@@ -113,5 +86,28 @@
             </VBox>
          </content>
       </ScrollPane>
+      <HBox layoutX="693.0" layoutY="72.0">
+         <children>
+            <Button fx:id="buttonPagPreviousPage" mnemonicParsing="false" style="-fx-padding: 8 13;" styleClass="button-quantity-left">
+               <graphic>
+                  <ImageView fitHeight="9.0" fitWidth="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/chevron-left-dark.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="labelPaginationInfo" style="-fx-font-family: &quot;Lato&quot;, sans-serif; -fx-font-size: 13; -fx-text-fill: #777; -fx-padding: 9 8; -fx-border-color: #CCC; -fx-border-width: 1 0 1 0;" text="\$of of $li" />
+            <Button fx:id="buttonPagNextPage" mnemonicParsing="false" style="-fx-padding: 8 13;" styleClass="button-quantity-right">
+               <graphic>
+                  <ImageView fitHeight="9.0" fitWidth="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/chevron-right-dark.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

@@ -1,12 +1,10 @@
 package controller;
 
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
-import model.bean.Product;
 import model.bean.Sale;
 import model.bean.SaleItem;
 
@@ -24,6 +22,9 @@ public class SaleItemController
     @FXML
     private Label labelSubtotal;
 
+    @FXML
+    private Label labelCodeItem;
+
     private SaleItem item;
 
     private Sale sale;
@@ -33,6 +34,7 @@ public class SaleItemController
         this.labelItemName.setText(item.getNameItem());
         this.labelSubtotal.setText(item.getSubtotalFormatted());
         this.textfieldItemQuantity.setText(""+item.getQuantity());
+        this.labelCodeItem.setText(item.getProductCode());
         this.item = item;
         this.sale = sale;
     }
@@ -40,7 +42,7 @@ public class SaleItemController
     @FXML
     void removeItem()
     {
-        this.sale.removeItem(this.item);
+        this.sale.removeItemFromSale(this.item);
         updateSaleTotalValueView();
         removeSaleItemFromView();
     }

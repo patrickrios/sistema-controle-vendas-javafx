@@ -24,7 +24,7 @@ public class SalesDAO implements Paginable
 
         for(String item : list)
         {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLItem.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLListItem.fxml"));
 
             try
             {
