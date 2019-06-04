@@ -5,6 +5,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Screen;
+import javafx.stage.Stage;
 import model.bean.Sale;
 import model.bean.SaleItem;
 
@@ -35,6 +37,7 @@ public class SaleItemController
         this.labelSubtotal.setText(item.getSubtotalFormatted());
         this.textfieldItemQuantity.setText(""+item.getQuantity());
         this.labelCodeItem.setText(item.getProductCode());
+        this.defineWidthValue();
         this.item = item;
         this.sale = sale;
     }
@@ -83,5 +86,11 @@ public class SaleItemController
     {
         Label label = (Label)anchorpaneSalteItemList.getScene().lookup("#labelSaleTotalValue");
         label.setText(this.sale.getTotalValueFormatted());
+    }
+
+    private void defineWidthValue()
+    {
+        double width = Screen.getPrimary().getBounds().getWidth();
+        this.anchorpaneSalteItemList.setPrefWidth(width-490);
     }
 }

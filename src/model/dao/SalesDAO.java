@@ -1,6 +1,6 @@
 package model.dao;
 
-import controller.ItemController;
+import controller.ListSalesItemController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import model.bean.Persistent;
@@ -17,21 +17,16 @@ public class SalesDAO implements Paginable, Persistent
         //Somente teste
         ArrayList<Parent> sales = new ArrayList<>();
 
-        ArrayList<String> list = new ArrayList<>();
-        list.add("023S  Patrick  R$765,98   14-01-2019 às 14:37");
-        list.add("024S  Bianca   R$583,06   14-01-2019 às 13:21");
-        list.add("023S  Pedro    R$3365,33  14-01-2019 às 09:42");
-        list.add("023S  Manuela  R$1034,15  14-01-2019 às 11:12");
-        list.add("023S  Jair     R$1366,68  14-01-2019 às 17:45");
+        ArrayList<Sale> list = findGroup(offset, limit);
 
-        for(String item : list)
+        for(Sale item : list)
         {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLListItem.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLListSaleItem.fxml"));
 
             try
             {
                 Parent parent = loader.load();
-                ItemController controller = loader.getController();
+                ListSalesItemController controller = loader.getController();
                 controller.init(item);
                 sales.add(parent);
             }
@@ -84,7 +79,18 @@ public class SalesDAO implements Paginable, Persistent
     }
 
     @Override
-    public ArrayList<?> findGroup(int offset, int limit) {
-        return null;
+    public ArrayList<Sale> findGroup(int offset, int limit)
+    {
+        ArrayList<Sale> group = new ArrayList<>();
+
+        group.add(new Sale(32.35f, 5));
+        group.add(new Sale(12.33f, 3));
+        group.add(new Sale(16, 2));
+        group.add(new Sale(44.75f, 7));
+        group.add(new Sale(36.50f, 6));
+        group.add(new Sale(7.50f, 1));
+        group.add(new Sale(1, 1));
+
+        return group;
     }
 }

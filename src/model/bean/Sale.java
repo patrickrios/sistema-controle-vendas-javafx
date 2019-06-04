@@ -22,6 +22,13 @@ public class Sale
         itensList = new ArrayList<>();
     }
 
+    //somente teste
+    public Sale(float value, int number)
+    {
+        this.numberOfItens = number;
+        this.totalValue = value;
+    }
+
 
     public boolean addItemToSale(SaleItem item)
     {
@@ -94,6 +101,10 @@ public class Sale
     public String getTotalValueFormatted()
     {
         return StringToReal.floatToReal(this.totalValue);
+    }
+
+    public int getNumberOfItens() {
+        return numberOfItens;
     }
 
     public void resetSale()

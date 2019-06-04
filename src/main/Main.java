@@ -17,7 +17,6 @@ public class Main extends Application
         primaryStage.setTitle("Controle de vendas e estoque");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.setMaximized(true);
-       // primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/view/img/win-icon.png")));
         primaryStage.show();
     }
 

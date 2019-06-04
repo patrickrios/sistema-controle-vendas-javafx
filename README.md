@@ -1,5 +1,5 @@
 ## Sistema de Controle de vendas e Estoque em JavaFX [Em desenvolvimento]
-Sistema simples para fins de estudos, ainda em desenvolvimento, por enquanto focado nas regras de negócio e visualização. Em breve será adicionado a camada de persistência.
+Projeto simples para fins de estudos, ainda em desenvolvimento, por enquanto focado nas regras de negócio e visualização. Em breve será adicionado a camada de persistência.
 
 #### Algumas funcionalidades
 * Abrir/fechar caixa

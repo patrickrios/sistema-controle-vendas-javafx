@@ -52,13 +52,10 @@ public class MainController implements Initializable
         try
         {
             Parent parent = loader.load();
-
             ListController controller = loader.getController();
-
             controller.init(new SalesDAO(), "Histórico de vendas");
-
+            controller.setListHeader("/view/fxml/FXMLListSaleHeader.fxml");
             new FadeEffectTransition(parent);
-
             anchorpaneMainContent.getChildren().setAll(parent);
         }
 
@@ -66,7 +63,6 @@ public class MainController implements Initializable
         {
             e.printStackTrace();
         }
-
     }
 
     @FXML

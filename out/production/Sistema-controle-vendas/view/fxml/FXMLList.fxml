@@ -14,7 +14,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #FFF;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListController">
    <children>
       <Label fx:id="labelListName" layoutX="35.0" layoutY="24.0" styleClass="h1" text="list name" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="25.0" />
-      <Group layoutX="30.0" layoutY="73.0">
+      <Group layoutX="356.0" layoutY="23.0">
          <children>
             <TextField fx:id="textfieldSearch" prefHeight="33.0" prefWidth="290.0" promptText="some information about search" />
             <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="265.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
@@ -24,69 +24,12 @@
             </ImageView>
          </children>
       </Group>
-      <ScrollPane layoutX="32.0" layoutY="125.0" prefHeight="523.0" prefWidth="795.0" style="-fx-background-color: #EEE; -fx-border-color: #DDD;">
+      <ScrollPane layoutX="32.0" layoutY="101.0" prefHeight="542.0" prefWidth="795.0" style="-fx-background-color: #EEE;">
          <content>
-            <VBox fx:id="vboxItens">
-               <children>
-                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="793.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-border-width: 0 0 1 0;" stylesheets="@../css/app.css">
-                     <children>
-                        <Label layoutX="29.0" layoutY="13.0" styleClass="h3" text="codigo" />
-                        <Label layoutX="126.0" layoutY="13.0" styleClass="h3" text="caixa" />
-                        <Label layoutX="231.0" layoutY="13.0" styleClass="h3" text="operador" />
-                        <Label layoutX="398.0" layoutY="13.0" styleClass="h3" text="R$ 00,00" />
-                        <Label layoutX="548.0" layoutY="13.0" styleClass="h3" text="data e hora" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="793.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-border-width: 0 0 1 0;" stylesheets="@../css/app.css">
-                     <children>
-                        <Label layoutX="29.0" layoutY="13.0" styleClass="h3" text="codigo" />
-                        <Label layoutX="126.0" layoutY="13.0" styleClass="h3" text="caixa" />
-                        <Label layoutX="231.0" layoutY="13.0" styleClass="h3" text="operador" />
-                        <Label layoutX="398.0" layoutY="13.0" styleClass="h3" text="R$ 00,00" />
-                        <Label layoutX="548.0" layoutY="13.0" styleClass="h3" text="data e hora" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="793.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-border-width: 0 0 1 0;" stylesheets="@../css/app.css">
-                     <children>
-                        <Label layoutX="29.0" layoutY="13.0" styleClass="h3" text="codigo" />
-                        <Label layoutX="126.0" layoutY="13.0" styleClass="h3" text="caixa" />
-                        <Label layoutX="231.0" layoutY="13.0" styleClass="h3" text="operador" />
-                        <Label layoutX="398.0" layoutY="13.0" styleClass="h3" text="R$ 00,00" />
-                        <Label layoutX="548.0" layoutY="13.0" styleClass="h3" text="data e hora" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="793.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-border-width: 0 0 1 0;" stylesheets="@../css/app.css">
-                     <children>
-                        <Label layoutX="29.0" layoutY="13.0" styleClass="h3" text="codigo" />
-                        <Label layoutX="126.0" layoutY="13.0" styleClass="h3" text="caixa" />
-                        <Label layoutX="231.0" layoutY="13.0" styleClass="h3" text="operador" />
-                        <Label layoutX="398.0" layoutY="13.0" styleClass="h3" text="R$ 00,00" />
-                        <Label layoutX="548.0" layoutY="13.0" styleClass="h3" text="data e hora" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="793.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD; -fx-border-width: 0 0 1 0;" stylesheets="@../css/app.css">
-                     <children>
-                        <Label layoutX="29.0" layoutY="13.0" styleClass="h3" text="codigo" />
-                        <Label layoutX="126.0" layoutY="13.0" styleClass="h3" text="caixa" />
-                        <Label layoutX="231.0" layoutY="13.0" styleClass="h3" text="operador" />
-                        <Label layoutX="398.0" layoutY="13.0" styleClass="h3" text="R$ 00,00" />
-                        <Label layoutX="548.0" layoutY="13.0" styleClass="h3" text="data e hora" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="793.0" style="-fx-background-color: #FFF;" stylesheets="@../css/app.css">
-                     <children>
-                        <Label layoutX="29.0" layoutY="13.0" styleClass="h3" text="codigo" />
-                        <Label layoutX="126.0" layoutY="13.0" styleClass="h3" text="caixa" />
-                        <Label layoutX="231.0" layoutY="13.0" styleClass="h3" text="operador" />
-                        <Label layoutX="398.0" layoutY="13.0" styleClass="h3" text="R$ 00,00" />
-                        <Label layoutX="548.0" layoutY="13.0" styleClass="h3" text="data e hora" />
-                     </children>
-                  </AnchorPane>
-               </children>
-            </VBox>
+            <VBox fx:id="vboxItens" />
          </content>
       </ScrollPane>
-      <HBox layoutX="693.0" layoutY="72.0">
+      <HBox layoutX="693.0" layoutY="22.0">
          <children>
             <Button fx:id="buttonPagPreviousPage" mnemonicParsing="false" style="-fx-padding: 8 13;" styleClass="button-quantity-left">
                <graphic>
@@ -109,5 +52,6 @@
             </Button>
          </children>
       </HBox>
+      <AnchorPane fx:id="anchorListHeader" layoutX="32.0" layoutY="70.0" prefHeight="30.0" prefWidth="795.0" AnchorPane.leftAnchor="32.0" />
    </children>
 </AnchorPane>

@@ -1,13 +1,11 @@
 package model.dao;
 
-import controller.ItemProductListController;
-import javafx.fxml.FXML;
+import controller.ListProductItemController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import model.bean.Persistent;
 import model.bean.Product;
 import model.util.Paginable;
-import view.util.FadeEffectTransition;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,7 +27,7 @@ public class ProductDAO implements Paginable, Persistent
             try
             {
                 Parent parent = loader.load();
-                ItemProductListController controller = loader.getController();
+                ListProductItemController controller = loader.getController();
                 controller.init(p);
                 products.add(parent);
             }

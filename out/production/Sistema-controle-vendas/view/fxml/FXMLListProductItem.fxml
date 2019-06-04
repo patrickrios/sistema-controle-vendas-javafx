@@ -3,7 +3,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="700.0" style="-fx-border-color: #DDD; -fx-border-width: 0 0 1 0;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemProductListController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="700.0" style="-fx-border-color: #DDD; -fx-border-width: 0 0 1 0;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListProductItemController">
    <children>
       <Label fx:id="labelCode" layoutX="14.0" layoutY="11.0" styleClass="h4" text="code" />
       <Label fx:id="labelProductName" layoutX="97.0" layoutY="11.0" styleClass="h4" text="Product name" />
