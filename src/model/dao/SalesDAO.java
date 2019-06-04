@@ -3,11 +3,13 @@ package model.dao;
 import controller.ItemController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import model.bean.Persistent;
+import model.bean.Sale;
 import model.util.Paginable;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class SalesDAO implements Paginable
+public class SalesDAO implements Paginable, Persistent
 {
     @Override
     public ArrayList<Parent> nextPage(int offset, int limit)
@@ -56,5 +58,33 @@ public class SalesDAO implements Paginable
     public int numberOfRegisters()
     {
         return 0;
+    }
+
+    @Override
+    public boolean save(Object obj)
+    {
+        Sale sale = (Sale)obj;
+        sale.status();
+        return false;
+    }
+
+    @Override
+    public boolean update(Object obj) {
+        return false;
+    }
+
+    @Override
+    public boolean delete(Object obj) {
+        return false;
+    }
+
+    @Override
+    public Object findById(int id) {
+        return null;
+    }
+
+    @Override
+    public ArrayList<?> findGroup(int offset, int limit) {
+        return null;
     }
 }

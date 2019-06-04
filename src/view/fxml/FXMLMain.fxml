@@ -19,7 +19,7 @@
                   <Image url="@../img/logo-icon.png" />
                </image>
             </ImageView>
-            <Label layoutX="301.0" layoutY="10.0" style="-fx-font-family: &quot;Lato&quot;, sans-serif; -fx-font-size: 15; -fx-text-fill: #FFF; -fx-font-weight: bold;" text="DOMINUS ERP" />
+            <Label layoutX="301.0" layoutY="10.0" style="-fx-font-family: &quot;Lato&quot;, sans-serif; -fx-font-size: 15; -fx-text-fill: #FFF; -fx-font-weight: bold;" text="CONTROLE DE VENDAS" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="200.0" prefWidth="466.0" style="-fx-background-color: #F5F6F7; -fx-border-color: #DDD; -fx-border-width: 0 1 0 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0">

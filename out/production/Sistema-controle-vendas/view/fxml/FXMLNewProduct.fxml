@@ -10,17 +10,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #FFF;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #FFF;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewProductController">
    <children>
       <Label layoutX="69.0" layoutY="39.0" styleClass="h1" text="Novo Produto" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="25.0" />
-      <TextField layoutX="30.0" layoutY="100.0" prefHeight="45.0" prefWidth="580.0" promptText="Insira um nome para o produto" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="100.0" />
+      <TextField fx:id="textfieldProductName" layoutX="30.0" layoutY="100.0" prefHeight="45.0" prefWidth="580.0" promptText="Insira um nome para o produto" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="100.0" />
       <Label layoutX="30.0" layoutY="75.0" styleClass="h2-label" text="NOME" />
       <ImageView fitHeight="18.0" fitWidth="17.0" layoutX="577.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/product-icon-light.png" />
          </image>
       </ImageView>
-      <TextField layoutX="30.0" layoutY="202.0" prefHeight="45.0" prefWidth="580.0" promptText="Insira um nome para o produto" />
+      <TextField fx:id="textfieldBarcode" layoutX="30.0" layoutY="202.0" prefHeight="45.0" prefWidth="580.0" promptText="Insira um nome para o produto" />
       <ImageView fitHeight="14.0" fitWidth="16.0" layoutX="578.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/barcode-icon.png" />
@@ -28,14 +28,14 @@
       </ImageView>
       <Label layoutX="30.0" layoutY="177.0" styleClass="h2-label" text="CÓDIGO DE BARRAS" />
       <CheckBox layoutX="382.0" layoutY="178.0" mnemonicParsing="false" text="Gerar código automaticamente" />
-      <TextField layoutX="30.0" layoutY="319.0" prefHeight="45.0" prefWidth="260.0" promptText="R$ 00,00" />
+      <TextField fx:id="textfieldCostPrice" layoutX="30.0" layoutY="319.0" prefHeight="45.0" prefWidth="260.0" promptText="R$ 00,00" />
       <Label layoutX="30.0" layoutY="294.0" styleClass="h2-label" text="PREÇO DE CUSTO" />
       <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="263.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/coin-icon-light.png" />
          </image>
       </ImageView>
-      <TextField layoutX="350.0" layoutY="319.0" prefHeight="45.0" prefWidth="260.0" promptText="R$ 00,00" />
+      <TextField fx:id="textfieldSalePrice" layoutX="350.0" layoutY="319.0" prefHeight="45.0" prefWidth="260.0" promptText="R$ 00,00" />
       <Label layoutX="350.0" layoutY="294.0" styleClass="h2-label" text="PREÇO DE VENDA" />
       <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="583.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -46,7 +46,7 @@
          <children>
             <HBox>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="30.0" styleClass="button-quantity-left">
+                  <Button mnemonicParsing="false" onAction="#decreaseProductQuantity" prefHeight="34.0" prefWidth="30.0" styleClass="button-quantity-left">
                      <graphic>
                         <ImageView fitHeight="2.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -55,8 +55,8 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <TextField alignment="CENTER" prefWidth="50.0" style="-fx-border-radius: 0; -fx-border-width: 1 0 1 0; -fx-border-color: #CCC;" text="1" />
-                  <Button mnemonicParsing="false" prefHeight="34.0" styleClass="button-quantity-right">
+                  <TextField fx:id="textfieldProductQuantity" alignment="CENTER" onKeyReleased="#setProductQuantity" prefWidth="50.0" style="-fx-border-radius: 0; -fx-border-width: 1 0 1 0; -fx-border-color: #CCC;" text="1" />
+                  <Button mnemonicParsing="false" onAction="#increaseProductQuantity" prefHeight="34.0" styleClass="button-quantity-right">
                      <graphic>
                         <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -70,6 +70,6 @@
          </children>
       </Group>
       <Label layoutX="30.0" layoutY="396.0" styleClass="h2-label" text="QUANTIDADE" />
-      <Button layoutX="30.0" layoutY="502.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="148.0" style="-fx-background-color: #2693FF; -fx-text-fill: #FFF; -fx-font-weight: bold; -fx-border-width: 0 0 1 0; -fx-border-color: #055d8c;" text="SALVAR" />
+      <Button layoutX="30.0" layoutY="502.0" mnemonicParsing="false" onAction="#saveNewProduct" prefHeight="50.0" prefWidth="148.0" style="-fx-background-color: #2693FF; -fx-text-fill: #FFF; -fx-font-weight: bold; -fx-border-width: 0 0 1 0; -fx-border-color: #055d8c;" text="SALVAR" />
    </children>
 </AnchorPane>

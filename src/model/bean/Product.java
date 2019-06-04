@@ -47,6 +47,16 @@ public class Product
         this.datetimeInclusion = inclusion;
     }
 
+    public Product(String code, String name, float costPrice, float salePrice, int quantity)
+    {
+        this.code = code;
+        this.name = name;
+        this.costPrice = costPrice;
+        this.salePrice = salePrice;
+        this.quantity = quantity;
+    }
+
+
     float getSalePrice()
     {
         return salePrice;
@@ -68,5 +78,11 @@ public class Product
     public String getSalePriceText()
     {
         return StringToReal.floatToReal(this.salePrice);
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Product{code="+this.code+", name="+this.name+", costPrice="+this.costPrice+", salePrice="+this.salePrice+", quantity="+this.quantity+"}";
     }
 }

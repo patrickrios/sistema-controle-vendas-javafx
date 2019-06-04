@@ -5,6 +5,7 @@
 
     /** Buttons*/
 	.button{-fx-border-width:1; -fx-border-color:transparent; -fx-cursor:hand; -fx-border-radius:5; -fx-font-family:"Lato", sans-serif; -fx-font-size:15; -fx-background-color:#F5F6F7; -fx-text-fill:#3A454B;}
+    .button-reset{-fx-padding:0;-fx-border:0; -fx-background-color:transparent;}
 
 	/** Textfiedls*/
 	.text-field{-fx-background-color:#FFF;-fx-border-color:#AAA; -fx-border-radius:5; -fx-font-family:"Lato", sans-serif; -fx-font-size:16; -fx-text-fill:#000; }
@@ -47,3 +48,7 @@
 	.h2-label{-fx-font-family:"Lato", sans-serif; -fx-font-size:15; -fx-text-fill:#515F66;}
 
 	.sale-item-quant-textfield{-fx-pref-height:28;}
+
+	/** Pop-ups labels*/
+	.sucess-confirmation{-fx-background-color:#00B285; -fx-background-radius:5;-fx-border-radius:5;}
+	.sucess-confirmation .label, .sucess-confirmation .button{-fx-text-fill:#FFF; -fx-padding:5 10;}

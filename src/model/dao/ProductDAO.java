@@ -4,6 +4,7 @@ import controller.ItemProductListController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import model.bean.Persistent;
 import model.bean.Product;
 import model.util.Paginable;
 import view.util.FadeEffectTransition;
@@ -12,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class ProductDAO implements Paginable
+public class ProductDAO implements Paginable, Persistent
 {
 
     @Override
@@ -69,5 +70,33 @@ public class ProductDAO implements Paginable
         list.add(new Product(5,"04D707", "Hot dog", 1.05f, 1.50f, 10));
 
         return list;
+    }
+
+    @Override
+    public boolean save(Object obj)
+    {
+        Product p = (Product) obj;
+        System.out.println("New product added: "+p.toString());
+        return true;
+    }
+
+    @Override
+    public boolean update(Object obj) {
+        return false;
+    }
+
+    @Override
+    public boolean delete(Object obj) {
+        return false;
+    }
+
+    @Override
+    public Object findById(int id) {
+        return null;
+    }
+
+    @Override
+    public ArrayList<?> findGroup(int offset, int limit) {
+        return null;
     }
 }

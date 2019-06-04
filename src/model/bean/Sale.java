@@ -1,5 +1,6 @@
 package model.bean;
 
+import model.dao.SalesDAO;
 import view.util.StringToReal;
 
 import java.security.Timestamp;
@@ -59,7 +60,10 @@ public class Sale
 
     public void finishSale()
     {
-
+        if(new SalesDAO().save(this))
+        {
+            this.resetSale();
+        }
     }
 
     private void addValueToTotal(float value)
@@ -99,12 +103,17 @@ public class Sale
         this.totalValue = 0;
     }
 
+    public boolean isListEmpty()
+    {
+        return this.itensList.isEmpty();
+    }
+
     public void status()
     {
-        System.out.println("Sale{ sale="+this.toString()+", itens="+this.numberOfItens+" total="+this.totalValue+"}");
+        System.out.println("Sale: sale="+this.toString()+", itens="+this.numberOfItens+" total="+this.totalValue+"}");
 
         for(SaleItem i : this.itensList)
-            System.out.println("\titem{name="+i.getNameItem()+", quant="+i.getQuantity()+", subtotal="+i.getSubtotalFormatted()+"}");
+            System.out.println("\titem{name="+i.getNameItem()+", quant="+i.getQuantity()+", subtotal="+i.getSubtotalFormatted()+"");
 
         System.out.println("\n");
     }

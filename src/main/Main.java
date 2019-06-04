@@ -14,7 +14,7 @@ public class Main extends Application
     public void start(Stage primaryStage) throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("/view/fxml/FXMLMain.fxml"));
-        primaryStage.setTitle("Dominus ERP");
+        primaryStage.setTitle("Controle de vendas e estoque");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.setMaximized(true);
        // primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/view/img/win-icon.png")));
