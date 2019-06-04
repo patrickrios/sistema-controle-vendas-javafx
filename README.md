@@ -11,8 +11,8 @@ Sistema simples para fins de estudos, ainda em desenvolvimento, por enquanto foc
 * (em breve) Relatório de estoque
 
 ##### Algumas imagens
-![](screenshot/screenshot-abrir-caixa.png)
-![](screenshot/screenshot-ponto-de-venda.png)
-![](screenshot/screenshot-itens-para-venda.png)
-![](screenshot/screenshot-busca-itens-para-venda.png)
-![](screenshot/screenshot-novo-produto.png)
+![](screenshots/screenshot-abrir-caixa.png)
+![](screenshots/screenshot-ponto-de-venda.png)
+![](screenshots/screenshot-itens-para-venda.png)
+![](screenshots/screenshot-busca-itens-para-venda.png)
+![](screenshots/screenshot-novo-produto.png)
