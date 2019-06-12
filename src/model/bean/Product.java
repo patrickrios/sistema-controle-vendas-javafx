@@ -67,11 +67,13 @@ public class Product
         return quantity;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public String getCode() {
+    public String getCode()
+    {
         return code;
     }
 

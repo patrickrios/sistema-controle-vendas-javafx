@@ -62,10 +62,11 @@ public class ProductDAO implements Paginable, Persistent
     {
         ArrayList<Product> list = new ArrayList<>();
 
-        list.add(new Product(1,"01D704", "Xícara de cafe", 0.35f, 1.00f, 4));
-        list.add(new Product(2,"02D705", "Bolo de banana", 1.00f, 2.00f, 3));
-        list.add(new Product(3,"03D706", "Torta de maçã", 1.05f, 3.00f, 5));
-        list.add(new Product(5,"04D707", "Hot dog", 1.05f, 1.50f, 10));
+        list.add(new Product(1,"01D704", "Produto 001", 0.35f, 1.00f, 4));
+        list.add(new Product(2,"02D705", "Produto 002", 1.00f, 2.00f, 3));
+        list.add(new Product(3,"03D706", "Produto 003", 1.05f, 3.00f, 5));
+        list.add(new Product(5,"04D707", "Produto 004", 1.05f, 1.50f, 10));
+        list.add(new Product(3,"03D706", "Produto 005", 1.05f, 3.75f, 5));
 
         return list;
     }

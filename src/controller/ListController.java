@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -39,6 +40,9 @@ public class ListController
     private AnchorPane anchorListHeader;
 
     @FXML
+    private ScrollPane scrollpaneList;
+
+    @FXML
     private VBox vboxItens;
 
     private Pagination pagination;
@@ -49,6 +53,7 @@ public class ListController
         this.labelListName.setText(title);
         this.vboxItens.getChildren().clear();
         loadList();
+        scrollpaneList.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
     }
 
     private void loadList()

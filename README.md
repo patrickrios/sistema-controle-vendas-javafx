@@ -11,13 +11,15 @@ Projeto simples para fins de estudos, ainda em desenvolvimento, por enquanto foc
 * (em breve) Relatório de estoque
 
 #### Algumas imagens
-Abertura de um novo caixa
-![](screenshots/screenshot-abrir-caixa.png)
+
+Histórico de vendas
+![](screenshots/screenshot-historico-vendas-min.png)
+
+Abertura novo caixa
+![](screenshots/screenshot-novo-caixa-min.png)
+
 Ponto de venda
-![](screenshots/screenshot-ponto-de-venda.png)
-Itens adicionados à venda
-![](screenshots/screenshot-itens-para-venda.png)
-Busca de itens
-![](screenshots/screenshot-busca-itens-para-venda.png)
-Registrar novo produto
-![](screenshots/screenshot-novo-produto.png)
+![](screenshots/screenshot-ponto-de-venda-min.png)
+
+Adicionar novo produto
+![](screenshots/screenshot-novo-produto-min.png)

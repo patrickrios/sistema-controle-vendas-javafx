@@ -90,6 +90,10 @@ public class SalesDAO implements Paginable, Persistent
         group.add(new Sale(36.50f, 6));
         group.add(new Sale(7.50f, 1));
         group.add(new Sale(1, 1));
+        group.add(new Sale(17.50f, 5));
+        group.add(new Sale(40.0f, 2));
+        group.add(new Sale(76.19f, 6));
+        group.add(new Sale(9.99f, 4));
 
         return group;
     }

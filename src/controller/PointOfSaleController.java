@@ -3,7 +3,6 @@ package controller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -33,7 +32,7 @@ public class PointOfSaleController
     private VBox vboxSaleItensView;
 
     @FXML
-    private Button buttonFinishSale;
+    private Label labelShowingResultItens;
 
     private CashRegister cashRegister;
 
@@ -46,7 +45,6 @@ public class PointOfSaleController
         this.sale = new Sale();
         this.labelSaldo.setText(this.labelSaldo.getText().replace("$saldo", cashRegister.getInitialValueFormatted()));
         this.labelSaleTotalValue.setText(this.sale.getTotalValueFormatted());
-        this.anchorpaneSearchItens.setVisible(false);
     }
 
     @FXML
@@ -75,12 +73,17 @@ public class PointOfSaleController
         }
 
         this.anchorpaneSearchItens.setVisible(true);
+        String numberResult = this.labelShowingResultItens.getText().replace("$n", ""+list.size());
+        this.labelShowingResultItens.setText(numberResult);
     }
 
     @FXML
     void closeSearchItensResult()
     {
-        this.anchorpaneSearchItens.setVisible(false);
+        //this.anchorpaneSearchItens.setVisible(false);
+        this.vboxSearch.getChildren().clear();
+        String numberResult = this.labelShowingResultItens.getText().replace("$n", "0");
+        this.labelShowingResultItens.setText(numberResult);
     }
 
     @FXML
@@ -88,7 +91,7 @@ public class PointOfSaleController
     {
         this.sale.resetSale();
         this.labelSaleTotalValue.setText(this.sale.getTotalValueFormatted());
-        this.anchorpaneSearchItens.setVisible(false);
+        this.closeSearchItensResult();
         this.vboxSaleItensView.getChildren().clear();
     }
 

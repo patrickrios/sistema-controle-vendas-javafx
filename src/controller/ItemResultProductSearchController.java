@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ItemResultProductSearchController implements Initializable
+public class ItemResultProductSearchController
 {
     @FXML
     private Pane paneItemResultSearchContent;
@@ -31,13 +31,7 @@ public class ItemResultProductSearchController implements Initializable
 
     private Product product;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle)
-    {
-
-    }
-
-    public void initi(Product product, Sale sale)
+    void initi(Product product, Sale sale)
     {
         this.labelProductName.setText(product.getName());
         this.labelSalePrice.setText(product.getSalePriceText());
@@ -56,7 +50,7 @@ public class ItemResultProductSearchController implements Initializable
             updateTotalValueLabelView();
         }
 
-        closeResultSearch();
+        this.paneItemResultSearchContent.setDisable(true);
     }
 
     private void addSaleItemOnView(SaleItem item)
@@ -77,13 +71,6 @@ public class ItemResultProductSearchController implements Initializable
         {
             e.printStackTrace();
         }
-    }
-
-
-    private void closeResultSearch()
-    {
-        AnchorPane searchScroll = (AnchorPane) paneItemResultSearchContent.getScene().lookup("#anchorpaneSearchItens");
-        searchScroll.setVisible(false);
     }
 
 
