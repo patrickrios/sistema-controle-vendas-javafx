@@ -13,7 +13,7 @@
 
 	/** Check-boxes*/
 	.check-box{-fx-text-fill:#999;}
-	.check-box .box{-fx-background-color:#FFF; -fx-border-color:#DDD; -fx-pref-width:12; -fx-pref-height:13; -fx-border-radius:2;}
+	.check-box .box{-fx-background-color:#FFF; -fx-border-color:#AAA; -fx-pref-width:12; -fx-pref-height:13; -fx-border-radius:2;}
 
 	/** Accordions and title panes*/
 	.accordion{-fx-padding:0 0 2 0 !important;}
@@ -52,6 +52,7 @@
 	.h4{-fx-font-size:15;}
 	.h2-label{-fx-font-family:"Lato", sans-serif; -fx-font-size:15; -fx-text-fill:#515F66;}
 
+    /**Sale itens*/
 	.sale-item-quant-textfield{-fx-pref-height:28;}
 
 	/** Pop-ups labels*/
@@ -66,3 +67,5 @@
     .anchor-list-item{-fx-background-color:#FFF;}
     .anchor-list-item:hover .hbox-item-options{visibility:visible;}
     .anchor-list-item:hover{-fx-background-color:#F9F9F9;}
+
+    .list-sale-item-selected{-fx-background-color:#defce9; -fx-border-color:#e3efce !important; -fx-border-width:1 !important;}

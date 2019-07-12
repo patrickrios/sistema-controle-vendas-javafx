@@ -126,4 +126,22 @@ public class MainController implements Initializable
             e.printStackTrace();
         }
     }
+
+    @FXML
+    public void logout()
+    {
+        try {
+            Parent parent = FXMLLoader.load(getClass().getResource("/view/fxml/FXMLMainLoginPage.fxml"));
+            Stage stage = (Stage)anchorpaneMainContent.getScene().getWindow();
+            stage.setResizable(false);
+            stage.setMaximized(false);
+            stage.setScene(new Scene(parent));
+            stage.setMaxWidth(980);
+            stage.setMaxHeight(544);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

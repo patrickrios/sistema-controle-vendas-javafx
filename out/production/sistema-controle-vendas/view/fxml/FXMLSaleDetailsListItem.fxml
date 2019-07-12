@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="830.0" style="-fx-border-color: #CCC; -fx-border-width: 0 0 1 0; -fx-border-style: dashed;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SaleDetailsListItemController">
+   <children>
+      <Label layoutX="25.0" layoutY="13.0" styleClass="h4" text="1" />
+      <Label layoutX="120.0" layoutY="13.0" styleClass="h4" text="Product name" />
+      <Label layoutX="370.0" layoutY="13.0" styleClass="h4" text="01" />
+      <Label layoutX="530.0" layoutY="13.0" styleClass="h4" text="R$ 00,00" />
+      <Label layoutX="700.0" layoutY="13.0" styleClass="h4" text="R$ 00,00" />
+   </children>
+</AnchorPane>
