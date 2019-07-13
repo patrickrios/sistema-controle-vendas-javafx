@@ -3,8 +3,12 @@ package controller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import model.bean.Product;
 import model.dao.ProductDAO;
@@ -23,13 +27,19 @@ public class NewProductController
     private TextField textfieldProductCode;
 
     @FXML
-    private CheckBox checkboxProductCodeGenerate;
+    private Label labelProductCode;
+
+    @FXML
+    private Button buttonProdCodeGen;
 
     @FXML
     private TextField textfieldBarcode;
 
     @FXML
-    private CheckBox checkboxBarcodeGenerate;
+    private Label labelBarcode;
+
+    @FXML
+    private Button buttonBarcodeGen;
 
     @FXML
     private TextField textfieldCostPrice;
@@ -41,6 +51,10 @@ public class NewProductController
     private TextField textfieldProductQuantity;
 
     private int productQuantity = 1;
+
+    private boolean genBarcodeControl = false;
+
+    private boolean genProdCodeControl = false;
 
     @FXML
     public void increaseProductQuantity()
@@ -72,19 +86,39 @@ public class NewProductController
     @FXML
     public void autoGenerateProductCode()
     {
-        if(this.checkboxProductCodeGenerate.isSelected())
+        Image icon;
+        if(!this.genProdCodeControl) {
             this.textfieldProductCode.setDisable(true);
-        else
+            this.labelProductCode.setDisable(true);
+            this.genProdCodeControl = true;
+            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-on-icon-52x32.png"));
+        }
+        else {
             this.textfieldProductCode.setDisable(false);
+            this.labelProductCode.setDisable(false);
+            this.genProdCodeControl = false;
+            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-off-icon-52x32.png"));
+        }
+        this.buttonProdCodeGen.setGraphic(new ImageView(icon));
     }
 
     @FXML
     public void autoGenerateBarcode()
     {
-        if(this.checkboxBarcodeGenerate.isSelected())
+        Image icon;
+        if(!this.genBarcodeControl) {
             this.textfieldBarcode.setDisable(true);
-        else
+            this.labelBarcode.setDisable(true);
+            this.genBarcodeControl = true;
+            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-on-icon-52x32.png"));
+        }
+        else {
             this.textfieldBarcode.setDisable(false);
+            this.labelBarcode.setDisable(false);
+            this.genBarcodeControl = false;
+            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-off-icon-52x32.png"));
+        }
+        this.buttonBarcodeGen.setGraphic(new ImageView(icon));
     }
 
     @FXML

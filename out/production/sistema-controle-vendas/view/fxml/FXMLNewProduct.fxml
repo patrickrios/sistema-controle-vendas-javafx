@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -10,25 +8,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #FFF;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewProductController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #FFF;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewProductController">
    <children>
-      <Label layoutX="56.0" layoutY="20.0" prefHeight="40.0" styleClass="h1" text="Adicionar novo produto" AnchorPane.leftAnchor="56.0" AnchorPane.topAnchor="20.0" />
-      <TextField fx:id="textfieldProductName" layoutX="56.0" layoutY="84.0" prefHeight="50.0" prefWidth="580.0" promptText="Insira um nome para" style="-fx-border-width: 2;" AnchorPane.leftAnchor="56.0" AnchorPane.topAnchor="84.0" />
-      <Label layoutX="69.0" layoutY="70.0" style="-fx-background-color: #FFF; -fx-padding: 5;" styleClass="h3" text="Nome" />
-      <TextField fx:id="textfieldBarcode" layoutX="56.0" layoutY="272.0" prefHeight="50.0" prefWidth="580.0" promptText="Insira um nome para o produto" style="-fx-border-width: 2;" />
-      <Label layoutX="67.0" layoutY="258.0" style="-fx-background-color: #FFF; -fx-padding: 5;" styleClass="h3" text="Codigo de barras" />
-      <CheckBox layoutX="441.0" layoutY="322.0" mnemonicParsing="false" text="Gerar código automaticamente" />
-      <TextField fx:id="textfieldCostPrice" layoutX="56.0" layoutY="371.0" prefHeight="50.0" prefWidth="280.0" promptText="R$ 00,00" style="-fx-border-width: 2;" />
-      <Label layoutX="69.0" layoutY="357.0" style="-fx-background-color: #FFF; -fx-padding: 5;" styleClass="h3" text="Preço de custo" />
-      <TextField fx:id="textfieldSalePrice" layoutX="357.0" layoutY="371.0" prefHeight="50.0" prefWidth="280.0" promptText="R$ 00,00" style="-fx-border-width: 2;" />
-      <Label layoutX="372.0" layoutY="357.0" style="-fx-background-color: #FFF; -fx-padding: 5;" styleClass="h3" text="Preço de venda" />
-      <Group layoutX="56.0" layoutY="422.0" />
-      <Label layoutX="55.0" layoutY="450.0" styleClass="h2-label" text="QUANTIDADE" />
-      <Button layoutX="56.0" layoutY="536.0" mnemonicParsing="false" onAction="#saveNewProduct" prefHeight="50.0" prefWidth="148.0" style="-fx-background-color: #2693FF; -fx-text-fill: #FFF; -fx-font-weight: bold; -fx-border-width: 0 0 1 0; -fx-border-color: #055d8c;" text="SALVAR" />
-      <TextField fx:id="textfieldBarcode1" layoutX="56.0" layoutY="176.0" prefHeight="50.0" prefWidth="580.0" promptText="Insira um codigo" style="-fx-border-width: 2;" />
-      <Label layoutX="69.0" layoutY="162.0" style="-fx-background-color: #FFF; -fx-padding: 5;" styleClass="h3" text="Codigo do produto" />
-      <CheckBox layoutX="441.0" layoutY="226.0" mnemonicParsing="false" text="Gerar código automaticamente" />
-      <HBox layoutX="56.0" layoutY="479.0">
+      <Label layoutX="44.0" layoutY="20.0" prefHeight="40.0" styleClass="h1" text="Adicionar novo produto" AnchorPane.leftAnchor="44.0" AnchorPane.topAnchor="12.0" />
+      <TextField fx:id="textfieldProductName" layoutX="44.0" layoutY="84.0" prefHeight="50.0" prefWidth="580.0" promptText="Insira um nome para" style="-fx-border-width: 2;" AnchorPane.leftAnchor="44.0" AnchorPane.topAnchor="84.0" />
+      <Label layoutX="46.0" layoutY="62.0" styleClass="h3" text="Nome" />
+      <TextField fx:id="textfieldBarcode" layoutX="44.0" layoutY="297.0" prefHeight="50.0" prefWidth="580.0" promptText="Insira um nome para o produto" style="-fx-border-width: 2;" />
+      <Label fx:id="labelBarcode" layoutX="46.0" layoutY="275.0" styleClass="h3" text="Codigo de barras" />
+      <TextField fx:id="textfieldCostPrice" layoutX="44.0" layoutY="434.0" prefHeight="50.0" prefWidth="280.0" promptText="R$ 00,00" style="-fx-border-width: 2;" />
+      <Label layoutX="46.0" layoutY="411.0" styleClass="h3" text="Preço de custo" />
+      <TextField fx:id="textfieldSalePrice" layoutX="345.0" layoutY="434.0" prefHeight="50.0" prefWidth="280.0" promptText="R$ 00,00" style="-fx-border-width: 2;" />
+      <Label layoutX="345.0" layoutY="411.0" styleClass="h3" text="Preço de venda" />
+      <Label layoutX="43.0" layoutY="513.0" styleClass="h3" text="Quantidade" />
+      <Button layoutX="46.0" layoutY="598.0" mnemonicParsing="false" onAction="#saveNewProduct" prefHeight="59.0" prefWidth="206.0" style="-fx-background-color: #2693FF; -fx-text-fill: #FFF; -fx-font-weight: bold; -fx-border-width: 0 0 1 0; -fx-border-color: #055d8c;" text="SALVAR" />
+      <TextField fx:id="textfieldProductCode" layoutX="44.0" layoutY="176.0" prefHeight="50.0" prefWidth="580.0" promptText="Insira um codigo" style="-fx-border-width: 2;" />
+      <Label fx:id="labelProductCode" layoutX="46.0" layoutY="154.0" styleClass="h3" text="Codigo do produto" />
+      <HBox layoutX="44.0" layoutY="542.0">
          <children>
             <Button mnemonicParsing="false" onAction="#decreaseProductQuantity" prefHeight="34.0" prefWidth="30.0" styleClass="button-quantity-left">
                <graphic>
@@ -51,5 +46,24 @@
             </Button>
          </children>
       </HBox>
+      <Button layoutX="485.0" layoutY="603.0" mnemonicParsing="false" onAction="#resetFields" prefHeight="50.0" prefWidth="148.0" style="-fx-background-color: #eee;" text="LIMPAR CAMPOS" />
+      <Button fx:id="buttonProdCodeGen" graphicTextGap="10.0" layoutX="369.0" layoutY="233.0" mnemonicParsing="false" onAction="#autoGenerateProductCode" style="-fx-font-size: 14; -fx-text-fill: #777;" styleClass="button-reset" text="Gerar codigo automaticamente">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/toggle-off-icon-52x32.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="buttonBarcodeGen" graphicTextGap="10.0" layoutX="369.0" layoutY="355.0" mnemonicParsing="false" onAction="#autoGenerateBarcode" style="-fx-font-size: 14; -fx-text-fill: #777;" styleClass="button-reset" text="Gerar codigo automaticamente">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/toggle-off-icon-52x32.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

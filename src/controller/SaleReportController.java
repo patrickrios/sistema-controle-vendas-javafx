@@ -7,6 +7,7 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.ChoiceBox;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -24,27 +25,41 @@ public class SaleReportController implements Initializable
     @FXML
     private NumberAxis numbAxis;
 
+    @FXML
+    private ChoiceBox<String> choiceboxMonth;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
         populateLineChart();
+        loadChoiceboxMonth();
     }
 
     private void populateLineChart()
     {
         XYChart.Series series = new XYChart.Series();
-        series.setName("Transações por dia");
+        series.setName("Total em R$ por dia");
 
         Random r = new Random();
 
-        for(int i=1; i<=20; i++)
+        for(int i=1; i<=15; i++)
         {
             int value = r.nextInt(101);
-            series.getData().add(new XYChart.Data(""+i, value));
+            boolean b = series.getData().addAll(new XYChart.Data("" + i, value));
 
         }
 
         lineChartSales.getData().add(series);
+        lineChartSales.setTitle("Transações");
+    }
+
+    private void loadChoiceboxMonth()
+    {
+        ArrayList<String> months = new ArrayList<>();
+        months.add("Este mês");
+
+        choiceboxMonth.setItems(FXCollections.observableList(months));
+        choiceboxMonth.setValue("Este mês");
     }
 
 }

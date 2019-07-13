@@ -8,10 +8,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #FFF;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SaleDetailsController">
    <children>
-      <Label layoutX="38.0" layoutY="21.0" style="-fx-padding: 8 0; -fx-font-size: 28;" text="Venda 1230098765" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="20.0" />
+      <Label layoutX="38.0" layoutY="21.0" style="-fx-padding: 8 0; -fx-font-size: 28;" text="Venda 1230098765" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="18.0" />
       <Button layoutX="655.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: #FF416b; -fx-text-fill: #FFF;" text="salvar pdf">
          <graphic>
             <ImageView fitHeight="14.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
@@ -30,7 +31,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <VBox layoutX="30.0" layoutY="220.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="220.0">
+      <VBox alignment="TOP_RIGHT" fillWidth="false" layoutX="30.0" layoutY="220.0" nodeOrientation="LEFT_TO_RIGHT" spacing="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="220.0">
          <children>
             <ScrollPane prefWidth="840.0" style="-fx-border-color: #DDD; -fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #F9F9F9;">
               <content>
@@ -50,14 +51,16 @@
                   </AnchorPane>
               </content>
             </ScrollPane>
-            <Pane prefHeight="100.0" prefWidth="200.0">
+            <Pane prefWidth="500.0" style="-fx-border-color: #DDD; -fx-background-radius: 5; -fx-border-radius: 5;">
                <children>
-                  <Label layoutX="469.0" layoutY="17.0" styleClass="h4" text="subtotal" />
-                  <Label layoutX="581.0" layoutY="17.0" styleClass="h4" text="desconto" />
-                  <Label layoutX="701.0" layoutY="17.0" styleClass="h4" text="total" />
-                  <Label alignment="BASELINE_LEFT" layoutX="469.0" layoutY="43.0" prefHeight="23.0" style="-fx-font-size: 18;" text="R$ 00,00" />
-                  <Label alignment="BASELINE_LEFT" layoutX="581.0" layoutY="43.0" prefHeight="23.0" style="-fx-font-size: 18;" text="R$ 00,00" />
-                  <Label alignment="BASELINE_LEFT" layoutX="701.0" layoutY="43.0" prefHeight="23.0" style="-fx-font-size: 18;" text="R$ 00,00" />
+                  <Label layoutX="26.0" layoutY="22.0" style="-fx-text-fill: #666;" styleClass="h4" text="Subtotal" />
+                  <Label layoutX="205.0" layoutY="22.0" style="-fx-text-fill: #666;" styleClass="h4" text="Desconto" />
+                  <Label layoutX="370.0" layoutY="22.0" style="-fx-text-fill: #666;" styleClass="h4" text="Total" />
+                  <Label alignment="BASELINE_LEFT" layoutX="26.0" layoutY="48.0" style="-fx-font-size: 20; -fx-text-fill: #000;" text="R$ 00,00" />
+                  <Label alignment="BASELINE_LEFT" layoutX="205.0" layoutY="48.0" prefHeight="23.0" style="-fx-font-size: 20; -fx-text-fill: #000;" text="R$ 00,00" />
+                  <Label alignment="BASELINE_LEFT" layoutX="370.0" layoutY="48.0" prefHeight="23.0" style="-fx-font-size: 20; -fx-text-fill: #000;" text="R$ 00,00" />
+                  <Line endX="15.0" endY="86.0" layoutX="166.0" layoutY="14.0" startX="15.0" startY="-13.0" style="-fx-stroke: #CCC;" />
+                  <Line endX="15.0" endY="86.0" layoutX="332.0" layoutY="14.0" startX="15.0" startY="-13.0" style="-fx-stroke: #CCC;" />
                </children>
             </Pane>
          </children>
@@ -65,18 +68,18 @@
       <Label layoutX="30.0" layoutY="195.0" styleClass="h3" text="Itens da venda" />
       <Pane layoutX="35.0" layoutY="74.0" prefHeight="98.0" prefWidth="840.0" style="-fx-border-color: #DDD; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
          <children>
-            <Label alignment="CENTER" layoutX="562.0" layoutY="15.0" prefHeight="20.0" prefWidth="280.0" styleClass="h3" text="Total" />
-            <Label layoutX="603.0" layoutY="35.0" style="-fx-font-size: 35; -fx-text-fill: #8D52B1;" text="R$ 12.684,94" />
+            <Label alignment="CENTER" layoutX="585.0" layoutY="14.0" prefHeight="20.0" styleClass="h3" text="Total" />
+            <Label layoutX="585.0" layoutY="34.0" style="-fx-font-size: 35; -fx-text-fill: #8D52B1;" text="R$ 12.684,94" />
             <Pane prefHeight="98.0" prefWidth="280.0" style="-fx-border-color: #DDD; -fx-border-width: 0 1 0 0;">
                <children>
-                  <Label alignment="CENTER" layoutY="20.0" prefHeight="20.0" prefWidth="280.0" styleClass="h3" text="Vendido para" />
-                  <Label alignment="CENTER" layoutY="45.0" prefHeight="23.0" prefWidth="280.0" style="-fx-text-fill: #8D52B1; -fx-font-size: 18;" text="Nome do cliente" />
+                  <Label alignment="CENTER" layoutX="25.0" layoutY="20.0" styleClass="h4" text="Vendido para" />
+                  <Label alignment="CENTER" layoutX="25.0" layoutY="48.0" prefHeight="23.0" style="-fx-text-fill: #8D52B1; -fx-font-size: 20;" text="Nome do cliente" />
                </children>
             </Pane>
             <Pane layoutX="280.0" prefHeight="98.0" prefWidth="280.0" style="-fx-border-color: #DDD; -fx-border-width: 0 1 0 0;">
                <children>
-                  <Label alignment="CENTER" layoutY="20.0" prefHeight="20.0" prefWidth="280.0" styleClass="h3" text="Data" />
-                  <Label alignment="CENTER" layoutY="45.0" prefHeight="23.0" prefWidth="280.0" style="-fx-text-fill: #8D52B1; -fx-font-size: 18;" text="14/08/2019 as 14h30m" />
+                  <Label alignment="CENTER" layoutX="25.0" layoutY="20.0" prefHeight="20.0" styleClass="h3" text="Data" />
+                  <Label alignment="CENTER" layoutX="25.0" layoutY="48.0" prefHeight="23.0" style="-fx-text-fill: #8D52B1; -fx-font-size: 18;" text="14/08/2019 as 14h30m" />
                </children>
             </Pane>
          </children>

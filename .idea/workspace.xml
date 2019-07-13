@@ -60,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="85" selection-start-line="18" selection-start-column="85" selection-end-line="18" selection-end-column="85" />
+            <state relative-caret-position="-121">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -95,10 +95,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/SaleReportController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="301">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
               <folding>
-                <element signature="e#705#706#0" expanded="true" />
+                <element signature="method#loadChoiceboxMonth#0;class#SaleReportController#0" />
               </folding>
             </state>
           </provider>
@@ -114,23 +114,16 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/SaleDetailsListItemController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/NewProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="1260">
+              <caret line="144" column="20" selection-start-line="144" selection-start-column="20" selection-end-line="144" selection-end-column="20" />
               <folding>
                 <element signature="method#increaseProductQuantity#0;class#NewProductController#0" />
                 <element signature="method#decreaseProductQuantity#0;class#NewProductController#0" />
                 <element signature="method#setProductQuantity#0;class#NewProductController#0" />
+                <element signature="method#autoGenerateProductCode#0;class#NewProductController#0" />
+                <element signature="method#autoGenerateBarcode#0;class#NewProductController#0" />
                 <element signature="method#saveNewProduct#0;class#NewProductController#0" />
                 <element signature="method#resetFields#0;class#NewProductController#0" />
                 <element signature="method#getProductFromForm#0;class#NewProductController#0" />
@@ -165,7 +158,6 @@
         <option value="$PROJECT_DIR$/src/controller/ItemResultProductSearchController.java" />
         <option value="$PROJECT_DIR$/src/controller/PointOfSaleController.java" />
         <option value="$PROJECT_DIR$/src/model/dao/ProductDAO.java" />
-        <option value="$PROJECT_DIR$/src/controller/NewProductController.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/controller/MainLoginPageController.java" />
         <option value="$PROJECT_DIR$/src/model/bean/Authenticable.java" />
@@ -176,12 +168,13 @@
         <option value="$PROJECT_DIR$/src/controller/SaleDetailsController.java" />
         <option value="$PROJECT_DIR$/src/view/css/app.css" />
         <option value="$PROJECT_DIR$/src/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/controller/NewProductController.java" />
         <option value="$PROJECT_DIR$/src/controller/SaleReportController.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1366" />
     <option name="height" value="728" />
   </component>
@@ -211,12 +204,6 @@
               <item name="sistema-controle-vendas" type="b2602c69:ProjectViewProjectNode" />
               <item name="sistema-controle-vendas" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sistema-controle-vendas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sistema-controle-vendas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -240,6 +227,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -358,6 +346,7 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="1" BundledDictionary0="english.dic" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="project-level" UseSingleDictionary="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
@@ -372,6 +361,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="729" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.1839166" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -379,7 +369,7 @@
       <window_info id="Designer" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30385852" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.09807074" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993559" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -575,13 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="85" selection-start-line="18" selection-start-column="85" selection-end-line="18" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/ListSalesItemController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -589,33 +572,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/SaleDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/SaleDetailsListItemController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/NewProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="method#increaseProductQuantity#0;class#NewProductController#0" />
-            <element signature="method#decreaseProductQuantity#0;class#NewProductController#0" />
-            <element signature="method#setProductQuantity#0;class#NewProductController#0" />
-            <element signature="method#saveNewProduct#0;class#NewProductController#0" />
-            <element signature="method#resetFields#0;class#NewProductController#0" />
-            <element signature="method#getProductFromForm#0;class#NewProductController#0" />
-            <element signature="method#showSucessLabel#0;class#NewProductController#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -634,12 +594,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-121">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/NewProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="144" column="20" selection-start-line="144" selection-start-column="20" selection-end-line="144" selection-end-column="20" />
+          <folding>
+            <element signature="method#increaseProductQuantity#0;class#NewProductController#0" />
+            <element signature="method#decreaseProductQuantity#0;class#NewProductController#0" />
+            <element signature="method#setProductQuantity#0;class#NewProductController#0" />
+            <element signature="method#autoGenerateProductCode#0;class#NewProductController#0" />
+            <element signature="method#autoGenerateBarcode#0;class#NewProductController#0" />
+            <element signature="method#saveNewProduct#0;class#NewProductController#0" />
+            <element signature="method#resetFields#0;class#NewProductController#0" />
+            <element signature="method#getProductFromForm#0;class#NewProductController#0" />
+            <element signature="method#showSucessLabel#0;class#NewProductController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/SaleDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/SaleReportController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="301">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
           <folding>
-            <element signature="e#705#706#0" expanded="true" />
+            <element signature="method#loadChoiceboxMonth#0;class#SaleReportController#0" />
           </folding>
         </state>
       </provider>
