@@ -68,7 +68,7 @@
                                  <children>
                                     <Button alignment="BASELINE_LEFT" layoutX="5.0" mnemonicParsing="false" onAction="#loadOpenNewCashRegister" prefHeight="39.0" styleClass="main-menu-subitens" text="Abrir novo caixa" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                     <Button alignment="BASELINE_LEFT" layoutX="11.0" layoutY="37.0" mnemonicParsing="false" onAction="#loadSalesHistoryScreen" prefHeight="39.0" prefWidth="153.0" styleClass="main-menu-subitens" text="Historico de vendas" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0" />
-                                    <Button alignment="BASELINE_LEFT" layoutX="15.0" layoutY="86.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="153.0" styleClass="main-menu-subitens" text="Relatorio de vendas" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="76.0" />
+                                    <Button alignment="BASELINE_LEFT" layoutX="15.0" layoutY="86.0" mnemonicParsing="false" onAction="#loadSaleReportScreen" prefHeight="39.0" prefWidth="153.0" styleClass="main-menu-subitens" text="Relatorio de vendas" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="76.0" />
                                  </children>
                               </AnchorPane>
                            </content>

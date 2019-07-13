@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #FFF;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SaleReportController">
+   <children>
+      <Label layoutX="28.0" layoutY="35.0" styleClass="h2" text="Suas vendas" />
+      <ChoiceBox layoutX="161.0" layoutY="34.0" prefWidth="150.0" />
+      <Button layoutX="665.0" layoutY="32.0" mnemonicParsing="false" style="-fx-background-color: #FF416b; -fx-text-fill: #FFF;" text="salvar pdf">
+         <graphic>
+            <ImageView fitHeight="14.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/pdfs-icon-light-11x14.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="776.0" layoutY="32.0" mnemonicParsing="false" style="-fx-background-color: #0092DF; -fx-text-fill: #FFF;" text="imprimir">
+         <graphic>
+            <ImageView fitHeight="14.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/printf-icon-16x14.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Pane layoutX="28.0" layoutY="89.0" prefHeight="117.0" prefWidth="840.0" style="-fx-border-color: #DDD; -fx-border-width: 0 0 1 0; -fx-border-style: dashed;" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+         <children>
+            <Label layoutY="14.0" style="-fx-font-size: 42; -fx-text-fill: #8D52B1;" text="R$ 12.456,87" />
+            <Label layoutY="75.0" styleClass="h3" text="Total em vendas" />
+            <Label alignment="BASELINE_RIGHT" layoutX="740.0" layoutY="14.0" style="-fx-font-size: 42; -fx-text-fill: #8D52B1;" text="1376" />
+            <Label layoutX="712.0" layoutY="75.0" styleClass="h3" text="Vendas realizadas" />
+         </children>
+      </Pane>
+      <Label layoutX="30.0" layoutY="226.0" styleClass="h2" text="Transaçoes por dia" />
+      <LineChart fx:id="lineChartSales" layoutX="30.0" layoutY="252.0" prefHeight="400.0" prefWidth="855.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="30.0">
+        <xAxis>
+          <CategoryAxis fx:id="catAxis" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="numbAxis" side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>

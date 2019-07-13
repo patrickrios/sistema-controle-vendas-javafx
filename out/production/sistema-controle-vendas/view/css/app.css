@@ -15,6 +15,9 @@
 	.check-box{-fx-text-fill:#999;}
 	.check-box .box{-fx-background-color:#FFF; -fx-border-color:#AAA; -fx-pref-width:12; -fx-pref-height:13; -fx-border-radius:2;}
 
+	/** Choiceboxes */
+	.choice-box{-fx-background-color:#FFF; -fx-border-color:#CCC; -fx-border-radius:3; -fx-background-radius:3;}
+
 	/** Accordions and title panes*/
 	.accordion{-fx-padding:0 0 2 0 !important;}
 	.accordion .titled-pane > .title {-fx-background-color: #F5F6F7;-fx-font-size:15;-fx-cursor: "hand";-fx-border-width:0;-fx-padding:12 0;}

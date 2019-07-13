@@ -66,6 +66,22 @@ public class MainController implements Initializable
     }
 
     @FXML
+    public void loadSaleReportScreen()
+    {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLSaleReport.fxml"));
+
+        try
+        {
+            Parent parent = loader.load();
+            new FadeEffectTransition(parent);
+            this.anchorpaneMainContent.getChildren().setAll(parent);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @FXML
     public void loadListProductsScreen()
     {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLList.fxml"));
