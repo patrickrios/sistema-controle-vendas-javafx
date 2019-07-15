@@ -15,7 +15,7 @@
       <Label fx:id="labelTotalValue" layoutX="378.0" layoutY="10.0" styleClass="h3" text="R$ 00,00" />
       <Label fx:id="labelDateTime" layoutX="533.0" layoutY="10.0" styleClass="h3" text="data e hora" />
       <CheckBox fx:id="checkboxItem" graphicTextGap="0.0" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#checkboxSelected" />
-      <HBox layoutX="503.0" layoutY="10.0" prefHeight="20.0" spacing="8.0" styleClass="hbox-item-options" AnchorPane.rightAnchor="10.0">
+      <HBox layoutX="503.0" layoutY="7.0" prefHeight="20.0" spacing="8.0" styleClass="hbox-item-options" AnchorPane.rightAnchor="10.0">
          <children>
             <Button mnemonicParsing="false" onAction="#viewDetails" style="-fx-border-color: #DDD; -fx-padding: 3 4;">
                <graphic>

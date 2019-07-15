@@ -40,17 +40,27 @@ public class MainLoginPageController
 
         try
         {
-            Parent parent = FXMLLoader.load(getClass().getResource("/view/fxml/FXMLMain.fxml"));
-            Scene scene = new Scene(parent);
-            stage.setScene(scene);
-            stage.setResizable(true);
-            stage.setMaximized(true);
-            stage.show();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLMain.fxml"));
+            Parent parent = loader.load();
+
+            stage.close();
+
+            Stage mainStage = new Stage();
+            mainStage.setMaximized(true);
+            mainStage.setTitle("Controle de vendas");
+            mainStage.setScene(new Scene(parent));
+            mainStage.show();
         }
 
         catch (IOException e)
         {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    void exitApp()
+    {
+        System.exit(0);
     }
 }

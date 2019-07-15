@@ -13,46 +13,63 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #FFF;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListController">
    <children>
-      <Label fx:id="labelListName" layoutX="32.0" layoutY="13.0" prefHeight="16.0" styleClass="h5" text="list name" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="10.0" />
+      <Label fx:id="labelListName" layoutX="32.0" layoutY="13.0" prefHeight="16.0" styleClass="h5" text="list name" visible="false" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="10.0" />
       <Group layoutX="356.0" layoutY="23.0" />
-      <ScrollPane fx:id="scrollpaneList" layoutX="32.0" layoutY="110.0" prefHeight="532.0" prefWidth="806.0" style="-fx-background-color: #EEE;">
+      <ScrollPane fx:id="scrollpaneList" layoutX="32.0" layoutY="86.0" prefHeight="556.0" prefWidth="806.0" style="-fx-background-color: #EEE;">
          <content>
             <VBox fx:id="vboxItens" />
          </content>
       </ScrollPane>
-      <HBox layoutX="649.0" layoutY="41.0" nodeOrientation="LEFT_TO_RIGHT" spacing="6.0" AnchorPane.rightAnchor="73.0">
+      <AnchorPane fx:id="anchorListHeader" layoutX="32.0" layoutY="70.0" prefHeight="30.0" prefWidth="795.0" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="55.0" />
+      <AnchorPane layoutX="60.0" layoutY="-72.0" prefHeight="50.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label fx:id="labelPaginationInfo" style="-fx-font-family: &quot;Lato&quot;, sans-serif; -fx-font-size: 15; -fx-text-fill: #515F66; -fx-padding: 6 10;" text="1-15 de 300" />
-            <Button fx:id="buttonPagPreviousPage" mnemonicParsing="false" style="-fx-padding: 3 8;" styleClass="button-pagination-nav">
+            <Group AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0">
+               <children>
+                  <TextField fx:id="textfieldSearch" prefHeight="30.0" prefWidth="301.0" promptText="digite algo para buscar..." style="-fx-padding: 4 10;" />
+                  <Button layoutX="260.0" mnemonicParsing="false" styleClass="button-search-icon">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/search-icon-dark.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Group>
+            <HBox nodeOrientation="LEFT_TO_RIGHT" spacing="6.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="12.0">
+               <children>
+                  <Label fx:id="labelPaginationInfo" style="-fx-font-family: &quot;Lato&quot;, sans-serif; -fx-font-size: 15; -fx-text-fill: #515F66; -fx-padding: 6 10;" text="1-15 de 300" />
+                  <Button fx:id="buttonPagPreviousPage" mnemonicParsing="false" style="-fx-padding: 3 8;" styleClass="button-pagination-nav">
+                     <graphic>
+                        <ImageView fitHeight="9.0" fitWidth="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/chevron-left-dark.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="buttonPagNextPage" mnemonicParsing="false" style="-fx-padding: 3 8;" styleClass="button-pagination-nav">
+                     <graphic>
+                        <ImageView fitHeight="9.0" fitWidth="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/chevron-right-dark.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <Button layoutX="318.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: #EE6969; -fx-text-fill: #FFF; -fx-padding: 3 8;">
                <graphic>
-                  <ImageView fitHeight="9.0" fitWidth="6.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="14.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/chevron-left-dark.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button fx:id="buttonPagNextPage" mnemonicParsing="false" style="-fx-padding: 3 8;" styleClass="button-pagination-nav">
-               <graphic>
-                  <ImageView fitHeight="9.0" fitWidth="6.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/chevron-right-dark.png" />
+                        <Image url="@../img/item-delete-icon-light-11x14s.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
          </children>
-      </HBox>
-      <AnchorPane fx:id="anchorListHeader" layoutX="32.0" layoutY="70.0" prefHeight="30.0" prefWidth="795.0" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="80.0" />
-      <TextField fx:id="textfieldSearch" layoutX="32.0" layoutY="41.0" prefHeight="30.0" prefWidth="301.0" promptText="digite algo para buscar..." style="-fx-padding: 4 10;" />
-      <Button layoutX="292.0" layoutY="41.0" mnemonicParsing="false" styleClass="button-search-icon">
-         <graphic>
-            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/search-icon-dark.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
+      </AnchorPane>
    </children>
 </AnchorPane>

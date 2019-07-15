@@ -53,15 +53,15 @@
       <AnchorPane prefHeight="544.0" prefWidth="522.0" style="-fx-background-color: #FFF; -fx-border-color: #DDD;" AnchorPane.leftAnchor="458.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label layoutX="39.0" layoutY="32.0" style="-fx-font-family: &quot;Lato&quot;; -fx-text-fill: #39454B; -fx-font-size: 30;" text="Entrar no sistema" AnchorPane.leftAnchor="75.0" />
-            <TextField fx:id="textfieldUsername" layoutX="39.0" layoutY="127.0" prefHeight="45.0" prefWidth="177.0" promptText="seu username" style="-fx-padding: 0 0 0 33;" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
-            <Label layoutX="39.0" layoutY="101.0" style="-fx-font-family: &quot;Lato&quot;; -fx-text-fill: #666; -fx-font-size: 17;" text="Username ou email" />
+            <TextField fx:id="textfieldUsername" layoutX="39.0" layoutY="127.0" prefHeight="45.0" prefWidth="177.0" promptText="seu username" style="-fx-padding: 0 0 0 33; -fx-border-color: #CCC;" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+            <Label layoutX="42.0" layoutY="101.0" style="-fx-font-family: &quot;Lato&quot;; -fx-text-fill: #666; -fx-font-size: 17;" text="Username ou email" />
             <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="50.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/login-user-light-15x15.png" />
                </image>
             </ImageView>
-            <Label layoutX="40.0" layoutY="203.0" style="-fx-font-family: &quot;Lato&quot;; -fx-text-fill: #666; -fx-font-size: 17;" text="Senha" />
-            <PasswordField fx:id="textfieldPassword" layoutX="40.0" layoutY="233.0" prefHeight="45.0" promptText="sua senha" style="-fx-padding: 0 0 0 33;" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+            <Label layoutX="42.0" layoutY="207.0" style="-fx-font-family: &quot;Lato&quot;; -fx-text-fill: #666; -fx-font-size: 17;" text="Senha" />
+            <PasswordField fx:id="textfieldPassword" layoutX="40.0" layoutY="233.0" prefHeight="45.0" promptText="sua senha" style="-fx-padding: 0 0 0 33; -fx-border-color: #CCC;" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
             <ImageView fitHeight="17.0" fitWidth="13.0" layoutX="50.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/login-password-light-13x17.png" />
@@ -75,6 +75,15 @@
                   <Image url="@../img/login-sigin-dark-28x28.png" />
                </image>
             </ImageView>
+            <Button layoutX="397.0" layoutY="19.0" mnemonicParsing="false" onAction="#exitApp" styleClass="button-reset" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/login-close-page-light-30x30.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
    </children>

@@ -26,6 +26,11 @@ public class MainController implements Initializable
         loadHomepageScreen();
     }
 
+    public void initi(Stage stage)
+    {
+
+    }
+
     @FXML
     public void loadNewProductScreen()
     {

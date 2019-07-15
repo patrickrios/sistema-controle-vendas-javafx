@@ -17,7 +17,7 @@ public class Main extends Application
         Parent root = FXMLLoader.load(getClass().getResource("/view/fxml/FXMLMainLoginPage.fxml"));
         primaryStage.setTitle("Controle de vendas e estoque");
         primaryStage.setScene(new Scene(root));
-        primaryStage.setResizable(false);
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.show();
     }
 

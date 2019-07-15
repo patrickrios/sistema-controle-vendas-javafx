@@ -45,8 +45,7 @@ public class SaleReportController implements Initializable
         for(int i=1; i<=15; i++)
         {
             int value = r.nextInt(101);
-            boolean b = series.getData().addAll(new XYChart.Data("" + i, value));
-
+            series.getData().addAll(new XYChart.Data("" + i, value));
         }
 
         lineChartSales.getData().add(series);
