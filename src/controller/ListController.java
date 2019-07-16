@@ -8,6 +8,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import model.util.Paginable;
@@ -37,6 +39,15 @@ public class ListController
     private Button buttonPagNextPage;
 
     @FXML
+    private Button buttonDeleteAll;
+
+    @FXML
+    private Button buttonViewList;
+
+    @FXML
+    private Button buttonViewGrid;
+
+    @FXML
     private AnchorPane anchorListHeader;
 
     @FXML
@@ -52,8 +63,9 @@ public class ListController
         this.pagination = new Pagination(paginable);
         this.labelListName.setText(title);
         this.vboxItens.getChildren().clear();
-        loadList();
-        scrollpaneList.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        this.loadList();
+        this.scrollpaneList.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        this.markButtonView(this.buttonViewList);
     }
 
     private void loadList()
@@ -64,10 +76,9 @@ public class ListController
         {
             vboxItens.getChildren().add(item);
         }
-
     }
 
-    public void setListHeader(String path)
+    void setListHeader(String path)
     {
         try
         {
@@ -79,5 +90,66 @@ public class ListController
         {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    public void viewGridLayout()
+    {
+        markButtonView(this.buttonViewGrid);
+        unmarkButtonView(this.buttonViewList);
+        changeViewGridIconOn();
+        changeViewListIconOff();
+    }
+
+    @FXML
+    void viewListLayout()
+    {
+        markButtonView(this.buttonViewList);
+        unmarkButtonView(this.buttonViewGrid);
+        changeViewListIconOn();
+        changeViewGridIconOff();
+    }
+
+    private void markButtonView (Button button)
+    {
+        button.getStyleClass().clear();
+        button.getStyleClass().add("button");
+        button.getStyleClass().add("button-pagination-nav");
+        button.getStyleClass().add("button-view-selected");
+    }
+
+    private void unmarkButtonView(Button button)
+    {
+        button.getStyleClass().clear();
+        button.getStyleClass().add("button");
+        button.getStyleClass().add("button-pagination-nav");
+    }
+
+    private void changeViewGridIconOn()
+    {
+        Image icon = null;
+        icon = new Image(getClass().getResourceAsStream("/view/img/list/view-grid-selected-17x13.png"));
+        this.buttonViewGrid.setGraphic(new ImageView(icon));
+    }
+
+    private void changeViewGridIconOff()
+    {
+        Image icon = null;
+        icon = new Image(getClass().getResourceAsStream("/view/img/list/view-grid-unselected-17x13.png"));
+        this.buttonViewGrid.setGraphic(new ImageView(icon));
+    }
+
+    private void changeViewListIconOn()
+    {
+        Image icon = null;
+        icon = new Image(getClass().getResourceAsStream("/view/img/list/view-list-selected-17x14.png"));
+        this.buttonViewList.setGraphic(new ImageView(icon));
+    }
+
+    private void changeViewListIconOff()
+    {
+        Image icon = null;
+        icon = new Image(getClass().getResourceAsStream("/view/img/list/view-list-unselected-17x14.png"));
+        this.buttonViewList.setGraphic(new ImageView(icon));
     }
 }

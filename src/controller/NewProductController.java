@@ -102,6 +102,18 @@ public class NewProductController
         this.buttonProdCodeGen.setGraphic(new ImageView(icon));
     }
 
+    private void resetAutoGenerateProductCode()
+    {
+        Image icon = null;
+
+            this.textfieldProductCode.setDisable(false);
+            this.labelProductCode.setDisable(false);
+            this.genProdCodeControl = false;
+            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-off-icon-52x32.png"));
+
+        this.buttonProdCodeGen.setGraphic(new ImageView(icon));
+    }
+
     @FXML
     public void autoGenerateBarcode()
     {
@@ -118,6 +130,17 @@ public class NewProductController
             this.genBarcodeControl = false;
             icon = new Image(getClass().getResourceAsStream("/view/img/toggle-off-icon-52x32.png"));
         }
+        this.buttonBarcodeGen.setGraphic(new ImageView(icon));
+    }
+
+    private void resetAutoGenerateBarcode()
+    {
+        Image icon = null;
+       this.textfieldBarcode.setDisable(false);
+            this.labelBarcode.setDisable(false);
+            this.genBarcodeControl = false;
+            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-off-icon-52x32.png"));
+
         this.buttonBarcodeGen.setGraphic(new ImageView(icon));
     }
 
@@ -140,6 +163,8 @@ public class NewProductController
         this.textfieldSalePrice.setText("");
         this.textfieldProductQuantity.setText("1");
         this.productQuantity = 1;
+        this.resetAutoGenerateProductCode();
+        this.resetAutoGenerateBarcode();
     }
 
     private Product getProductFromForm()

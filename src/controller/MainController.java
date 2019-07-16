@@ -64,8 +64,7 @@ public class MainController implements Initializable
             anchorpaneMainContent.getChildren().setAll(parent);
         }
 
-        catch (IOException e)
-        {
+        catch (IOException e){
             e.printStackTrace();
         }
     }

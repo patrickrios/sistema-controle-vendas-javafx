@@ -10,7 +10,7 @@
 
 <AnchorPane fx:id="anchorListeSaleItem" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="793.0" style="-fx-border-color: #DDD; -fx-border-width: 0 0 1 0; -fx-border-style: dashed;" styleClass="anchor-list-item" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListSalesItemController">
    <children>
-      <Label fx:id="labelSaleCode" layoutX="56.0" layoutY="10.0" styleClass="h3" text="codigo" />
+      <Label fx:id="labelSaleCode" layoutX="65.0" layoutY="10.0" styleClass="h3" text="codigo" />
       <Label fx:id="labelNumItens" layoutX="201.0" layoutY="10.0" styleClass="h3" text="\$num itens" />
       <Label fx:id="labelTotalValue" layoutX="378.0" layoutY="10.0" styleClass="h3" text="R$ 00,00" />
       <Label fx:id="labelDateTime" layoutX="533.0" layoutY="10.0" styleClass="h3" text="data e hora" />
@@ -46,5 +46,14 @@
             </Button>
          </children>
       </HBox>
+      <Button fx:id="buttonFavorite" layoutX="35.0" layoutY="10.0" mnemonicParsing="false" onAction="#markAsFavorite" styleClass="button-reset">
+         <graphic>
+            <ImageView fitHeight="14.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/list/favorite-star-unselected-light-15x14.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>
