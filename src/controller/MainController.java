@@ -58,7 +58,7 @@ public class MainController implements Initializable
         {
             Parent parent = loader.load();
             ListController controller = loader.getController();
-            controller.init(new SalesDAO(), "Vendas  >  Histórico de vendas");
+            controller.init(new SalesDAO(), "Histórico de vendas");
             controller.setListHeader("/view/fxml/FXMLListSaleHeader.fxml");
             new FadeEffectTransition(parent);
             anchorpaneMainContent.getChildren().setAll(parent);
@@ -90,21 +90,15 @@ public class MainController implements Initializable
     {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLList.fxml"));
 
-        try
-        {
+        try{
             Parent parent = loader.load();
-
             ListController controller = loader.getController();
-
-            controller.init(new ProductDAO(), "Produtos  >  Lista de produtos");
-
+            controller.init(new ProductDAO(), "Lista de produtos");
+            controller.setListHeader("/view/fxml/FXMLListProductHeader.fxml");
             new FadeEffectTransition(parent);
-
             anchorpaneMainContent.getChildren().setAll(parent);
         }
-
-        catch (IOException e)
-        {
+        catch (IOException e){
             e.printStackTrace();
         }
     }

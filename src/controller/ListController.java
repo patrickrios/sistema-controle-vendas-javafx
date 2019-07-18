@@ -24,7 +24,7 @@ public class ListController
 {
 
     @FXML
-    private Label labelListName;
+    private Label labelListTitle;
 
     @FXML
     private TextField textfieldSearch;
@@ -61,7 +61,7 @@ public class ListController
     public void init(Paginable paginable, String title)
     {
         this.pagination = new Pagination(paginable);
-        this.labelListName.setText(title);
+        this.labelListTitle.setText(title);
         this.vboxItens.getChildren().clear();
         this.loadList();
         this.scrollpaneList.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);

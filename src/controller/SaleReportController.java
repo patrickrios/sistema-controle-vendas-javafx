@@ -25,14 +25,11 @@ public class SaleReportController implements Initializable
     @FXML
     private NumberAxis numbAxis;
 
-    @FXML
-    private ChoiceBox<String> choiceboxMonth;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
         populateLineChart();
-        loadChoiceboxMonth();
     }
 
     private void populateLineChart()
@@ -51,14 +48,4 @@ public class SaleReportController implements Initializable
         lineChartSales.getData().add(series);
         lineChartSales.setTitle("Transações");
     }
-
-    private void loadChoiceboxMonth()
-    {
-        ArrayList<String> months = new ArrayList<>();
-        months.add("Este mês");
-
-        choiceboxMonth.setItems(FXCollections.observableList(months));
-        choiceboxMonth.setValue("Este mês");
-    }
-
 }

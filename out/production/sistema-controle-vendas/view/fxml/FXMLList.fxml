@@ -9,35 +9,29 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #FFF;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListController">
    <children>
-      <Label fx:id="labelListName" layoutX="32.0" layoutY="13.0" prefHeight="16.0" styleClass="h5" text="list name" visible="false" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="10.0" />
-      <Group layoutX="356.0" layoutY="23.0" />
-      <ScrollPane fx:id="scrollpaneList" layoutX="32.0" layoutY="92.0" prefHeight="556.0" prefWidth="795.0" style="-fx-background-color: #EEE;">
+      <ScrollPane fx:id="scrollpaneList" layoutX="32.0" layoutY="136.0" prefHeight="514.0" prefWidth="795.0" style="-fx-background-color: #EEE;">
          <content>
             <VBox fx:id="vboxItens" />
          </content>
       </ScrollPane>
-      <AnchorPane fx:id="anchorListHeader" layoutX="32.0" layoutY="70.0" prefHeight="30.0" prefWidth="795.0" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="60.0" />
-      <AnchorPane layoutX="60.0" layoutY="-72.0" prefHeight="60.0" style="-fx-border-color: #CCC; -fx-border-width: 0 0 1 0; -fx-border-style: dashed;" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="anchorListHeader" layoutX="32.0" layoutY="70.0" prefHeight="30.0" prefWidth="795.0" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="105.0" />
+      <AnchorPane layoutX="60.0" layoutY="-72.0" prefHeight="50.0" style="-fx-border-color: #DDD; -fx-border-width: 1 0 0 0; -fx-border-style: dashed;" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="50.0">
          <children>
-            <Group layoutY="13.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="15.0">
-               <children>
-                  <TextField fx:id="textfieldSearch" prefHeight="30.0" prefWidth="301.0" promptText="digite algo para buscar..." style="-fx-padding: 4 10;" />
-                  <Button layoutX="260.0" mnemonicParsing="false" styleClass="button-search-icon">
-                     <graphic>
-                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/search-icon-dark.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </Group>
-            <HBox nodeOrientation="LEFT_TO_RIGHT" spacing="6.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="16.0">
+            <Button layoutX="312.0" layoutY="11.0" mnemonicParsing="false" style="-fx-border-color: #EEE;" text="Favoritos">
+               <graphic>
+                  <ImageView fitHeight="13.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/list/favorite-star-14x13.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <HBox layoutY="11.0" nodeOrientation="LEFT_TO_RIGHT" spacing="6.0" AnchorPane.rightAnchor="0.0">
                <children>
                   <Label fx:id="labelPaginationInfo" layoutY="13.0" style="-fx-font-family: &quot;Lato&quot;, sans-serif; -fx-font-size: 15; -fx-text-fill: #000 /*515F66*/; -fx-padding: 6 10;" text="1-15 de 300" />
                   <Button fx:id="buttonPagPreviousPage" layoutY="13.0" mnemonicParsing="false" style="-fx-padding: 4 10;" styleClass="button-pagination-nav">
@@ -60,52 +54,84 @@
                   </Button>
                </children>
             </HBox>
-            <Button fx:id="buttonDeleteAll" layoutX="418.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: #DDD; -fx-padding: 3 6;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="16.0">
-               <graphic>
-                  <ImageView fitHeight="15.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+            <Pane layoutY="11.0" prefHeight="28.0" prefWidth="70.0" style="-fx-border-color: #DDD; -fx-border-width: 0 1 0 0; -fx-border-style: dashed;">
+               <children>
+                  <Button fx:id="buttonDeleteAll" mnemonicParsing="false" style="-fx-background-color: #DDD; -fx-padding: 3 6;">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/list/delete-all-12x15.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="33.0" mnemonicParsing="false" style="-fx-background-color: #DDD; -fx-padding: 3 4;">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/list/favorite-all-16x15.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="81.0" layoutY="11.0" prefHeight="30.0" prefWidth="89.0" style="-fx-border-color: #DDD; -fx-border-width: 0 1 0 0; -fx-border-style: dashed;">
+               <children>
+                  <Button fx:id="buttonViewList" mnemonicParsing="false" onAction="#viewListLayout" style="-fx-padding: 5 8;" styleClass="button-pagination-nav">
+                     <graphic>
+                        <ImageView fitHeight="14.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/list/view-list-selected-17x14.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="buttonViewGrid" layoutX="41.0" mnemonicParsing="false" onAction="#viewGridLayout" style="-fx-padding: 5 8;" styleClass="button-pagination-nav">
+                     <graphic>
+                        <ImageView fitHeight="13.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/list/view-grid-unselected-17x13.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="180.0" layoutY="11.0" prefHeight="31.0" prefWidth="118.0" style="-fx-border-color: #DDD; -fx-border-width: 0 1 0 0; -fx-border-style: dashed;">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="106.0" style="-fx-border-color: #EEE; -fx-padding: 5 18 5 5;" text="Filtrar">
+                     <graphic>
+                        <ImageView fitHeight="11.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/list/list-filter-10x11.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="6.0" fitWidth="9.0" layoutX="85.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/list/delete-all-12x15.png" />
+                        <Image url="@../img/chevron-down-dark.png" />
                      </image>
                   </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutX="428.0" mnemonicParsing="false" style="-fx-background-color: #DDD; -fx-padding: 3 4;" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="16.0">
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Label fx:id="labelListTitle" layoutX="32.0" layoutY="11.0" style="-fx-font-size: 22;" text="title" />
+      <Group layoutX="526.0" layoutY="10.0" AnchorPane.leftAnchor="526.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <TextField fx:id="textfieldSearch" prefHeight="30.0" prefWidth="301.0" promptText="digite algo para buscar..." style="-fx-padding: 4 10;" />
+            <Button layoutX="260.0" mnemonicParsing="false" styleClass="button-search-icon">
                <graphic>
-                  <ImageView fitHeight="15.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/list/favorite-all-16x15.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button fx:id="buttonViewList" layoutX="407.0" layoutY="15.0" mnemonicParsing="false" onAction="#viewListLayout" style="-fx-padding: 5 8;" styleClass="button-pagination-nav">
-               <graphic>
-                  <ImageView fitHeight="14.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/list/view-list-selected-17x14.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button fx:id="buttonViewGrid" layoutX="448.0" layoutY="15.0" mnemonicParsing="false" onAction="#viewGridLayout" style="-fx-padding: 5 8;" styleClass="button-pagination-nav">
-               <graphic>
-                  <ImageView fitHeight="13.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/list/view-grid-unselected-17x13.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutX="506.0" layoutY="15.0" mnemonicParsing="false" style="-fx-border-color: #EEE;" text="Filtrar">
-               <graphic>
-                  <ImageView fitHeight="11.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/list/list-filter-10x11.png" />
+                        <Image url="@../img/search-icon-dark.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
          </children>
-      </AnchorPane>
+      </Group>
    </children>
 </AnchorPane>
