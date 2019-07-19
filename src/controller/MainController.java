@@ -7,7 +7,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import model.dao.ProductDAO;
 import model.dao.SalesDAO;
 import view.util.FadeEffectTransition;
@@ -122,17 +121,13 @@ public class MainController implements Initializable
     @FXML
     public void loadOpenNewCashRegister()
     {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLOpenNewCashRegister.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLCashRegisterManager.fxml"));
 
         try
         {
             Parent root = loader.load();
-
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setResizable(false);
-            stage.show();
-
+            new FadeEffectTransition(root);
+            this.anchorpaneMainContent.getChildren().setAll(root);
         }
 
         catch (IOException e)

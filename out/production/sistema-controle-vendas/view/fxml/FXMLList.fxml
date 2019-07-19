@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #FFF;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #FFF;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListController">
    <children>
-      <ScrollPane fx:id="scrollpaneList" layoutX="32.0" layoutY="136.0" prefHeight="514.0" prefWidth="795.0" style="-fx-background-color: #EEE;">
+      <ScrollPane fx:id="scrollpaneList" layoutX="32.0" layoutY="135.0" prefHeight="514.0" prefWidth="795.0" style="-fx-background-color: #EEE; -fx-border-color: #CCC; -fx-background-radius: 0 0 5 5; -fx-border-radius: 0 0 5 5; -fx-border-width: 0 1 1 1;" AnchorPane.bottomAnchor="45.0" AnchorPane.topAnchor="135.0">
          <content>
             <VBox fx:id="vboxItens" />
          </content>
@@ -22,7 +22,7 @@
       <AnchorPane fx:id="anchorListHeader" layoutX="32.0" layoutY="70.0" prefHeight="30.0" prefWidth="795.0" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="105.0" />
       <AnchorPane layoutX="60.0" layoutY="-72.0" prefHeight="50.0" style="-fx-border-color: #DDD; -fx-border-width: 1 0 0 0; -fx-border-style: dashed;" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="50.0">
          <children>
-            <Button layoutX="312.0" layoutY="11.0" mnemonicParsing="false" style="-fx-border-color: #EEE;" text="Favoritos">
+            <Button layoutX="441.0" layoutY="11.0" mnemonicParsing="false" style="-fx-border-color: #EEE;" text="Favoritos">
                <graphic>
                   <ImageView fitHeight="13.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -110,6 +110,24 @@
                      </graphic>
                   </Button>
                   <ImageView fitHeight="6.0" fitWidth="9.0" layoutX="85.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/chevron-down-dark.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="310.0" layoutY="11.0" prefHeight="31.0" prefWidth="118.0" style="-fx-border-color: #DDD; -fx-border-width: 0 1 0 0; -fx-border-style: dashed;">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="106.0" style="-fx-border-color: #EEE; -fx-padding: 5 18 5 5;" text="Ordenar">
+                     <graphic>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/list/sort-variant-14x14.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="6.0" fitWidth="9.0" layoutX="88.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/chevron-down-dark.png" />
                      </image>

@@ -3,12 +3,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="795.0" style="-fx-background-color: #F3F4F5; -fx-border-color: #DDD; -fx-background-radius: 5; -fx-border-radius: 5;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="795.0" style="-fx-background-color: #F9F9F9; -fx-border-color: #CCC; -fx-background-radius: 5 5 0 0; -fx-border-radius: 5 5 0 0;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="80.0" layoutY="7.0" style="-fx-text-fill: #000;" text="CODIGO" />
-      <Label layoutX="175.0" layoutY="7.0" style="-fx-text-fill: #000;" text="NOME DO PRODUTO" />
-      <Label layoutX="370.0" layoutY="7.0" style="-fx-text-fill: #000;" text="COD. DE BARRAS" />
-      <Label layoutX="510.0" layoutY="7.0" style="-fx-text-fill: #000;" text="PREÇO CUSTO" />
-      <Label layoutX="630.0" layoutY="8.0" style="-fx-text-fill: #000;" text="PREÇO VENDA" />
+      <Label layoutX="80.0" layoutY="7.0" style="-fx-text-fill: #E94057;" text="CODIGO" />
+      <Label layoutX="175.0" layoutY="7.0" style="-fx-text-fill: #E94057;" text="NOME DO PRODUTO" />
+      <Label layoutX="370.0" layoutY="7.0" style="-fx-text-fill: #E94057;" text="COD. DE BARRAS" />
+      <Label layoutX="510.0" layoutY="7.0" style="-fx-text-fill: #E94057;" text="PREÇO CUSTO" />
+      <Label layoutX="630.0" layoutY="8.0" style="-fx-text-fill: #E94057;" text="PREÇO VENDA" />
    </children>
 </AnchorPane>

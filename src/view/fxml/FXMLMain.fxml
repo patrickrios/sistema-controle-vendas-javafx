@@ -75,9 +75,9 @@
                            <graphic>
                               <Label graphicTextGap="8.0" style="-fx-translate-x: -5;" styleClass="h3" text="Vendas">
                                  <graphic>
-                                    <ImageView fitHeight="15.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../img/main-sale-icon-14x15.png" />
+                                          <Image url="@../img/cart-20x20.png" />
                                        </image>
                                     </ImageView>
                                  </graphic>
@@ -100,9 +100,9 @@
                            <graphic>
                               <Label graphicTextGap="8.0" style="-fx-translate-x: -8;" styleClass="h3" text="Produtos">
                                  <graphic>
-                                    <ImageView fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../img/main-products-icon-13x13.png" />
+                                          <Image url="@../img/package-variant-20x20.png" />
                                        </image>
                                     </ImageView>
                                  </graphic>

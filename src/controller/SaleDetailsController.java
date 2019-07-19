@@ -19,11 +19,12 @@ public class SaleDetailsController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        loadSaleItensList();
     }
 
     private void loadSaleItensList()
     {
-        for(int i=0; i<6; i++)
+        for(int i=0; i<7; i++)
         {
             try
             {
