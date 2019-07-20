@@ -24,7 +24,7 @@ public class SaleDetailsController implements Initializable
 
     private void loadSaleItensList()
     {
-        for(int i=0; i<7; i++)
+        for(int i=0; i<15; i++)
         {
             try
             {
