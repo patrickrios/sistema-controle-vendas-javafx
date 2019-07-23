@@ -51,9 +51,6 @@ public class ListController
     private AnchorPane anchorListHeader;
 
     @FXML
-    private ScrollPane scrollpaneList;
-
-    @FXML
     private VBox vboxItens;
 
     private Pagination pagination;
@@ -64,7 +61,6 @@ public class ListController
         this.labelListTitle.setText(title);
         this.vboxItens.getChildren().clear();
         this.loadList();
-        this.scrollpaneList.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
         this.markButtonView(this.buttonViewList);
     }
 

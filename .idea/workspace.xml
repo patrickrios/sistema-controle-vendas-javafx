@@ -57,43 +57,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1278">
-              <caret line="71" column="56" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/ListSalesItemController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
-              <folding>
-                <element signature="method#init#0;class#ListSalesItemController#0" />
-                <element signature="method#checkboxSelected#0;class#ListSalesItemController#0" />
-                <element signature="method#markAsFavorite#0;class#ListSalesItemController#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/ListController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
-              <folding>
-                <element signature="method#loadList#0;class#ListController#0" />
-                <element signature="method#setListHeader#0;class#ListController#0" />
-                <element signature="method#viewGridLayout#0;class#ListController#0" />
-                <element signature="method#viewListLayout#0;class#ListController#0" />
-                <element signature="method#markButtonView#0;class#ListController#0" />
-                <element signature="method#unmarkButtonView#0;class#ListController#0" />
-                <element signature="method#changeViewGridIconOn#0;class#ListController#0" />
-              </folding>
+            <state relative-caret-position="198">
+              <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -114,42 +82,35 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/CashRegisterManagerController.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/NewProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controller/SaleDetailsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            <state relative-caret-position="1188">
+              <caret line="136" column="4" selection-start-line="136" selection-start-column="4" selection-end-line="136" selection-end-column="4" />
               <folding>
-                <element signature="e#483#484#0" expanded="true" />
-                <element signature="e#518#519#0" expanded="true" />
+                <element signature="method#increaseProductQuantity#0;class#NewProductController#0" />
+                <element signature="method#decreaseProductQuantity#0;class#NewProductController#0" />
+                <element signature="method#setProductQuantity#0;class#NewProductController#0" />
+                <element signature="method#autoGenerateProductCode#0;class#NewProductController#0" />
+                <element signature="method#resetAutoGenerateProductCode#0;class#NewProductController#0" />
+                <element signature="method#autoGenerateBarcode#0;class#NewProductController#0" />
+                <element signature="method#resetAutoGenerateBarcode#0;class#NewProductController#0" />
+                <element signature="method#saveNewProduct#0;class#NewProductController#0" />
+                <element signature="method#resetFields#0;class#NewProductController#0" />
+                <element signature="method#getProductFromForm#0;class#NewProductController#0" />
+                <element signature="method#showSucessLabel#0;class#NewProductController#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/NewProductController.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/SaleDetailsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="111" column="12" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="100" />
+            <state relative-caret-position="252">
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
               <folding>
-                <element signature="method#increaseProductQuantity#0;class#NewProductController#0" />
-                <element signature="method#decreaseProductQuantity#0;class#NewProductController#0" />
-                <element signature="method#setProductQuantity#0;class#NewProductController#0" />
-                <element signature="method#autoGenerateProductCode#0;class#NewProductController#0" />
-                <element signature="method#autoGenerateBarcode#0;class#NewProductController#0" />
-                <element signature="method#saveNewProduct#0;class#NewProductController#0" />
-                <element signature="method#resetFields#0;class#NewProductController#0" />
-                <element signature="method#getProductFromForm#0;class#NewProductController#0" />
-                <element signature="method#showSucessLabel#0;class#NewProductController#0" />
+                <element signature="e#483#484#0" expanded="true" />
+                <element signature="e#518#519#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -184,17 +145,17 @@
         <option value="$PROJECT_DIR$/src/controller/SaleDetailsListItemController.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/controller/MainLoginPageController.java" />
-        <option value="$PROJECT_DIR$/src/controller/NewProductController.java" />
         <option value="$PROJECT_DIR$/src/controller/ListSalesItemController.java" />
-        <option value="$PROJECT_DIR$/src/controller/ListController.java" />
         <option value="$PROJECT_DIR$/src/view/fxml/FXMLListProductItem.fxml" />
-        <option value="$PROJECT_DIR$/src/model/dao/SalesDAO.java" />
         <option value="$PROJECT_DIR$/src/controller/SaleReportController.java" />
-        <option value="$PROJECT_DIR$/src/view/css/app.css" />
         <option value="$PROJECT_DIR$/src/controller/FXMLOpenCashRegisterController.java" />
         <option value="$PROJECT_DIR$/src/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/controller/CashRegisterManagerController.java" />
+        <option value="$PROJECT_DIR$/src/controller/ListController.java" />
+        <option value="$PROJECT_DIR$/src/model/dao/SalesDAO.java" />
+        <option value="$PROJECT_DIR$/src/controller/NewProductController.java" />
         <option value="$PROJECT_DIR$/src/controller/SaleDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/view/css/app.css" />
       </list>
     </option>
   </component>
@@ -222,6 +183,18 @@
               <item name="sistema-controle-vendas" type="b2602c69:ProjectViewProjectNode" />
               <item name="sistema-controle-vendas" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sistema-controle-vendas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sistema-controle-vendas" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sistema-controle-vendas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sistema-controle-vendas" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -381,14 +354,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="729" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.19583023" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.19583023" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.057877813" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.056270096" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993559" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -579,10 +553,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/css/app.css">
+    <entry file="file://$PROJECT_DIR$/src/controller/SaleReportController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1278">
-          <caret line="71" column="56" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
+        <state relative-caret-position="254">
+          <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+          <folding>
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/dao/SalesDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="100" column="41" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
+          <folding>
+            <element signature="method#previousPage#0;class#SalesDAO#0" />
+            <element signature="method#save#0;class#SalesDAO#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -600,8 +589,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/ListController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+        <state relative-caret-position="576">
+          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
           <folding>
             <element signature="method#loadList#0;class#ListController#0" />
             <element signature="method#setListHeader#0;class#ListController#0" />
@@ -611,6 +600,20 @@
             <element signature="method#unmarkButtonView#0;class#ListController#0" />
             <element signature="method#changeViewGridIconOn#0;class#ListController#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/CashRegisterManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -627,28 +630,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/dao/SalesDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
-          <folding>
-            <element signature="method#previousPage#0;class#SalesDAO#0" />
-            <element signature="method#save#0;class#SalesDAO#0" />
-            <element signature="method#findGroup#0;class#SalesDAO#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/NewProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="111" column="12" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="100" />
+        <state relative-caret-position="1188">
+          <caret line="136" column="4" selection-start-line="136" selection-start-column="4" selection-end-line="136" selection-end-column="4" />
           <folding>
             <element signature="method#increaseProductQuantity#0;class#NewProductController#0" />
             <element signature="method#decreaseProductQuantity#0;class#NewProductController#0" />
             <element signature="method#setProductQuantity#0;class#NewProductController#0" />
             <element signature="method#autoGenerateProductCode#0;class#NewProductController#0" />
+            <element signature="method#resetAutoGenerateProductCode#0;class#NewProductController#0" />
             <element signature="method#autoGenerateBarcode#0;class#NewProductController#0" />
+            <element signature="method#resetAutoGenerateBarcode#0;class#NewProductController#0" />
             <element signature="method#saveNewProduct#0;class#NewProductController#0" />
             <element signature="method#resetFields#0;class#NewProductController#0" />
             <element signature="method#getProductFromForm#0;class#NewProductController#0" />
@@ -657,28 +650,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/SaleReportController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-          <folding>
-            <element signature="e#710#711#0" expanded="true" />
-            <element signature="e#745#746#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/CashRegisterManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/SaleDetailsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
           <folding>
             <element signature="e#483#484#0" expanded="true" />
             <element signature="e#518#519#0" expanded="true" />

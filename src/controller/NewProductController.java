@@ -91,13 +91,13 @@ public class NewProductController
             this.textfieldProductCode.setDisable(true);
             this.labelProductCode.setDisable(true);
             this.genProdCodeControl = true;
-            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-on-icon-52x32.png"));
+            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-on-38x23-min.png"));
         }
         else {
             this.textfieldProductCode.setDisable(false);
             this.labelProductCode.setDisable(false);
             this.genProdCodeControl = false;
-            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-off-icon-52x32.png"));
+            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-off-38x23-min.png"));
         }
         this.buttonProdCodeGen.setGraphic(new ImageView(icon));
     }
@@ -109,7 +109,7 @@ public class NewProductController
             this.textfieldProductCode.setDisable(false);
             this.labelProductCode.setDisable(false);
             this.genProdCodeControl = false;
-            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-off-icon-52x32.png"));
+            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-off-38x23-min.png"));
 
         this.buttonProdCodeGen.setGraphic(new ImageView(icon));
     }
@@ -122,13 +122,13 @@ public class NewProductController
             this.textfieldBarcode.setDisable(true);
             this.labelBarcode.setDisable(true);
             this.genBarcodeControl = true;
-            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-on-icon-52x32.png"));
+            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-on-38x23-min.png"));
         }
         else {
             this.textfieldBarcode.setDisable(false);
             this.labelBarcode.setDisable(false);
             this.genBarcodeControl = false;
-            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-off-icon-52x32.png"));
+            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-off-38x23-min.png"));
         }
         this.buttonBarcodeGen.setGraphic(new ImageView(icon));
     }
@@ -139,7 +139,7 @@ public class NewProductController
        this.textfieldBarcode.setDisable(false);
             this.labelBarcode.setDisable(false);
             this.genBarcodeControl = false;
-            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-off-icon-52x32.png"));
+            icon = new Image(getClass().getResourceAsStream("/view/img/toggle-off-38x23-min.png"));
 
         this.buttonBarcodeGen.setGraphic(new ImageView(icon));
     }

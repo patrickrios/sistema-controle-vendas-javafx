@@ -4,10 +4,35 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #FFF;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomepageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="900.0" style="-fx-background-color: #FFF; -fx-padding: 0 0 60 0;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomepageController">
    <children>
-      <Label layoutX="23.0" layoutY="20.0" styleClass="h1" text="Pagina Inicial" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="25.0" />
+      <Label layoutX="23.0" layoutY="20.0" styleClass="h1" text="Resumo do dia" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="25.0" />
       <Label fx:id="labelCurrentDate" layoutX="524.0" layoutY="30.0" styleClass="h3" text="current date" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="27.0" />
-      <Pane layoutX="670.0" layoutY="77.0" prefHeight="434.0" prefWidth="296.0" style="-fx-border-color: #DDD; -fx-background-radius: 5; -fx-border-radius: 5;" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="66.0" />
+      <Pane layoutX="30.0" layoutY="106.0" prefHeight="136.0" prefWidth="853.0" style="-fx-border-color: #CCC; -fx-background-radius: 5; -fx-border-radius: 5;" />
+      <Label layoutX="30.0" layoutY="79.0" styleClass="h3" text="Lembretes e avisos" />
+      <Label layoutX="30.0" layoutY="275.0" styleClass="h3" text="Fluxo de caixa" />
+      <Pane layoutX="30.0" layoutY="302.0" prefHeight="245.0" prefWidth="390.0" style="-fx-border-color: #CCC; -fx-background-radius: 5; -fx-border-radius: 5;">
+         <children>
+            <Pane layoutY="5.0" prefHeight="36.0" prefWidth="390.0" style="-fx-border-color: #CCC; -fx-border-width: 0 0 1 0;">
+               <children>
+                  <Label layoutX="15.0" layoutY="7.0" styleClass="h4" text="Caixa" />
+                  <Label layoutX="194.0" layoutY="7.0" styleClass="h4" text="Entrada" />
+                  <Label layoutX="319.0" layoutY="7.0" styleClass="h4" text="Saida" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Label layoutX="493.0" layoutY="275.0" styleClass="h3" text="Estoque" />
+      <Pane layoutX="493.0" layoutY="302.0" prefHeight="245.0" prefWidth="390.0" style="-fx-border-color: #CCC; -fx-background-radius: 5; -fx-border-radius: 5;">
+         <children>
+            <Pane layoutY="5.0" prefHeight="36.0" prefWidth="390.0" style="-fx-border-color: #CCC; -fx-border-width: 0 0 1 0;">
+               <children>
+                  <Label layoutX="15.0" layoutY="7.0" styleClass="h4" text="Produto" />
+                  <Label layoutX="182.0" layoutY="7.0" styleClass="h4" text="Quant." />
+                  <Label layoutX="304.0" layoutY="7.0" styleClass="h4" text="Abaixo" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

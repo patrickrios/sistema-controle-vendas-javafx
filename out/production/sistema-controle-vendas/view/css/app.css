@@ -32,7 +32,7 @@
     .scroll-pane:focused{-fx-background-insets: 0;}
     .scroll-pane .corner{-fx-background-insets:0;-fx-background-color:#FFF;}
     .scroll-bar:vertical{-fx-background-color:#FFF;-fx-pref-width:8 !important;}
-    .scroll-bar:vertical .thumb {-fx-background-color:#CCC;-fx-background-radius:10;}
+    .scroll-bar:vertical .thumb {-fx-background-color:#999;-fx-background-radius:10;}
     .scroll-bar:horizontal .track, .scroll-bar:horizontal .thumb, .scroll-bar:horizontal .increment, .scroll-bar:horizontal .decrement{-fx-background-color:transparent;-fx-border-width:0;}
 
     /** Main menu*/
