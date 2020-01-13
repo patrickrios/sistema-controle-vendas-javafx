@@ -12,5 +12,4 @@ public class FullSizeConteiner {
 		
 		anchor.setPrefSize(width, height);
 	}
-
 }

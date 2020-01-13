@@ -24,7 +24,6 @@ public class MainController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
         loadHomepageScreen();
-
     }
 
     public void initi(Stage stage) {
@@ -37,9 +36,8 @@ public class MainController implements Initializable
         try{
             Parent parent = loader.load();
             ListController c = loader.getController();
-            new FadeEffectTransition(parent);
-            anchorpaneMainContent.getChildren().setAll(parent);
-            c.fullSize();
+            this.anchorpaneMainContent.getChildren().setAll(parent);
+            c.initiAfterAdded(this.scrollContent.getWidth(),this.scrollContent.getHeight());
         }
         catch (IOException e){
             e.printStackTrace();
@@ -57,20 +55,16 @@ public class MainController implements Initializable
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     @FXML
     public void loadHomepageScreen() {
-        try
-        {
+        try{
             Parent parent = FXMLLoader.load(getClass().getResource("/view/fxml/FXMLHomepage.fxml"));
             new FadeEffectTransition(parent);
             anchorpaneMainContent.getChildren().setAll(parent);
         }
-
-        catch (IOException e)
-        {
+        catch (IOException e){
             e.printStackTrace();
         }
     }

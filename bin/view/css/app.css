@@ -9,7 +9,7 @@
 	.button-no-radius{-fx-background-radius:0;-fx-border-radius:0;}
 
 	/** Textfiedls*/
-	.text-field{-fx-background-color:#FFF;-fx-border-color:#DDD; -fx-border-radius:3; -fx-font-family:"Lato", sans-serif; -fx-font-size:16; -fx-text-fill:#000; }
+	.text-field{-fx-background-color:#FFF;-fx-border-color:#DDD; -fx-border-radius:3; -fx-font-family:"Lato", sans-serif; -fx-font-size:15; -fx-text-fill:#000; }
 	.text-field:focused{-fx-border-color:#067CD7;}
 
 	/** Check-boxes*/
@@ -55,9 +55,9 @@
 	.main-menu-subitens:hover{-fx-text-fill:#068FFF;}	
 
     	/** Quantify/pagination buttons*/
-    	.button-pagination-nav{-fx-border-color:#DDD; -fx-border-radius:5;}
-	.button-quantity-right{-fx-border-color:#CCC; -fx-border-radius:0 5 5 0;}
-	.button-quantity-left{-fx-border-color:#CCC; -fx-border-radius:5 0 0 5;}
+    	.button-pagination-nav{-fx-border-color:transparent; -fx-border-radius:3;}
+	.button-quantity-right{-fx-border-color:#CCC; -fx-border-radius:0 3 3 0;}
+	.button-quantity-left{-fx-border-color:#CCC; -fx-border-radius:3 0 0 3;}
 
 	/** Textos*/
 	.h1, .h2, .h3, .h4{-fx-font-family:"Lato", sans-serif; -fx-text-fill:#3A454B;}
@@ -66,3 +66,12 @@
 	.h3{-fx-font-size:16;}
 	.h4{-fx-font-size:15;}
 	.h2-label{-fx-font-family:"Lato", sans-serif; -fx-font-size:15; -fx-text-fill:#515F66;}
+
+	/** List view*/
+	.list-item{-fx-background-color:#FFF;-fx-border-color:#DDD;-fx-border-width:0 0 1 0;-fx-border-style:dashed;-fx-cursor:hand;}
+	.list-item .label{-fx-text-fill:#666;}
+	.list-item:hover .label{-fx-text-fill:#0078D7;}
+	.list-item-option-pane{visibility:hidden;}
+	.list-item:hover .list-item-option-pane{visibility:visible;}
+	.list-item-option-button{-fx-background-color:#F0F0F0;-fx-padding:3 6;}
+	.list-item-pair{-fx-background-color:#FCFCFC;}
