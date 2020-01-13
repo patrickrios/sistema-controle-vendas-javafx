@@ -1,0 +1,68 @@
+
+    	/** Lato Custom Font*/
+    	/**@font-face { src: url("../fonts/Lato-Regular.ttf");}*/
+    	.text{-fx-font-family:'Lato', sans-serif;}
+
+    	/** Buttons*/
+	.button{-fx-border-width:1; -fx-border-color:transparent; -fx-cursor:hand; -fx-border-radius:5; -fx-font-family:"Lato", sans-serif; -fx-font-size:15; -fx-background-color:#F5F6F7; -fx-text-fill:#3A454B;}
+    	.button-reset{-fx-padding:0;-fx-border:0; -fx-background-color:transparent;}
+	.button-no-radius{-fx-background-radius:0;-fx-border-radius:0;}
+
+	/** Textfiedls*/
+	.text-field{-fx-background-color:#FFF;-fx-border-color:#DDD; -fx-border-radius:3; -fx-font-family:"Lato", sans-serif; -fx-font-size:16; -fx-text-fill:#000; }
+	.text-field:focused{-fx-border-color:#067CD7;}
+
+	/** Check-boxes*/
+	.check-box{-fx-text-fill:#999;}
+	.check-box .box{-fx-background-color:#FFF; -fx-border-color:#AAA; -fx-pref-width:12; -fx-pref-height:13; -fx-border-radius:2;}
+
+	/** Choiceboxes */
+	.choice-box{-fx-background-color:#FFF; -fx-border-color:#CCC; -fx-border-radius:3; -fx-background-radius:3;}
+
+	/** Accordions and title panes*/
+	.accordion{-fx-padding:0 0 2 0 !important;}
+	.accordion .titled-pane > .title {-fx-background-color: #F9F9F9;-fx-font-size:15;-fx-cursor: "hand";-fx-border-width:0;-fx-padding:12 0;}
+    	.titled-pane > .title > .arrow-button .arrow{-fx-effect:null;-fx-translate-x:190;}
+    	.titled-pane{-fx-animated:true;-fx-border-color:#F9F9F9; -fx-insets:5 0 5 0;-fx-border-width:0;}
+    	.titled-pane > *.content{-fx-border-width:0;-fx-background-color:#EEE;}
+    	.titled-pane:expanded{-fx-border-color:#DDD;-fx-border-width:1 0 1 0;}
+	.accordion .titled-pane:expanded > .title{-fx-background-color:#F2F3F4;}
+
+    	/** Panes*/
+    	.scroll-pane > .viewport{-fx-background-color:#FFF;}
+    	.scroll-pane{-fx-background-insets:0;-fx-padding:0;}
+    	.scroll-pane:focused{-fx-background-insets: 0;}
+    	.scroll-pane .corner{-fx-background-insets:0;-fx-background-color:#FFF;}
+    	.scroll-bar:vertical{-fx-background-color:#FFF;-fx-pref-width:8 !important;}
+    	.scroll-bar:vertical .thumb {-fx-background-color:#999;-fx-background-radius:10;}
+    	.scroll-bar:horizontal .track, .scroll-bar:horizontal .thumb, .scroll-bar:horizontal .increment, .scroll-bar:horizontal .decrement{-fx-background-color:transparent;-fx-border-width:0;}
+
+	.split-pane{-fx-box-border:transparent;-fx-box-border-width:0;-fx-background-insets: 0;-fx-padding: 0;}
+	.split-pane *.split-pane-divider {-fx-padding: 0 1 0 1;-fx-background-color:#EEE;}
+	
+	/**Header*/
+	.win-close-button, .win-resize-button{-fx-padding:0 8;}
+	.win-close-button:hover{-fx-background-color:#EE6969;}
+	.win-resize-button:hover{-fx-background-color:#46A66F;}
+
+    	/** Main menu*/
+	.main-menu-section-label{-fx-padding:15 0 0 20;}
+	.main-menu-buttons, .main-menu-subitens{-fx-background-radius:0;-fx-border-radius:0;}
+	.main-menu-buttons{-fx-padding:8 20; -fx-font-size:16;-fx-background-color:#F9F9F9;}
+	.main-menu-subitens{-fx-font-size:14;-fx-text-fill:#777; -fx-background-color:#F2F3F4; -fx-padding:8 8 8 40;}
+
+	.main-menu-buttons:hover, .main-menu-subitens:hover, .accordion .titled-pane > .title:hover{-fx-background-color:#EEE;}
+	.main-menu-subitens:hover{-fx-text-fill:#068FFF;}	
+
+    	/** Quantify/pagination buttons*/
+    	.button-pagination-nav{-fx-border-color:#DDD; -fx-border-radius:5;}
+	.button-quantity-right{-fx-border-color:#CCC; -fx-border-radius:0 5 5 0;}
+	.button-quantity-left{-fx-border-color:#CCC; -fx-border-radius:5 0 0 5;}
+
+	/** Textos*/
+	.h1, .h2, .h3, .h4{-fx-font-family:"Lato", sans-serif; -fx-text-fill:#3A454B;}
+	.h1{-fx-font-size:23; -fx-font-weight:bold;}
+	.h2{-fx-font-size:19;}
+	.h3{-fx-font-size:16;}
+	.h4{-fx-font-size:15;}
+	.h2-label{-fx-font-family:"Lato", sans-serif; -fx-font-size:15; -fx-text-fill:#515F66;}

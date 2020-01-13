@@ -5,10 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import model.dao.ProductDAO;
-import model.dao.SalesDAO;
 import view.util.FadeEffectTransition;
 import java.io.IOException;
 import java.net.URL;
@@ -16,65 +15,42 @@ import java.util.ResourceBundle;
 
 public class MainController implements Initializable
 {
-    @FXML
-    private AnchorPane anchorpaneMainContent;
 
+	@FXML
+    private ScrollPane scrollContent;
+    @FXML
+    private  AnchorPane anchorpaneMainContent;
+    
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle)
-    {
+    public void initialize(URL url, ResourceBundle resourceBundle){
         loadHomepageScreen();
-    }
-
-    public void initi(Stage stage)
-    {
 
     }
 
-    @FXML
-    public void loadNewProductScreen()
-    {
-        try
-        {
-            Parent parent = FXMLLoader.load(getClass().getResource("/view/fxml/FXMLNewProduct.fxml"));
+    public void initi(Stage stage) {
 
-            new FadeEffectTransition(parent);
-
-            anchorpaneMainContent.getChildren().setAll(parent);
-        }
-
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
     }
 
     @FXML
-    public void loadSalesHistoryScreen()
-    {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLList.fxml"));
-
-        try
-        {
+    public void loadListLayout(){
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLList.fxml"));
+        try{
             Parent parent = loader.load();
-            ListController controller = loader.getController();
-            controller.init(new SalesDAO(), "Histórico de vendas");
-            controller.setListHeader("/view/fxml/FXMLListSaleHeader.fxml");
+            ListController c = loader.getController();
             new FadeEffectTransition(parent);
             anchorpaneMainContent.getChildren().setAll(parent);
+            c.fullSize();
         }
-
         catch (IOException e){
             e.printStackTrace();
         }
     }
 
     @FXML
-    public void loadSaleReportScreen()
-    {
+    public void loadSaleReportScreen(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLSaleReport.fxml"));
 
-        try
-        {
+        try{
             Parent parent = loader.load();
             new FadeEffectTransition(parent);
             this.anchorpaneMainContent.getChildren().setAll(parent);
@@ -85,26 +61,7 @@ public class MainController implements Initializable
     }
 
     @FXML
-    public void loadListProductsScreen()
-    {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLList.fxml"));
-
-        try{
-            Parent parent = loader.load();
-            ListController controller = loader.getController();
-            controller.init(new ProductDAO(), "Lista de produtos");
-            controller.setListHeader("/view/fxml/FXMLListProductHeader.fxml");
-            new FadeEffectTransition(parent);
-            anchorpaneMainContent.getChildren().setAll(parent);
-        }
-        catch (IOException e){
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
-    public void loadHomepageScreen()
-    {
+    public void loadHomepageScreen() {
         try
         {
             Parent parent = FXMLLoader.load(getClass().getResource("/view/fxml/FXMLHomepage.fxml"));
@@ -118,27 +75,10 @@ public class MainController implements Initializable
         }
     }
 
-    @FXML
-    public void loadOpenNewCashRegister()
-    {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLCashRegisterManager.fxml"));
-
-        try
-        {
-            Parent root = loader.load();
-            new FadeEffectTransition(root);
-            this.anchorpaneMainContent.getChildren().setAll(root);
-        }
-
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-    }
+   
 
     @FXML
-    public void logout()
-    {
+    public void logout() {
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("/view/fxml/FXMLMainLoginPage.fxml"));
             Stage stage = (Stage)anchorpaneMainContent.getScene().getWindow();
@@ -152,5 +92,23 @@ public class MainController implements Initializable
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    
+    @FXML
+    void minimizeStage() {
+    	Stage stage = (Stage)anchorpaneMainContent.getScene().getWindow();
+    	stage.setIconified(true);
+    }
+    
+    @FXML
+    void closeApplication() {
+    	System.exit(0);
+    }
+    
+    @FXML
+    void maximizeStage() {
+    	Stage stage = (Stage)anchorpaneMainContent.getScene().getWindow();
+    	stage.setX(0.0);
+    	stage.setY(0.0);
     }
 }
