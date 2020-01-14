@@ -15,7 +15,6 @@ import java.util.ResourceBundle;
 
 public class MainController implements Initializable
 {
-
 	@FXML
     private ScrollPane scrollContent;
     @FXML
