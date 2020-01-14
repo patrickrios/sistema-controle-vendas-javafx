@@ -4,25 +4,31 @@ import view.exception.BackspaceInputException;
 import view.exception.InvaliCharacterException;
 
 public class TextInputValidation {
-	private String characters;
+	private String type = "";
+	public static String TEXT = "\\/[]{}";
+	public static String NUMERIC = "0123456789";
+	public static String DECIMAL = NUMERIC+",";
 	
-	public TextInputValidation(String characters) {
-		this.characters = characters;
+	public TextInputValidation(String validationType) {
+		this.type = validationType;
 	}
 	
 	public void validate(String c) throws InvaliCharacterException{
-		char in = c.charAt(0);
-		boolean notExist = true;
+		char input = c.charAt(0);
 		
-		if(in !='\b') {
-			for(int i=0; i<this.characters.length(); i++) {
-				if(this.characters.charAt(i) == in) {
-					notExist = false;
-					break;
-				}
+		if(input !='\b') {
+			if(this.type.equals(TEXT)) {
+				if(textValidation(input))
+					throw new InvaliCharacterException(c);
 			}
-			
-			if(notExist) throw new InvaliCharacterException(c);
+			else if(this.type.equals(NUMERIC)) {
+				if(numericValidation(input,NUMERIC))
+					throw new InvaliCharacterException(c);
+			}
+			else{
+				if(numericValidation(input, DECIMAL))
+				throw new InvaliCharacterException(c);
+			}	
 		}
 	}
 	
@@ -32,5 +38,27 @@ public class TextInputValidation {
 		if(in == '\b')
 			throw new BackspaceInputException();
 	}
-
+	
+	private boolean textValidation(char c){
+		boolean exist = false;
+		
+		for(int i=0; i<TEXT.length(); i++) {
+			if(c == TEXT.charAt(i)) {
+				exist = true;
+				break;
+			}
+		}
+		return exist;
+	}
+	
+	private boolean numericValidation(char c, String type) {
+		boolean notexist = true;
+		
+		for(int i=0; i<type.length();i++){
+			if(c == type.charAt(i)) {
+				notexist = false;
+			}
+		}
+		return notexist;
+	}
 }

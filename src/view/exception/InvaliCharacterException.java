@@ -11,5 +11,4 @@ public class InvaliCharacterException extends Exception {
 	public String toString() {
 		return character+" is invalid";
 	}
-
 }
