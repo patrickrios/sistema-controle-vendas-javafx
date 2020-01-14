@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: #fff;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="47.0" layoutY="35.0" style="-fx-font-size: 19;" text="Cadastrar produto" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="25.0" />
+      <Button layoutX="30.0" layoutY="542.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="182.0" style="-fx-background-color: #0078D7; -fx-text-fill: #FFF;" text="SALVAR" />
+      <AnchorPane layoutX="561.0" layoutY="65.0" prefHeight="221.0" prefWidth="620.0" style="-fx-border-color: #DDD; -fx-border-radius: 3; -fx-background-color: #fcfcfc;" AnchorPane.leftAnchor="30.0">
+         <children>
+            <TextField layoutY="64.0" prefHeight="48.0" prefWidth="486.0" promptText="Insira um nome..." AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+            <Label layoutX="-1.0" layoutY="44.0" style="-fx-text-fill: #666;" text="NOME" AnchorPane.leftAnchor="20.0" />
+            <TextField layoutX="25.0" layoutY="148.0" prefHeight="48.0" prefWidth="270.0" promptText="Inisira um código válido" AnchorPane.leftAnchor="24.0" />
+            <Label layoutX="22.0" layoutY="129.0" style="-fx-text-fill: #666;" text="CÓDIGO" AnchorPane.leftAnchor="22.0" />
+            <Label layoutX="328.0" layoutY="129.0" style="-fx-text-fill: #666;" text="SELECIONA UMA CATEGORIA" />
+            <ChoiceBox layoutX="354.0" layoutY="148.0" prefHeight="48.0" prefWidth="270.0" AnchorPane.rightAnchor="22.0" />
+            <Label layoutY="11.0" style="-fx-text-fill: #FF3366; -fx-padding: 7 20; -fx-background-color: linear-gradient(to bottom, #fff, #fcfcfc);" styleClass="h3" text="IDENTIFICAÇÃO" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="30.0" layoutY="305.0" prefHeight="225.0" prefWidth="620.0" style="-fx-border-color: #ddd; -fx-border-radius: 3; -fx-background-color: #fcfcfc;" AnchorPane.leftAnchor="30.0">
+         <children>
+            <Label layoutX="11.0" layoutY="6.0" style="-fx-text-fill: #FF3366; -fx-padding: 7 20; -fx-background-color: linear-gradient(to bottom, #fff, #fcfcfc);" styleClass="h3" text="VALORES" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <TextField layoutX="22.0" layoutY="64.0" prefHeight="48.0" prefWidth="270.0" promptText="R$ 00,00" AnchorPane.leftAnchor="21.0" />
+            <Label layoutX="11.0" layoutY="44.0" style="-fx-text-fill: #666;" text="PREÇO DE CUSTO" AnchorPane.leftAnchor="20.0" />
+            <TextField layoutX="272.0" layoutY="62.0" prefHeight="48.0" prefWidth="270.0" promptText="R$ 00,00" AnchorPane.rightAnchor="21.0" />
+            <Label layoutX="328.0" layoutY="44.0" style="-fx-text-fill: #666;" text="PREÇO DE VENDA" />
+            <TextField layoutX="23.0" layoutY="148.0" prefHeight="50.0" prefWidth="238.0" text="1" AnchorPane.leftAnchor="22.0" />
+            <Label layoutX="11.0" layoutY="129.0" style="-fx-text-fill: #666;" text="QUANTIDADE" AnchorPane.leftAnchor="20.0" />
+            <VBox layoutX="266.0" layoutY="148.0" prefHeight="43.0" prefWidth="26.0">
+               <children>
+                  <Button mnemonicParsing="false" style="-fx-padding: 2 7; -fx-border-color: #ccc; -fx-border-width: 0 0 1 0; -fx-background-color: #e4e4e4;">
+                     <graphic>
+                        <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../UCBillManager-App/src/view/img/plusIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-padding: 2 7; -fx-border-color: #ccc; -fx-border-width: 0 0 1 0; -fx-background-color: #e4e4e4;">
+                     <graphic>
+                        <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../UCBillManager-App/src/view/img/minusIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <TextField layoutX="272.0" layoutY="148.0" prefHeight="48.0" prefWidth="270.0" text="10" AnchorPane.rightAnchor="20.0" />
+            <Label layoutX="329.0" layoutY="129.0" style="-fx-text-fill: #666;" text="ESTOQUE MÍNIMO" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

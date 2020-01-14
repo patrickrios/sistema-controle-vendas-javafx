@@ -112,7 +112,7 @@
                                  <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="183.0" style="-fx-padding: 0;">
                                        <children>
-                                          <Button alignment="BASELINE_LEFT" layoutX="14.0" mnemonicParsing="false" prefHeight="39.0" styleClass="main-menu-subitens" text="Novo Produto" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                          <Button alignment="BASELINE_LEFT" layoutX="14.0" mnemonicParsing="false" onAction="#loadNewProductLayout" prefHeight="39.0" styleClass="main-menu-subitens" text="Novo Produto" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                           <Button alignment="BASELINE_LEFT" layoutX="32.0" layoutY="41.0" mnemonicParsing="false" onAction="#loadListLayout" prefHeight="39.0" styleClass="main-menu-subitens" text="Lista de produtos" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
                                           <Button alignment="BASELINE_LEFT" layoutX="42.0" layoutY="51.0" mnemonicParsing="false" prefHeight="39.0" styleClass="main-menu-subitens" text="Categorias" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
                                        </children>

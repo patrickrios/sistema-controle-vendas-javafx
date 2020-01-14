@@ -11,7 +11,6 @@ public class ListItemController {
     	//TODO
     }
     
-    
     protected void initiAfterAdded(double width, int index) {
     	fullWidthSize(width);
     	markAsPair(index);

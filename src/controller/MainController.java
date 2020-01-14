@@ -68,8 +68,16 @@ public class MainController implements Initializable
             e.printStackTrace();
         }
     }
-
-   
+    
+    @FXML
+    public void loadNewProductLayout() {
+    	try {
+			Parent layout = FXMLLoader.load(getClass().getResource("/view/fxml/FXMLNewProduct.fxml"));
+			this.anchorpaneMainContent.getChildren().setAll(layout);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
 
     @FXML
     public void logout() {
