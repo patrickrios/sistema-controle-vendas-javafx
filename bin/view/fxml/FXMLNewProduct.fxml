@@ -31,7 +31,7 @@
             <Label layoutX="27.0" layoutY="400.0" style="-fx-text-fill: #444;" text="QUANTIDADE" AnchorPane.leftAnchor="25.0" />
             <VBox layoutX="285.0" layoutY="419.0" prefHeight="43.0" prefWidth="26.0">
                <children>
-                  <Button mnemonicParsing="false" style="-fx-padding: 2 7; -fx-border-color: #ccc; -fx-border-width: 0 0 1 0; -fx-background-color: #e4e4e4;">
+                  <Button mnemonicParsing="false" onAction="#incrementQuantity" style="-fx-padding: 2 7; -fx-border-color: #ccc; -fx-border-width: 0 0 1 0; -fx-background-color: #e4e4e4;">
                      <graphic>
                         <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -40,7 +40,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-padding: 2 7; -fx-border-color: #ccc; -fx-border-width: 0 0 1 0; -fx-background-color: #e4e4e4;">
+                  <Button mnemonicParsing="false" onAction="#decrementQuantity" style="-fx-padding: 2 7; -fx-border-color: #ccc; -fx-border-width: 0 0 1 0; -fx-background-color: #e4e4e4;">
                      <graphic>
                         <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
                            <image>

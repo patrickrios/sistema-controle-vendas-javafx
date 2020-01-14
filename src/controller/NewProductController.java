@@ -32,10 +32,13 @@ public class NewProductController implements Initializable{
     private Label labelInvalidChar;
     
     private String inputs[] = new String[6];
+    private int quantityValue=1;
+    private int minInventValue=10;
     
     @Override
 	public void initialize(URL location, ResourceBundle resources) {
     	initiInputValidations();
+    	initiFields();
 	}
     
     private void initiInputValidations() {
@@ -46,6 +49,25 @@ public class NewProductController implements Initializable{
     	validateInput(textfieldSalePrice,new TextInputValidation(TextInputValidation.DECIMAL),3);
     	validateInput(textfieldQuantity, new TextInputValidation(TextInputValidation.NUMERIC),4);
     	validateInput(textfieldMinInv, new TextInputValidation(TextInputValidation.NUMERIC),5);
+    }
+    
+    private void initiFields() {
+    	this.textfieldQuantity.setText(""+this.quantityValue);
+    	this.textfieldMinInv.setText(""+this.minInventValue);
+    }
+    
+    @FXML
+    void incrementQuantity() {
+    	this.quantityValue++;
+    	this.textfieldQuantity.setText(""+quantityValue);
+    }
+    
+    @FXML
+    void decrementQuantity() {
+    	if(this.quantityValue > 1) {
+    		this.quantityValue--;
+    		this.textfieldQuantity.setText(""+quantityValue);
+    	}
     }
     
     private void validateInput(TextField txtfield, TextInputValidation valid, int index) {
@@ -74,18 +96,6 @@ public class NewProductController implements Initializable{
     	});
     }
     
-    @FXML
-    void saveNewProduct() {
-    	System.out.println("Product{");
-    	System.out.println("\tname: "+inputs[0]);
-    	System.out.println("\tcode: "+inputs[1]);
-    	System.out.println("\tcost: "+inputs[2]);
-    	System.out.println("\tprice: "+inputs[3]);
-    	System.out.println("\tquant.: "+inputs[4]);
-    	System.out.println("\tmin. inv.: "+inputs[5]);
-    	System.out.println("}");
-    }
-    
     private void removeLastChar(int i) {
     	if( inputs[i] != null && inputs[i].length() > 0 )
     		inputs[i] = inputs[i].substring(0, inputs[i].length()-1);
@@ -105,5 +115,17 @@ public class NewProductController implements Initializable{
     	this.labelInvalidChar.setLayoutX(x);
     	this.labelInvalidChar.setLayoutY(y+50);
     	this.labelInvalidChar.setVisible(true);
+    }
+    
+    @FXML
+    void saveNewProduct() {
+    	System.out.println("Product{");
+    	System.out.println("\tname: "+inputs[0]);
+    	System.out.println("\tcode: "+inputs[1]);
+    	System.out.println("\tcost: "+inputs[2]);
+    	System.out.println("\tprice: "+inputs[3]);
+    	System.out.println("\tquant.: "+inputs[4]);
+    	System.out.println("\tmin. inv.: "+inputs[5]);
+    	System.out.println("}");
     }
 }

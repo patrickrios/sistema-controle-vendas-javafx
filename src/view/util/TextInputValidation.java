@@ -26,7 +26,7 @@ public class TextInputValidation {
 					throw new InvaliCharacterException(c);
 			}
 			else{
-				if(numericValidation(input, DECIMAL))
+				if(numericValidation(input,DECIMAL))
 				throw new InvaliCharacterException(c);
 			}	
 		}
