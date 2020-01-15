@@ -1,7 +1,7 @@
 package view.util;
 
 import view.exception.BackspaceInputException;
-import view.exception.InvaliCharacterException;
+import view.exception.InvalidCharacterException;
 
 public class TextInputValidation {
 	private String type = "";
@@ -13,21 +13,21 @@ public class TextInputValidation {
 		this.type = validationType;
 	}
 	
-	public void validate(String c) throws InvaliCharacterException{
+	public void validate(String c) throws InvalidCharacterException{
 		char input = c.charAt(0);
 		
 		if(input !='\b') {
 			if(this.type.equals(TEXT)) {
 				if(textValidation(input))
-					throw new InvaliCharacterException(c);
+					throw new InvalidCharacterException(c);
 			}
 			else if(this.type.equals(NUMERIC)) {
 				if(numericValidation(input,NUMERIC))
-					throw new InvaliCharacterException(c);
+					throw new InvalidCharacterException(c);
 			}
 			else{
 				if(numericValidation(input,DECIMAL))
-				throw new InvaliCharacterException(c);
+				throw new InvalidCharacterException(c);
 			}	
 		}
 	}

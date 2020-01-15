@@ -35,8 +35,8 @@
                </children>
             </AnchorPane>
             <Label layoutX="28.0" layoutY="100.0" styleClass="h3" text="Atalhos" AnchorPane.leftAnchor="23.0" />
-            <Button layoutX="24.0" layoutY="132.0" mnemonicParsing="false" text="Cadastrar produto" />
-            <Button layoutX="182.0" layoutY="132.0" mnemonicParsing="false" text="Lista de produtos" />
+            <Button layoutX="24.0" layoutY="132.0" mnemonicParsing="false" style="-fx-text-fill: #067CD7;" text="Cadastrar produto" />
+            <Button layoutX="182.0" layoutY="132.0" mnemonicParsing="false" style="-fx-text-fill: #067CD7;" text="Lista de produtos" />
             <Label layoutX="24.0" layoutY="190.0" style="-fx-padding: 7 0; -fx-border-color: #eee; -fx-border-width: 1 0 0 0; -fx-border-style: dashed;" styleClass="h3" text="Atividades" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="23.0" />
             <Label layoutX="24.0" layoutY="230.0" style="-fx-text-fill: #999;" styleClass="h4" text="Nenhuma atividade registrada" />
             <Button layoutX="623.0" layoutY="97.0" mnemonicParsing="false" AnchorPane.rightAnchor="24.0">

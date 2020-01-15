@@ -1,9 +1,9 @@
 package view.exception;
 
-public class InvaliCharacterException extends Exception {
+public class InvalidCharacterException extends Exception {
 	private String character;
 	
-	public InvaliCharacterException(String c) {
+	public InvalidCharacterException(String c) {
 		this.character = c;
 	}
 	
