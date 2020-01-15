@@ -1,14 +1,18 @@
 package controller;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ChoiceBox;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.VBox;
 import view.exception.BackspaceInputException;
 import view.exception.EmptyInputException;
 import view.exception.InvalidCharacterException;
@@ -20,8 +24,6 @@ public class NewProductController implements Initializable{
     @FXML
     private TextField inputCode;
     @FXML
-    private ChoiceBox<?> choiceboxCategories;
-    @FXML
     private TextField inputCostPrice;
     @FXML
     private TextField inputSalePrice;
@@ -31,8 +33,11 @@ public class NewProductController implements Initializable{
     private TextField inputMinimus;
     @FXML
     private Label labelCharEx;
+    @FXML
+    private VBox vboxCategories;
     
     private String values[] = new String[6];
+    private ArrayList<String> categories = new ArrayList<>();
     private int quantityValue=1;
     private int minInventValue=10;
     
@@ -40,6 +45,7 @@ public class NewProductController implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
     	initiInputValidations();
     	initiFields();
+    	loadCategories();
 	}
     
     private void initiInputValidations() {
@@ -55,6 +61,21 @@ public class NewProductController implements Initializable{
     private void initiFields() {
     	this.inputQuantity.setText(""+this.quantityValue);
     	this.inputMinimus.setText(""+this.minInventValue);
+    }
+    
+    private void loadCategories() {
+    	for(int i=0; i<25;i++) {
+    		FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLListItemCategory.fxml"));
+    		try {
+				Parent item = loader.load();
+				ListItemCategoryController c = loader.getController();
+				c.initi(i,this.categories);
+				if(i%2!=0) markAsPair(item);
+				this.vboxCategories.getChildren().add(item);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+    	}
     }
     
     @FXML
@@ -141,9 +162,9 @@ public class NewProductController implements Initializable{
     	tf.getStyleClass().add("textfield-empty");
     }
     
-    private void unmarkAsEmpty(TextField tf) {
-    	tf.getStyleClass().remove("textfield-empty");
-    }
+    //private void unmarkAsEmpty(TextField tf) {
+    //	tf.getStyleClass().remove("textfield-empty");
+    //}
     
     //Just for test
     private void printStatus() {
@@ -154,6 +175,14 @@ public class NewProductController implements Initializable{
     	System.out.println("\tprice: "+values[3]);
     	System.out.println("\tquant.: "+values[4]);
     	System.out.println("\tmin. inv.: "+values[5]);
+    	System.out.println("\tcategories:{");
+    	for(String c : categories)
+    		System.out.println("\t\t"+c);
+    	System.out.println("\t}");
     	System.out.println("}");
+    }
+    
+    private void markAsPair(Parent p) {
+    	p.getStyleClass().add("list-item-pair");
     }
 }

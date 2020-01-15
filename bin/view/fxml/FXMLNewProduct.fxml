@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,24 +10,22 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1000.0" style="-fx-background-color: #fff;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewProductController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1100.0" style="-fx-background-color: #fff;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewProductController">
    <children>
-      <Button layoutX="30.0" layoutY="585.0" mnemonicParsing="false" onAction="#saveNewProduct" prefHeight="61.0" prefWidth="182.0" style="-fx-background-color: #0078D7; -fx-text-fill: #FFF;" text="SALVAR" />
+      <Button layoutX="30.0" layoutY="585.0" mnemonicParsing="false" onAction="#saveNewProduct" prefHeight="61.0" prefWidth="182.0" style="-fx-background-color: #3785C4; -fx-text-fill: #FFF;" text="SALVAR" />
       <AnchorPane layoutX="561.0" layoutY="55.0" prefHeight="513.0" prefWidth="675.0" style="-fx-border-color: #eee; -fx-border-radius: 3 3 0 0; -fx-background-color: #fcfcfc;" AnchorPane.leftAnchor="30.0">
          <children>
-            <TextField fx:id="inputName" layoutY="64.0" prefHeight="48.0" prefWidth="486.0" promptText="Insira um nome..." AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+            <TextField fx:id="inputName" layoutY="64.0" prefHeight="48.0" prefWidth="486.0" promptText="Insira um nome..." styleClass="textfield-form" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
             <Label layoutX="-1.0" layoutY="44.0" style="-fx-text-fill: #444;" text="NOME" AnchorPane.leftAnchor="25.0" />
-            <TextField fx:id="inputCode" layoutX="25.0" layoutY="154.0" prefHeight="48.0" prefWidth="285.0" promptText="Inisira um código válido" AnchorPane.leftAnchor="25.0" />
+            <TextField fx:id="inputCode" layoutX="25.0" layoutY="154.0" prefHeight="48.0" prefWidth="285.0" promptText="Inisira um código válido" styleClass="textfield-form" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
             <Label layoutX="25.0" layoutY="135.0" style="-fx-text-fill: #444;" text="CÓDIGO" AnchorPane.leftAnchor="25.0" />
-            <Label layoutX="366.0" layoutY="135.0" style="-fx-text-fill: #444;" text="SELECIONA UMA CATEGORIA" />
-            <ChoiceBox fx:id="choiceboxCategories" layoutX="366.0" layoutY="154.0" prefHeight="48.0" prefWidth="285.0" AnchorPane.rightAnchor="25.0" />
-            <Label layoutY="11.0" style="-fx-padding: 10 20; -fx-text-fill: #714EDA; -fx-background-color: linear-gradient(to top, #fcfcfc, #f7f7f7);" styleClass="h3" text="IDENTIFICAÇÃO" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Label layoutX="51.0" layoutY="243.0" style="-fx-padding: 10 20; -fx-text-fill: #714EDA; -fx-background-color: linear-gradient(to top, #fcfcfc, #f7f7f7); -fx-border-color: #f0f0f0; -fx-border-width: 1 0 0 0;" styleClass="h3" text="VALORES" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <TextField fx:id="inputCostPrice" layoutX="26.0" layoutY="330.0" prefHeight="48.0" prefWidth="285.0" promptText="R$ 00,00" AnchorPane.leftAnchor="25.0" />
+            <Label layoutY="11.0" style="-fx-padding: 10 20; -fx-text-fill: #FF1752; -fx-background-color: linear-gradient(to top, #fcfcfc, #f7f7f7);" styleClass="h3" text="IDENTIFICAÇÃO" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Label layoutX="51.0" layoutY="243.0" style="-fx-padding: 10 20; -fx-text-fill: #FF1752; -fx-background-color: linear-gradient(to top, #fcfcfc, #f7f7f7); -fx-border-color: #f0f0f0; -fx-border-width: 1 0 0 0;" styleClass="h3" text="VALORES" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <TextField fx:id="inputCostPrice" layoutX="26.0" layoutY="330.0" prefHeight="48.0" prefWidth="285.0" promptText="R$ 00,00" styleClass="textfield-form" AnchorPane.leftAnchor="25.0" />
             <Label layoutX="25.0" layoutY="305.0" style="-fx-text-fill: #444;" text="PREÇO DE CUSTO" AnchorPane.leftAnchor="25.0" />
-            <TextField fx:id="inputSalePrice" layoutX="359.0" layoutY="330.0" prefHeight="48.0" prefWidth="285.0" promptText="R$ 00,00" AnchorPane.rightAnchor="25.0" />
+            <TextField fx:id="inputSalePrice" layoutX="359.0" layoutY="330.0" prefHeight="48.0" prefWidth="285.0" promptText="R$ 00,00" styleClass="textfield-form" AnchorPane.rightAnchor="25.0" />
             <Label layoutX="364.0" layoutY="305.0" style="-fx-text-fill: #444;" text="PREÇO DE VENDA" />
-            <TextField fx:id="inputQuantity" layoutX="28.0" layoutY="419.0" prefHeight="50.0" prefWidth="254.0" text="1" AnchorPane.leftAnchor="25.0" />
+            <TextField fx:id="inputQuantity" layoutX="28.0" layoutY="419.0" prefHeight="50.0" prefWidth="254.0" styleClass="textfield-form" text="1" AnchorPane.leftAnchor="25.0" />
             <Label layoutX="27.0" layoutY="400.0" style="-fx-text-fill: #444;" text="QUANTIDADE" AnchorPane.leftAnchor="25.0" />
             <VBox layoutX="285.0" layoutY="419.0" prefHeight="43.0" prefWidth="26.0">
                <children>
@@ -35,7 +33,7 @@
                      <graphic>
                         <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../UCBillManager-App/src/view/img/plusIcon.png" />
+                              <Image url="@../img/icon-plus-light.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -44,14 +42,14 @@
                      <graphic>
                         <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../UCBillManager-App/src/view/img/minusIcon.png" />
+                              <Image url="@../img/icon-minus-light.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
                </children>
             </VBox>
-            <TextField fx:id="inputMinimus" layoutX="361.0" layoutY="419.0" prefHeight="48.0" prefWidth="285.0" text="10" AnchorPane.rightAnchor="25.0" />
+            <TextField fx:id="inputMinimus" layoutX="361.0" layoutY="419.0" prefHeight="48.0" prefWidth="285.0" styleClass="textfield-form" text="10" AnchorPane.rightAnchor="25.0" />
             <Label layoutX="366.0" layoutY="400.0" style="-fx-text-fill: #444;" text="ESTOQUE MÍNIMO" />
             <Label fx:id="labelCharEx" style="-fx-text-fill: #ee6969;" styleClass="h4" text="Caracter inválido" />
          </children>
@@ -67,5 +65,26 @@
             <Label styleClass="h4" text="Cadastrar produto" />
          </children>
       </HBox>
+      <AnchorPane layoutX="705.0" layoutY="55.0" prefHeight="513.0" prefWidth="310.0" style="-fx-background-color: #fcfcfc; -fx-border-color: #eee; -fx-border-radius: 0 3 3 0; -fx-border-width: 1 1 1 0;" AnchorPane.topAnchor="55.0">
+         <children>
+            <Label layoutX="6.0" style="-fx-padding: 10 20; -fx-text-fill: #FF1752; -fx-background-color: linear-gradient(to top, #fcfcfc, #f7f7f7); -fx-border-color: #f0f0f0; -fx-border-width: 1 0 0 0;" styleClass="h3" text="CATEGORIAS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Label layoutX="21.0" layoutY="39.0" style="-fx-text-fill: #999; -fx-font-size: 14;" text="Selecione categorias para este produto" AnchorPane.leftAnchor="25.0" />
+            <ScrollPane hbarPolicy="NEVER" layoutX="20.0" layoutY="71.0" pannable="true" style="-fx-background-color: transparent;" styleClass="scroll-list-category" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="70.0">
+               <content>
+                  <VBox fx:id="vboxCategories" fillWidth="false" style="-fx-background-color: #fff; -fx-border-width: 0 0 1 0;" styleClass="textfield-form" />
+               </content>
+            </ScrollPane>
+            <Button layoutX="255.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #3EBF8B; -fx-text-fill: #fff; -fx-padding: 1 5;" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="10.0">
+               <graphic>
+                  <ImageView fitHeight="11.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon-plus-ligher.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField layoutX="117.0" layoutY="10.0" prefHeight="27.0" prefWidth="135.0" promptText="buscar" style="-fx-padding: 2 5; -fx-font-size: 12;" AnchorPane.rightAnchor="53.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
