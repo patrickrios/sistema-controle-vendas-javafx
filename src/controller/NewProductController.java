@@ -13,6 +13,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
+import model.entity.Product;
+import model.util.MoneyRealFormat;
 import view.exception.BackspaceInputException;
 import view.exception.EmptyInputException;
 import view.exception.InvalidCharacterException;
@@ -92,6 +94,17 @@ public class NewProductController implements Initializable{
     	}
     }
     
+    @FXML
+    void saveNewProduct() {
+    	try {
+			verifyEmptyInput(inputName,inputCode,inputSalePrice,inputQuantity,inputMinimus);
+			for(String data : getProductFromForm().datasFormatted())
+				System.out.println("attr: "+data);
+		} catch (EmptyInputException e) {
+			System.out.println(e.toString());
+		}
+    }
+    
     private void validateInput(TextField txtfield, TextInputValidation validator, int index) {
     	values[index] = "";
     	txtfield.addEventFilter(KeyEvent.KEY_TYPED, new EventHandler<KeyEvent>() {
@@ -139,16 +152,6 @@ public class NewProductController implements Initializable{
     	this.labelCharEx.setVisible(true);
     }
     
-    @FXML
-    void saveNewProduct() {
-    	try {
-			verifyEmptyInput(inputName,inputCode,inputSalePrice,inputQuantity,inputMinimus);
-			printStatus();
-		} catch (EmptyInputException e) {
-			System.out.println(e.toString());
-		}
-    }
-    
     private void verifyEmptyInput(TextField...fields) throws EmptyInputException{
     	for(int i=0; i<fields.length; i++) {
     		if(fields[i].getText().isEmpty() || fields[i]==null) {
@@ -162,27 +165,18 @@ public class NewProductController implements Initializable{
     	tf.getStyleClass().add("textfield-empty");
     }
     
-    //private void unmarkAsEmpty(TextField tf) {
-    //	tf.getStyleClass().remove("textfield-empty");
-    //}
-    
-    //Just for test
-    private void printStatus() {
-    	System.out.println("Product{");
-    	System.out.println("\tname: "+values[0]);
-    	System.out.println("\tcode: "+values[1]);
-    	System.out.println("\tcost: "+values[2]);
-    	System.out.println("\tprice: "+values[3]);
-    	System.out.println("\tquant.: "+values[4]);
-    	System.out.println("\tmin. inv.: "+values[5]);
-    	System.out.println("\tcategories:{");
-    	for(String c : categories)
-    		System.out.println("\t\t"+c);
-    	System.out.println("\t}");
-    	System.out.println("}");
-    }
-    
     private void markAsPair(Parent p) {
     	p.getStyleClass().add("list-item-pair");
+    }
+    
+    private Product getProductFromForm() {
+    	String name = inputName.getText();
+    	String code = inputCode.getText();
+    	float  cost = MoneyRealFormat.realStringToFloat(inputCostPrice.getText());
+    	float  price = MoneyRealFormat.realStringToFloat(inputSalePrice.getText());
+    	int	   quant = Integer.parseInt(inputQuantity.getText());
+    	int	   mini  = Integer.parseInt(inputMinimus.getText());
+    	
+    	return new Product(name,code,cost,price,quant,mini,categories);
     }
 }
