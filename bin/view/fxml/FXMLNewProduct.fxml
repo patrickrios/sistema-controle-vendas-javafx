@@ -69,9 +69,9 @@
          <children>
             <Label layoutX="6.0" style="-fx-padding: 10 20; -fx-text-fill: #FF1752; -fx-background-color: linear-gradient(to top, #fcfcfc, #f7f7f7); -fx-border-color: #f0f0f0; -fx-border-width: 1 0 0 0;" styleClass="h3" text="CATEGORIAS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             <Label layoutX="21.0" layoutY="39.0" style="-fx-text-fill: #999; -fx-font-size: 14;" text="Selecione categorias para este produto" AnchorPane.leftAnchor="25.0" />
-            <ScrollPane hbarPolicy="NEVER" layoutX="20.0" layoutY="71.0" pannable="true" style="-fx-background-color: transparent;" styleClass="scroll-list-category" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="70.0">
+            <ScrollPane hbarPolicy="NEVER" layoutX="20.0" layoutY="71.0" pannable="true" style="-fx-background-color: transparent; -fx-border-color: #E1E1E1;" styleClass="scroll-list-category" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="70.0">
                <content>
-                  <VBox fx:id="vboxCategories" fillWidth="false" style="-fx-background-color: #fff; -fx-border-width: 0 0 1 0;" styleClass="textfield-form" />
+                  <VBox fx:id="vboxCategories" fillWidth="false" style="-fx-background-color: #fff;" />
                </content>
             </ScrollPane>
             <Button layoutX="255.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #3EBF8B; -fx-text-fill: #fff; -fx-padding: 1 5;" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="10.0">

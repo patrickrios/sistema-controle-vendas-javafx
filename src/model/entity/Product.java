@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import model.util.MoneyRealFormat;
 
-public class Product {
+public class Product implements PersistentEntity{
 	private Integer id;
 	private String name;
 	private String code;
@@ -64,5 +64,71 @@ public class Product {
 		for(String cat : categories)	datas.add(cat);
 		
 		return datas;
+	}
+
+	@Override
+	public void createIfNotExist() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteThis() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateThis() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean verifyExistent() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	public Integer getId() {
+		return id;
+	}
+	public String getName() {
+		return name;
+	}
+	public String getCode() {
+		return code;
+	}
+	public float getCostPrice() {
+		return costPrice;
+	}
+	public float getSalePrice() {
+		return salePrice;
+	}
+	public int getQuantiy() {
+		return quantiy;
+	}
+	public int getMinimumQuantity() {
+		return minimumQuantity;
+	}
+	public ArrayList<String> getCategories() {
+		return categories;
+	}
+	public Date getInclusionDate() {
+		return inclusionDate;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public void changeDatas(Product prod) {
+		this.name = prod.name;
+		this.code = prod.code;
+		this.costPrice = prod.costPrice;
+		this.salePrice = prod.salePrice;
+		this.quantiy = prod.quantiy;
+		this.minimumQuantity = prod.minimumQuantity;
+		this.categories = prod.categories;
+		this.inclusionDate = prod.inclusionDate;
 	}
 }

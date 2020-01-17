@@ -82,7 +82,7 @@
 	/** New Product*/
 	.textfield-form{-fx-border-color:#C0C0C0;}
 	.scroll-list-category > .viewport{-fx-background-color:transparent;}
-	.list-category-item{-fx-background-color:#FFF;-fx-border-color:#DDD;-fx-border-width:1 1 0 1;-fx-border-style:dashed solid;-fx-cursor:hand;}
+	.list-category-item{-fx-background-color:#FFF;-fx-border-color:#DDD;-fx-border-width:0 0 1 0;-fx-border-style:dashed solid;-fx-cursor:hand;}
 	.list-category-item .check-box{-fx-text-fill:#009CF0;}
 	.list-category-item:hover .check-box{-fx-text-fill:#000;}
 	.list-category-item-selected{-fx-background-color:#1CAFFF !important;-fx-border-width:0 0 0 1; -fx-border-color:#006297;-fx-border-style:solid;}

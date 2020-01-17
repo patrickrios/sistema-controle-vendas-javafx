@@ -66,7 +66,7 @@ public class NewProductController implements Initializable{
     }
     
     private void loadCategories() {
-    	for(int i=0; i<25;i++) {
+    	for(int i=0; i<9;i++) {
     		FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLListItemCategory.fxml"));
     		try {
 				Parent item = loader.load();
