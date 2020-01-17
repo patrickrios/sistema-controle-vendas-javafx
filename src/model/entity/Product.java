@@ -3,6 +3,8 @@ package model.entity;
 import java.sql.Date;
 import java.util.ArrayList;
 
+import model.dao.ProductDAO;
+import model.exception.EntityAlreadyExistException;
 import model.util.MoneyRealFormat;
 
 public class Product implements PersistentEntity{
@@ -67,9 +69,14 @@ public class Product implements PersistentEntity{
 	}
 
 	@Override
-	public void createIfNotExist() {
-		// TODO Auto-generated method stub
+	public void createIfNotExist() throws EntityAlreadyExistException {
+		/*ProductDAO pdao = new ProductDAO();
 		
+		if(pdao.findByName(name) || pdao.findByCode(code))
+			throw new EntityAlreadyExistException(this.name);
+		else
+			pdao.save(this);
+		*/
 	}
 
 	@Override
@@ -86,7 +93,7 @@ public class Product implements PersistentEntity{
 
 	@Override
 	public boolean verifyExistent() {
-		// TODO Auto-generated method stub
+		//boolean exist = new ProductDAO().
 		return false;
 	}
 	

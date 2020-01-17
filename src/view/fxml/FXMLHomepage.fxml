@@ -12,12 +12,12 @@
          <children>
             <AnchorPane layoutX="-27.0" layoutY="-33.0" prefHeight="80.0" prefWidth="200.0" style="-fx-border-color: #EEE; -fx-border-width: 0 0 1 0; -fx-background-color: #f9f9f9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0">
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" styleClass="home-avatar" AnchorPane.leftAnchor="20.0">
                      <image>
-                        <Image url="@../img/avatar.png" />
+                        <Image url="@../img/avatar2.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="77.0" layoutY="14.0" style="-fx-text-fill: #000;" styleClass="h2" text="Rebecca" AnchorPane.leftAnchor="77.0" />
+                  <Label layoutX="77.0" layoutY="14.0" style="-fx-text-fill: #000;" styleClass="h2" text="USER_NAME" AnchorPane.leftAnchor="77.0" />
                   <Label fx:id="labelCurrentDate" layoutX="102.0" layoutY="44.0" style="-fx-text-fill: #888;" styleClass="h4" text="current date" AnchorPane.leftAnchor="77.0">
                      <graphic>
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">

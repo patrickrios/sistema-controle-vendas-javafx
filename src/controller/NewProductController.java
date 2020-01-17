@@ -13,6 +13,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
+import model.dao.ProductDAO;
 import model.entity.Product;
 import model.util.MoneyRealFormat;
 import view.exception.BackspaceInputException;

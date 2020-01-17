@@ -68,6 +68,9 @@
 	.h4{-fx-font-size:15;}
 	.h2-label{-fx-font-family:"Lato", sans-serif; -fx-font-size:15; -fx-text-fill:#515F66;}
 
+	/** Homepage */
+	.home-avatar{-fx-border-radius:100;-fx-background-radius:100;}
+
 	/** List view*/
 	.list-item{-fx-background-color:#FFF;-fx-border-color:transparent transparent #DDD transparent;-fx-border-width:0 0 1 1;-fx-border-style:dashed;-fx-cursor:hand;}
 	.list-item:hover{-fx-border-color:transparent transparent #DDD #0078D7;-fx-border-width:0 0 1 1 ;-fx-border-style:dashed solid;}
