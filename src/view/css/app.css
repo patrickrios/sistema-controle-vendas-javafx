@@ -83,6 +83,8 @@
 	.list-item-pair{-fx-background-color:#FCFCFC !important;}
 
 	/** New Product*/
+	.label-confirm-sucess{-fx-text-fill:#44AD7A;}
+	.label-confirm-exception{-fx-text-fill:#EE6969;}
 	.textfield-form{-fx-border-color:#C0C0C0;}
 	.scroll-list-category > .viewport{-fx-background-color:transparent;}
 	.list-category-item{-fx-background-color:#FFF;-fx-border-color:#DDD;-fx-border-width:0 0 1 0;-fx-border-style:dashed solid;-fx-cursor:hand;}

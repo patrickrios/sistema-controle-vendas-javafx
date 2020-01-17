@@ -70,13 +70,12 @@ public class Product implements PersistentEntity{
 
 	@Override
 	public void createIfNotExist() throws EntityAlreadyExistException {
-		/*ProductDAO pdao = new ProductDAO();
+		ProductDAO pdao = new ProductDAO();
 		
 		if(pdao.findByName(name) || pdao.findByCode(code))
 			throw new EntityAlreadyExistException(this.name);
 		else
 			pdao.save(this);
-		*/
 	}
 
 	@Override

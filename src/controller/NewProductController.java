@@ -11,10 +11,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
-import model.dao.ProductDAO;
 import model.entity.Product;
+import model.exception.EntityAlreadyExistException;
 import model.util.MoneyRealFormat;
 import view.exception.BackspaceInputException;
 import view.exception.EmptyInputException;
@@ -22,6 +24,10 @@ import view.exception.InvalidCharacterException;
 import view.util.TextInputValidation;
 
 public class NewProductController implements Initializable{
+	@FXML
+    private Label labelConfirmRegister;
+	@FXML
+    private ImageView imageviewConfirmIcon;
     @FXML
     private TextField inputName;
     @FXML
@@ -64,6 +70,7 @@ public class NewProductController implements Initializable{
     private void initiFields() {
     	this.inputQuantity.setText(""+this.quantityValue);
     	this.inputMinimus.setText(""+this.minInventValue);
+    	this.labelConfirmRegister.setVisible(false);
     }
     
     private void loadCategories() {
@@ -99,10 +106,15 @@ public class NewProductController implements Initializable{
     void saveNewProduct() {
     	try {
 			verifyEmptyInput(inputName,inputCode,inputSalePrice,inputQuantity,inputMinimus);
-			for(String data : getProductFromForm().datasFormatted())
-				System.out.println("attr: "+data);
-		} catch (EmptyInputException e) {
-			System.out.println(e.toString());
+			getProductFromForm().createIfNotExist();
+			showSucessLabel("Cadastrado com sucesso");
+			resetForm();
+		} 
+    	catch (EmptyInputException emptyEx) {
+			emptyEx.markAsEmpty();
+		} 
+    	catch (EntityAlreadyExistException e) {
+			showExceptionLabel(e.toString());
 		}
     }
     
@@ -149,25 +161,36 @@ public class NewProductController implements Initializable{
     	double y = tf.getLayoutY();
     	
     	this.labelCharEx.setLayoutX(x);
-    	this.labelCharEx.setLayoutY(y+50);
+    	this.labelCharEx.setLayoutY(y+53);
     	this.labelCharEx.setVisible(true);
     }
     
     private void verifyEmptyInput(TextField...fields) throws EmptyInputException{
     	for(int i=0; i<fields.length; i++) {
     		if(fields[i].getText().isEmpty() || fields[i]==null) {
-    			markAsEmpty(fields[i]);
-    			throw new EmptyInputException(fields[i].getId());
+    			throw new EmptyInputException(fields[i]);
     		}
     	}
     }
     
-    private void markAsEmpty(TextField tf) {
-    	tf.getStyleClass().add("textfield-empty");
-    }
-    
     private void markAsPair(Parent p) {
     	p.getStyleClass().add("list-item-pair");
+    }
+    
+    private void showSucessLabel(String message) {
+    	labelConfirmRegister.getStyleClass().clear();
+    	labelConfirmRegister.getStyleClass().addAll("label","label-confirm-sucess");
+    	labelConfirmRegister.setText(message);
+    	setConfirmIcon("/view/img/checked-icon.png");
+    	labelConfirmRegister.setVisible(true);
+    }
+    
+    private void showExceptionLabel(String exception) {
+    	labelConfirmRegister.getStyleClass().clear();
+    	labelConfirmRegister.getStyleClass().addAll("label","label-confirm-exception");
+    	labelConfirmRegister.setText(exception);
+    	setConfirmIcon("/view/img/failed-icon.png");
+    	labelConfirmRegister.setVisible(true);
     }
     
     private Product getProductFromForm() {
@@ -179,5 +202,18 @@ public class NewProductController implements Initializable{
     	int	   mini  = Integer.parseInt(inputMinimus.getText());
     	
     	return new Product(name,code,cost,price,quant,mini,categories);
+    }
+    
+    private void setConfirmIcon(String path) {
+    	this.imageviewConfirmIcon.setImage(new Image(getClass().getResourceAsStream(path)));
+    }
+    
+    private void resetForm() {
+    	this.inputCode.setText("");
+    	this.inputCostPrice.setText("");
+    	this.inputMinimus.setText("10");
+    	this.inputName.setText("");
+    	this.inputQuantity.setText("1");
+    	this.inputSalePrice.setText("");
     }
 }

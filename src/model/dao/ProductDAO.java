@@ -18,8 +18,22 @@ public class ProductDAO implements  PersistentDAO{
 	
 	@Override
 	public void save(PersistentEntity entity) {
-		//Product prod = (Product)entity;
+		Product prod = (Product)entity;
+		String sql = "INSERT INTO ddb_product (id_product,name,code,costPrice,salePrice,quantity,minimum_quantity,inclusion) VALUES (DEFAULT,?,?,?,?,?,?,CURRENT_TIMESTAMP)";
 		
+		try {
+			PreparedStatement stat = this.connection.prepareStatement(sql);
+			stat.setString(1,prod.getName());
+			stat.setString(2,prod.getCode());
+			stat.setFloat(3,prod.getCostPrice());
+			stat.setFloat(4, prod.getSalePrice());
+			stat.setInt(5,prod.getQuantiy());
+			stat.setInt(6, prod.getMinimumQuantity());
+			stat.executeUpdate();
+			stat.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override

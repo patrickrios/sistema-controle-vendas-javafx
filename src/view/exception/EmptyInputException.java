@@ -1,16 +1,21 @@
 package view.exception;
 
+import javafx.scene.control.TextField;
 
 public class EmptyInputException extends Exception{
 	
-	private String txtfieldID;
+	private TextField textfield;
 	
-	public EmptyInputException(String txtfield) {
-		this.txtfieldID = txtfield;
+	public EmptyInputException(TextField txtfield) {
+		this.textfield = txtfield;
 	}
 	
 	@Override
 	public String toString() {
-		return txtfieldID+" is empty.";
+		return textfield.getId()+" is empty.";
 	}
+	
+	public void markAsEmpty() {
+    	this.textfield.getStyleClass().add("textfield-empty");
+    }
 }
