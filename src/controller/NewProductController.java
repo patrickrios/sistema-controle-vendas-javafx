@@ -15,6 +15,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
+import model.entity.Category;
 import model.entity.Product;
 import model.exception.EntityAlreadyExistException;
 import model.util.MoneyRealFormat;
@@ -41,7 +42,11 @@ public class NewProductController implements Initializable{
     @FXML
     private TextField inputMinimus;
     @FXML
+    private TextField inputCategory;
+    @FXML
     private Label labelCharEx;
+    @FXML
+    private Label labelCategoryEx;
     @FXML
     private VBox vboxCategories;
     
@@ -59,6 +64,7 @@ public class NewProductController implements Initializable{
     
     private void initiInputValidations() {
     	labelCharEx.setVisible(false);
+    	labelCategoryEx.setVisible(false);
     	validateInput(inputName, new TextInputValidation(TextInputValidation.TEXT),0);
     	validateInput(inputCode, new TextInputValidation(TextInputValidation.NUMERIC),1);
     	validateInput(inputCostPrice,new TextInputValidation(TextInputValidation.DECIMAL),2);
@@ -115,6 +121,18 @@ public class NewProductController implements Initializable{
 		} 
     	catch (EntityAlreadyExistException e) {
 			showExceptionLabel(e.toString());
+		}
+    }
+    @FXML
+    void saveNewCategory() {
+    	try {
+			verifyEmptyInput(this.inputCategory);
+			new Category(inputCategory.getText()).createIfNotExist();
+		} catch (EmptyInputException e) {
+			e.markAsEmpty();
+		} catch (EntityAlreadyExistException e) {
+			this.labelCategoryEx.setText(e.toString());
+			this.labelCategoryEx.setVisible(true);
 		}
     }
     
