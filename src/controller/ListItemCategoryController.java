@@ -7,6 +7,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.layout.AnchorPane;
+import model.entity.Category;
 
 public class ListItemCategoryController {
 	@FXML
@@ -14,23 +15,26 @@ public class ListItemCategoryController {
 	 @FXML
 	 private CheckBox checkSelectCategory;
 	 
-	 private ArrayList<String> catList;
+	 private Category cat;
 	 
-	 public void initi(int i, ArrayList<String> list) {
-		 this.checkSelectCategory.setText(names(i));
+	 private ArrayList<Category> catList;
+	 
+	 public void initi(Category cat, ArrayList<Category> list) {
+		 this.cat = cat;
 		 this.catList = list;
+		 this.checkSelectCategory.setText(cat.getName());
 	 }
 	 
 	 @FXML
 	 void switchCheckboxStatus(){
 		 
 		 if(checkSelectCategory.isSelected()) {
-			 this.catList.add(checkSelectCategory.getText());
+			 this.catList.add(this.cat);
 			 markAsSelected();
 		 }
 		 else {
-			 for(String cat : catList) {
-				 if(checkSelectCategory.getText().equals(cat)) {
+			 for(Category cat : catList) {
+				 if(checkSelectCategory.getText().equals(cat.getName())) {
 					 catList.remove(cat);
 					 break;
 				 }
@@ -47,19 +51,4 @@ public class ListItemCategoryController {
 	 private void unmarkAsSelected() {
 		 this.anchorCategoryItem.getStyleClass().remove("list-category-item-selected");
 	 }
-	 
-	 //just for test, must be removed later
-	 private String names(int i) {
-		 String name = "sem nome";
-		 if(i==0) name="Informática";
-		 if(i==1) name="Acessórios para escritório";
-		 if(i==2) name="Celulares";
-		 if(i==3) name="Informática";
-		 if(i==4) name="Gadgets";
-		 if(i==5) name="Notebooks";
-		 if(i==6) name="Papelaria";
-		 if(i==7) name="Baterias";
-			return name;
-	 }
-
 }

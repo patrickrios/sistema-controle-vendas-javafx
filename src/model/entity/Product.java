@@ -15,11 +15,11 @@ public class Product implements PersistentEntity{
 	private float salePrice;
 	private int quantiy;
 	private int minimumQuantity;
-	private ArrayList<String> categories;
+	private ArrayList<Category> categories;
 	private Date inclusionDate;
 	
 	//A product not save on db
-	public Product(String name,String code,float costPrice,float salePrice,int quantity,int minQuantity,ArrayList<String> categories,Date inclusion) {
+	public Product(String name,String code,float costPrice,float salePrice,int quantity,int minQuantity,ArrayList<Category> categories,Date inclusion) {
 		this.name=name;
 		this.code=code;
 		this.costPrice=costPrice;
@@ -31,7 +31,7 @@ public class Product implements PersistentEntity{
 	}
 	
 	//A product not save on db
-	public Product(String name,String code,float costPrice,float salePrice,int quantity,int minQuantity,ArrayList<String> categories) {
+	public Product(String name,String code,float costPrice,float salePrice,int quantity,int minQuantity,ArrayList<Category> categories) {
 		this.name=name;
 		this.code=code;
 		this.costPrice=costPrice;
@@ -42,7 +42,7 @@ public class Product implements PersistentEntity{
 	}
 	
 	//Product from database
-	public Product(int id,String name,String code,float costPrice,float salePrice,int quantity,int minQuantity,ArrayList<String> categories,Date inclusion) {
+	public Product(int id,String name,String code,float costPrice,float salePrice,int quantity,int minQuantity,ArrayList<Category> categories,Date inclusion) {
 		this.id=id;
 		this.name=name;
 		this.code=code;
@@ -63,7 +63,7 @@ public class Product implements PersistentEntity{
 		datas.add(quantiy+"");
 		datas.add(minimumQuantity+"");
 	
-		for(String cat : categories)	datas.add(cat);
+		for(Category cat : categories)	datas.add(cat.getName());
 		
 		return datas;
 	}
@@ -117,7 +117,7 @@ public class Product implements PersistentEntity{
 	public int getMinimumQuantity() {
 		return minimumQuantity;
 	}
-	public ArrayList<String> getCategories() {
+	public ArrayList<Category> getCategories() {
 		return categories;
 	}
 	public Date getInclusionDate() {

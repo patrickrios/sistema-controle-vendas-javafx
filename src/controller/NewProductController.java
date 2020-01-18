@@ -15,6 +15,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
+import model.dao.CategoryDAO;
 import model.entity.Category;
 import model.entity.Product;
 import model.exception.EntityAlreadyExistException;
@@ -51,9 +52,10 @@ public class NewProductController implements Initializable{
     private VBox vboxCategories;
     
     private String values[] = new String[6];
-    private ArrayList<String> categories = new ArrayList<>();
+    private ArrayList<Category> categories = new ArrayList<>();
     private int quantityValue=1;
     private int minInventValue=10;
+    private int listIndex = 0;
     
     @Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -80,17 +82,8 @@ public class NewProductController implements Initializable{
     }
     
     private void loadCategories() {
-    	for(int i=0; i<9;i++) {
-    		FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLListItemCategory.fxml"));
-    		try {
-				Parent item = loader.load();
-				ListItemCategoryController c = loader.getController();
-				c.initi(i,this.categories);
-				if(i%2!=0) markAsPair(item);
-				this.vboxCategories.getChildren().add(item);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+    	for(Category cat : new CategoryDAO().getAll()) {
+    		addCategoryListItem(cat);
     	}
     }
     
@@ -127,7 +120,10 @@ public class NewProductController implements Initializable{
     void saveNewCategory() {
     	try {
 			verifyEmptyInput(this.inputCategory);
-			new Category(inputCategory.getText()).createIfNotExist();
+			Category newCat = new Category(inputCategory.getText());
+			newCat.createIfNotExist();
+			addCategoryListItem(newCat);
+			this.inputCategory.clear();
 		} catch (EmptyInputException e) {
 			e.markAsEmpty();
 		} catch (EntityAlreadyExistException e) {
@@ -224,6 +220,20 @@ public class NewProductController implements Initializable{
     
     private void setConfirmIcon(String path) {
     	this.imageviewConfirmIcon.setImage(new Image(getClass().getResourceAsStream(path)));
+    }
+    
+    private void addCategoryListItem(Category cat) {
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLListItemCategory.fxml"));
+		try {
+			Parent item = loader.load();
+			ListItemCategoryController c = loader.getController();
+			c.initi(cat,this.categories);
+			if(this.listIndex%2!=0) markAsPair(item);
+			this.vboxCategories.getChildren().add(item);
+			this.listIndex++;
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
     }
     
     private void resetForm() {

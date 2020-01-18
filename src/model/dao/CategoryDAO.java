@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
 import model.entity.Category;
 import model.entity.PersistentEntity;
 
@@ -66,5 +68,21 @@ public class CategoryDAO implements PersistentDAO{
 			e.printStackTrace();
 		}
 		return exist;
+	}
+	
+	public ArrayList<Category> getAll(){
+		ArrayList<Category> list = new ArrayList<>();
+		String query = "SELECT id_product_category, category_name FROM ddb_product_category";
+		try {
+			PreparedStatement stat = this.conn.prepareStatement(query);
+			ResultSet result = stat.executeQuery();
+			while (result.next()) {
+				list.add(new Category(result.getInt(1),result.getString(2)));
+			}
+			stat.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
 	}
 }
