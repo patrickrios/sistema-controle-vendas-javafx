@@ -53,6 +53,7 @@ public class NewProductController implements Initializable{
     
     private String values[] = new String[6];
     private ArrayList<Category> categories = new ArrayList<>();
+    private ArrayList<Category> categoriesDB = new ArrayList<>();
     private int quantityValue=1;
     private int minInventValue=10;
     private int listIndex = 0;
@@ -82,7 +83,8 @@ public class NewProductController implements Initializable{
     }
     
     private void loadCategories() {
-    	for(Category cat : new CategoryDAO().getAll()) {
+    	this.categoriesDB = new CategoryDAO().getAll();
+    	for(Category cat : this.categoriesDB) {
     		addCategoryListItem(cat);
     	}
     }
@@ -122,6 +124,7 @@ public class NewProductController implements Initializable{
 			verifyEmptyInput(this.inputCategory);
 			Category newCat = new Category(inputCategory.getText());
 			newCat.createIfNotExist();
+			this.categoriesDB.add(newCat);
 			addCategoryListItem(newCat);
 			this.inputCategory.clear();
 		} catch (EmptyInputException e) {
@@ -243,5 +246,9 @@ public class NewProductController implements Initializable{
     	this.inputName.setText("");
     	this.inputQuantity.setText("1");
     	this.inputSalePrice.setText("");
+    	this.categories.clear();
+    	this.vboxCategories.getChildren().clear();
+    	for(Category c : this.categoriesDB)
+    		addCategoryListItem(c);
     }
 }

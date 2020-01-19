@@ -4,7 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+import java.util.ArrayList;
+import model.entity.Category;
 import model.entity.PersistentEntity;
 import model.entity.Product;
 
@@ -30,6 +31,8 @@ public class ProductDAO implements  PersistentDAO{
 			stat.setInt(5,prod.getQuantiy());
 			stat.setInt(6, prod.getMinimumQuantity());
 			stat.executeUpdate();
+			ResultSet r = stat.executeQuery("SELECT LAST_INSERT_ID()");
+			if(r.next()) saveProductCategories(r.getInt(1), prod.getCategories());
 			stat.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -85,6 +88,20 @@ public class ProductDAO implements  PersistentDAO{
 			e.printStackTrace();
 		}
 		return exist;
+	}
+	
+	private void saveProductCategories(int prodID,ArrayList<Category> list) {
+		String insert="INSERT INTO ddb_categories_by_product(product_id,category_id) VALUES("+prodID+",?)";
+		try {
+			PreparedStatement stat = this.connection.prepareStatement(insert);
+			for(Category cat : list) {
+				stat.setInt(1, cat.getId());
+				stat.executeUpdate();
+			}
+			stat.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
