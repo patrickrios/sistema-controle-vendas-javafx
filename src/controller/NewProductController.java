@@ -56,7 +56,6 @@ public class NewProductController implements Initializable{
     private ArrayList<Category> categoriesDB = new ArrayList<>();
     private int quantityValue=1;
     private int minInventValue=10;
-    private int listIndex = 0;
     
     @Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -190,10 +189,6 @@ public class NewProductController implements Initializable{
     	}
     }
     
-    private void markAsPair(Parent p) {
-    	p.getStyleClass().add("list-item-pair");
-    }
-    
     private void showSucessLabel(String message) {
     	labelConfirmRegister.getStyleClass().clear();
     	labelConfirmRegister.getStyleClass().addAll("label","label-confirm-sucess");
@@ -231,9 +226,7 @@ public class NewProductController implements Initializable{
 			Parent item = loader.load();
 			ListItemCategoryController c = loader.getController();
 			c.initi(cat,this.categories);
-			if(this.listIndex%2!=0) markAsPair(item);
 			this.vboxCategories.getChildren().add(item);
-			this.listIndex++;
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -9,7 +9,7 @@ import model.entity.Category;
 import model.entity.PersistentEntity;
 import model.entity.Product;
 
-public class ProductDAO implements  PersistentDAO{
+public class ProductDAO implements  PersistentDAO, ListableEntity{
 	
 	private Connection connection;
 	
@@ -104,4 +104,21 @@ public class ProductDAO implements  PersistentDAO{
 		}
 	}
 
+	@Override
+	public ArrayList<Product> getItems(int offset, int limit) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<Product> findItems(String keyword) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getNumberRegisters() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

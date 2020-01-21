@@ -9,80 +9,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1100.0" style="-fx-background-color: #fff;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewProductController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #fff;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewProductController">
    <children>
-      <Button layoutX="30.0" layoutY="585.0" mnemonicParsing="false" onAction="#saveNewProduct" prefHeight="61.0" prefWidth="182.0" style="-fx-background-color: #3785C4; -fx-text-fill: #FFF;" text="SALVAR" />
-      <AnchorPane layoutX="561.0" layoutY="55.0" prefHeight="513.0" prefWidth="675.0" style="-fx-border-color: #eee; -fx-border-radius: 0 0 0 3; -fx-background-color: #fcfcfc;" AnchorPane.leftAnchor="30.0">
+      <Button layoutX="30.0" layoutY="524.0" mnemonicParsing="false" onAction="#saveNewProduct" prefHeight="61.0" prefWidth="182.0" style="-fx-background-color: #FC5580; -fx-text-fill: #FFF;" text="SALVAR" />
+      <AnchorPane layoutX="506.0" layoutY="85.0" prefHeight="402.0" prefWidth="287.0" AnchorPane.topAnchor="85.0">
          <children>
-            <TextField fx:id="inputName" layoutY="64.0" prefHeight="48.0" prefWidth="486.0" promptText="Insira um nome..." styleClass="textfield-form" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
-            <Label layoutX="-1.0" layoutY="44.0" style="-fx-text-fill: #444;" text="NOME" AnchorPane.leftAnchor="25.0" />
-            <TextField fx:id="inputCode" layoutX="25.0" layoutY="154.0" prefHeight="48.0" prefWidth="285.0" promptText="Inisira um código válido" styleClass="textfield-form" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
-            <Label layoutX="25.0" layoutY="135.0" style="-fx-text-fill: #444;" text="CÓDIGO" AnchorPane.leftAnchor="25.0" />
-            <Label layoutY="11.0" style="-fx-padding: 10 20; -fx-text-fill: #FF1752; -fx-background-color: linear-gradient(to top, #fcfcfc, #f7f7f7);" styleClass="h3" text="IDENTIFICAÇÃO" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Label layoutX="51.0" layoutY="243.0" style="-fx-padding: 10 20; -fx-text-fill: #FF1752; -fx-background-color: linear-gradient(to top, #fcfcfc, #f7f7f7); -fx-border-color: #f0f0f0; -fx-border-width: 1 0 0 0;" styleClass="h3" text="VALORES" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <TextField fx:id="inputCostPrice" layoutX="26.0" layoutY="330.0" prefHeight="48.0" prefWidth="285.0" promptText="R$ 00,00" styleClass="textfield-form" AnchorPane.leftAnchor="25.0" />
-            <Label layoutX="25.0" layoutY="305.0" style="-fx-text-fill: #444;" text="PREÇO DE CUSTO" AnchorPane.leftAnchor="25.0" />
-            <TextField fx:id="inputSalePrice" layoutX="359.0" layoutY="330.0" prefHeight="48.0" prefWidth="285.0" promptText="R$ 00,00" styleClass="textfield-form" AnchorPane.rightAnchor="25.0" />
-            <Label layoutX="364.0" layoutY="305.0" style="-fx-text-fill: #444;" text="PREÇO DE VENDA" />
-            <TextField fx:id="inputQuantity" layoutX="28.0" layoutY="419.0" prefHeight="50.0" prefWidth="254.0" styleClass="textfield-form" text="1" AnchorPane.leftAnchor="25.0" />
-            <Label layoutX="27.0" layoutY="400.0" style="-fx-text-fill: #444;" text="QUANTIDADE" AnchorPane.leftAnchor="25.0" />
-            <VBox layoutX="285.0" layoutY="419.0" prefHeight="43.0" prefWidth="26.0">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#incrementQuantity" style="-fx-padding: 2 7; -fx-border-color: #ccc; -fx-border-width: 0 0 1 0; -fx-background-color: #e4e4e4;">
-                     <graphic>
-                        <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/icon-plus-light.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#decrementQuantity" style="-fx-padding: 2 7; -fx-border-color: #ccc; -fx-border-width: 0 0 1 0; -fx-background-color: #e4e4e4;">
-                     <graphic>
-                        <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/icon-minus-light.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </VBox>
-            <TextField fx:id="inputMinimus" layoutX="361.0" layoutY="419.0" prefHeight="48.0" prefWidth="285.0" styleClass="textfield-form" text="10" AnchorPane.rightAnchor="25.0" />
-            <Label layoutX="366.0" layoutY="400.0" style="-fx-text-fill: #444;" text="ESTOQUE MÍNIMO" />
-            <Label fx:id="labelCharEx" layoutX="559.0" layoutY="22.0" style="-fx-font-size: 11; -fx-text-fill: #fff; -fx-background-color: #ee6969; -fx-padding: 1 4;" text="Caracter inválido" />
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="30.0" layoutY="20.0" prefHeight="35.0" prefWidth="985.0" style="-fx-border-color: #eee; -fx-border-width: 1 1 0 1; -fx-background-radius: 3 3 0 0; -fx-background-color: linear-gradient(to top, #f7f7f7,#ECEEF0);" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
-         <children>
-            <Label fx:id="labelConfirmRegister" alignment="CENTER" layoutX="221.0" layoutY="1.0" text="Confirm sucess" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <graphic>
-                  <ImageView fx:id="imageviewConfirmIcon" fitHeight="12.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/checked-icon.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Label styleClass="h4" text="Cadastrar produto" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="0.0" />
-            <ImageView fitHeight="7.0" fitWidth="5.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="84.0">
-               <image>
-                  <Image url="@../img/nav-separator.png" />
-               </image>
-            </ImageView>
-            <Label styleClass="h4" text="Estoque" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="0.0" />
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="705.0" layoutY="55.0" prefHeight="513.0" prefWidth="310.0" style="-fx-background-color: #fcfcfc; -fx-border-color: #eee; -fx-border-radius: 0 0 3 0; -fx-border-width: 0 1 1 0;" AnchorPane.topAnchor="55.0">
-         <children>
-            <Label layoutX="6.0" style="-fx-padding: 10 20; -fx-text-fill: #FF1752; -fx-background-color: linear-gradient(to top, #fcfcfc, #f7f7f7); -fx-border-color: #f0f0f0; -fx-border-width: 1 0 0 0;" styleClass="h3" text="CATEGORIAS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Label layoutX="25.0" layoutY="47.0" style="-fx-text-fill: #999; -fx-font-size: 14;" text="Selecione categorias para este produto" AnchorPane.leftAnchor="25.0" />
-            <ScrollPane hbarPolicy="NEVER" layoutX="20.0" layoutY="71.0" pannable="true" style="-fx-background-color: transparent; -fx-border-color: #E1E1E1;" styleClass="scroll-list-category" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="70.0">
+            <Label layoutX="6.0" styleClass="h3" text="CATEGORIAS" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="4.0" />
+            <Label layoutY="45.0" style="-fx-text-fill: #999; -fx-font-size: 14;" text="Selecione categorias para este produto" AnchorPane.leftAnchor="0.0" />
+            <ScrollPane hbarPolicy="NEVER" layoutX="20.0" layoutY="71.0" pannable="true" style="-fx-background-color: transparent; -fx-border-color: #E1E1E1;" styleClass="scroll-list-category" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
                <content>
                   <VBox fx:id="vboxCategories" fillWidth="false" style="-fx-background-color: #fff;" />
                </content>
             </ScrollPane>
-            <Button layoutX="255.0" layoutY="10.0" mnemonicParsing="false" onAction="#saveNewCategory" style="-fx-background-color: #3EBF8B; -fx-text-fill: #fff; -fx-padding: 1 5;" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="10.0">
+            <Button layoutX="263.0" layoutY="2.0" mnemonicParsing="false" onAction="#saveNewCategory" style="-fx-background-color: #3EBF8B; -fx-text-fill: #fff; -fx-padding: 1 5;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <graphic>
                   <ImageView fitHeight="11.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -91,9 +30,54 @@
                   </ImageView>
                </graphic>
             </Button>
-            <TextField fx:id="inputCategory" layoutX="117.0" layoutY="10.0" prefHeight="27.0" prefWidth="135.0" promptText="Adicionar nova" style="-fx-padding: 2 5; -fx-font-size: 12;" AnchorPane.rightAnchor="53.0" />
-            <Label fx:id="labelCategoryEx" layoutX="228.0" layoutY="35.0" style="-fx-font-size: 12;" styleClass="label-confirm-exception" text="cat exception" AnchorPane.rightAnchor="54.0" />
+            <TextField fx:id="inputCategory" layoutX="117.0" prefHeight="27.0" prefWidth="161.0" promptText="Adicionar nova" style="-fx-padding: 2 5; -fx-font-size: 12;" AnchorPane.rightAnchor="30.0" />
+            <Label fx:id="labelCategoryEx" layoutX="208.0" layoutY="28.0" style="-fx-font-size: 12;" styleClass="label-confirm-exception" text="cat exception" AnchorPane.rightAnchor="31.0" />
          </children>
       </AnchorPane>
+      <TextField fx:id="inputName" layoutX="30.0" layoutY="115.0" prefHeight="43.0" prefWidth="430.0" promptText="Insira um nome..." styleClass="textfield-form" AnchorPane.leftAnchor="30.0" />
+      <Label layoutX="30.0" layoutY="95.0" style="-fx-text-fill: #444;" text="NOME" AnchorPane.leftAnchor="30.0" />
+      <TextField fx:id="inputCode" layoutX="30.0" layoutY="195.0" prefHeight="43.0" prefWidth="430.0" promptText="Inisira um código válido" styleClass="textfield-form" AnchorPane.leftAnchor="30.0" />
+      <Label layoutX="30.0" layoutY="175.0" style="-fx-text-fill: #444;" text="CÓDIGO" AnchorPane.leftAnchor="30.0" />
+      <TextField fx:id="inputCostPrice" layoutX="30.0" layoutY="275.0" prefHeight="43.0" prefWidth="430.0" promptText="R$ 00,00" styleClass="textfield-form" AnchorPane.leftAnchor="30.0" />
+      <Label layoutX="30.0" layoutY="255.0" style="-fx-text-fill: #444;" text="PREÇO DE CUSTO" AnchorPane.leftAnchor="30.0" />
+      <TextField fx:id="inputSalePrice" layoutX="30.0" layoutY="355.0" prefHeight="43.0" prefWidth="430.0" promptText="R$ 00,00" styleClass="textfield-form" AnchorPane.leftAnchor="30.0" />
+      <Label layoutX="30.0" layoutY="335.0" style="-fx-text-fill: #444;" text="PREÇO DE VENDA" AnchorPane.leftAnchor="30.0" />
+      <TextField fx:id="inputQuantity" layoutX="245.0" layoutY="435.0" prefHeight="45.0" prefWidth="180.0" styleClass="textfield-form" text="1" />
+      <Label layoutX="245.0" layoutY="415.0" style="-fx-text-fill: #444;" text="QUANTIDADE" />
+      <VBox layoutX="436.0" layoutY="433.0" prefHeight="43.0" prefWidth="26.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#incrementQuantity" style="-fx-padding: 2 7; -fx-border-color: #ccc; -fx-border-width: 0 0 1 0; -fx-background-color: #e4e4e4;">
+               <graphic>
+                  <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon-plus-light.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#decrementQuantity" style="-fx-padding: 2 7; -fx-border-color: #ccc; -fx-border-width: 0 0 1 0; -fx-background-color: #e4e4e4;">
+               <graphic>
+                  <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon-minus-light.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <TextField fx:id="inputMinimus" layoutX="28.0" layoutY="436.0" prefHeight="43.0" prefWidth="180.0" styleClass="textfield-form" text="1" AnchorPane.leftAnchor="30.0" />
+      <Label layoutX="28.0" layoutY="415.0" style="-fx-text-fill: #444;" text="ESTOQUE MÍNIMO" AnchorPane.leftAnchor="28.0" />
+      <Label fx:id="labelCharEx" layoutX="371.0" layoutY="70.0" style="-fx-font-size: 11; -fx-text-fill: #fff; -fx-background-color: #ee6969; -fx-padding: 1 4;" text="Caracter inválido" />
+      <Label fx:id="labelConfirmRegister" alignment="CENTER" layoutX="32.0" layoutY="64.0" style="-fx-background-color: #f9f9f9; -fx-padding: 2 4;" text="Confirm sucess" AnchorPane.leftAnchor="30.0">
+         <graphic>
+            <ImageView fx:id="imageviewConfirmIcon" fitHeight="12.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/failed-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label layoutX="30.0" layoutY="25.0" style="-fx-text-fill: #3399CC; -fx-font-size: 25;" text="Cadastrar produto" AnchorPane.leftAnchor="30.0" />
    </children>
 </AnchorPane>

@@ -10,6 +10,6 @@ public class EntityAlreadyExistException extends Exception{
 	
 	@Override
 	public String toString() {
-		return this.identify+" already exist.";
+		return this.identify+" já existe";
 	}
 }
