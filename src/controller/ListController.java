@@ -53,12 +53,16 @@ public class ListController{
 	
 	@FXML
     void nextPage() {
-
+		this.list.loadNextPage();
+		updatePaginationControls();
+		updatePaginationInfo();
     }
 
     @FXML
     void previousPage() {
-
+    	this.list.loadPreviousPage();
+    	updatePaginationControls();
+    	updatePaginationInfo();
     }
     
     private void initiHeader() {

@@ -27,11 +27,13 @@ public class EntityList {
 	
 	public ArrayList<?> loadNextPage(){
 		//TODO
+		incrementOffset();
 		return null;
 	}
 	
 	public ArrayList<?> loadPreviousPage(){
 		//TODO
+		decrementOffset();
 		return null;
 	}
 	
@@ -41,7 +43,9 @@ public class EntityList {
 	}
 	
 	public String getPaginationInfo() {
-		return offset+"-"+limit+" de "+total;
+		String pagination = offset+"-"+(offset+limit-1)+" de "+total;
+		if(offset+limit >= total) pagination = offset+"-"+total+" de "+total;
+		return pagination;
 	}
 	
 	public boolean isFirstPage() {
@@ -55,4 +59,14 @@ public class EntityList {
 		if((offset+15)>=total) yep = true;
 		return yep;
 	}	
+	
+	private void incrementOffset() {
+		if(offset+limit < total)
+			this.offset += limit;
+	}
+	
+	private void decrementOffset() {
+		if(offset > 1)
+			this.offset -= limit;
+	}
 }
