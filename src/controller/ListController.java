@@ -10,30 +10,46 @@ import javafx.scene.Parent;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import model.dao.ListableEntity;
+import model.entity.EntityList;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
-public class ListController implements Initializable{
-	@FXML
+public class ListController{
+    @FXML
     private AnchorPane anchorList;
-	@FXML
+    @FXML
+    private Label labelTitle;
+    @FXML
     private ScrollPane scrollList;
-	@FXML
+    @FXML
     private VBox vboxList;
+    @FXML
+    private Button buttonPagNavLeft;
+    @FXML
+    private Label labelPagination;
+    @FXML
+    private Button buttonPagNavRight;
+    @FXML
+    private AnchorPane anchorListHeader;
+    @FXML
+    private TextField inputSearch;
 	
 	private double itemWidth = 900;
 	
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-		
+	private EntityList list;
+	
+	public void initi(ListableEntity listable, String...columns) {
+		this.list = new EntityList(listable);
 	}
 	
 	private void loadList() {
-		
 		for(int index=0; index<8; index++) {
-			
 			try {
-				FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLListItem.fxml"));
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLListItemProduct.fxml"));
 				Parent item = loader.load();
-				ListItemController c = loader.getController();
+				ListItemProductController c = loader.getController();
 				this.vboxList.getChildren().add(item);
 				c.initiAfterAdded(itemWidth, index);
 			} catch (IOException e) {

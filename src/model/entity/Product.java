@@ -54,6 +54,20 @@ public class Product implements PersistentEntity{
 		this.inclusionDate=inclusion;
 	}
 	
+	//Product from database for item
+		public Product(int id,String name,String code,float salePrice,int quantity,int minQuantity) {
+			this.id=id;
+			this.name=name;
+			this.code=code;
+			this.costPrice=0.0f;
+			this.salePrice=salePrice;
+			this.quantiy=quantity;
+			this.minimumQuantity=minQuantity;
+			this.categories=null;
+			this.inclusionDate=null;
+		}
+		
+	
 	public ArrayList<String> datasFormatted(){
 		ArrayList<String> datas = new ArrayList<>();
 		datas.add(name);

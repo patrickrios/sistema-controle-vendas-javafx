@@ -3,7 +3,7 @@ package controller;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 
-public class ListItemController {
+public class ListItemProductController {
     @FXML
     private AnchorPane anchorItem;
     

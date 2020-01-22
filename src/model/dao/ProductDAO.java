@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import model.entity.Category;
 import model.entity.PersistentEntity;
 import model.entity.Product;
+import model.exception.EmptyArrayListException;
 
 public class ProductDAO implements  PersistentDAO, ListableEntity{
 	
@@ -105,9 +106,23 @@ public class ProductDAO implements  PersistentDAO, ListableEntity{
 	}
 
 	@Override
-	public ArrayList<Product> getItems(int offset, int limit) {
-		// TODO Auto-generated method stub
-		return null;
+	public ArrayList<Product> getItems(int offset, int limit) throws EmptyArrayListException {
+		ArrayList<Product> list = new ArrayList<>();
+		String query = "SELECT id_product,name,code,salePrice,quantity,minimum_quantity FROM ddb_product LIMIT "+limit+" OFFSET "+offset;
+		try {
+			PreparedStatement stat = this.connection.prepareStatement(query);
+			ResultSet rset = stat.executeQuery();
+			while (rset.next()) {
+				list.add(new Product(rset.getInt(1),rset.getString(2),rset.getString(3),rset.getFloat(4),rset.getInt(5),rset.getInt(6)));
+			}
+			stat.close();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if(list.isEmpty())
+			throw new EmptyArrayListException(list);
+		return list;
 	}
 
 	@Override
@@ -118,7 +133,17 @@ public class ProductDAO implements  PersistentDAO, ListableEntity{
 
 	@Override
 	public int getNumberRegisters() {
-		// TODO Auto-generated method stub
-		return 0;
+		int count=0;
+		String query = "SELECT count(id_product) FROM ddb_product LIMIT 1";
+		try {
+			PreparedStatement stat = this.connection.prepareStatement(query);
+			ResultSet result = stat.executeQuery();
+			if(result.next())
+				count = result.getInt(1);
+			stat.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return count;
 	}
 }

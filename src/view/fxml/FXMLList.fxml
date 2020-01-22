@@ -12,42 +12,47 @@
 
 <AnchorPane fx:id="anchorList" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: #fff;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListController">
    <children>
-      <Label layoutX="60.0" layoutY="14.0" styleClass="h3" text="Lista Produtos" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="23.0" />
+      <Label fx:id="labelTitle" layoutX="60.0" layoutY="14.0" styleClass="h3" text="Lista Produtos" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="23.0" />
       <ScrollPane fx:id="scrollList" layoutX="31.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #eee;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="77.0">
          <content>
             <VBox fx:id="vboxList" />
          </content>
       </ScrollPane>
-      <HBox alignment="BOTTOM_LEFT" layoutX="598.0" layoutY="-2.0" spacing="10.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="15.0">
+      <HBox alignment="BOTTOM_LEFT" layoutX="598.0" layoutY="-2.0" spacing="10.0" style="-fx-border-color: #d2d2d2; -fx-background-radius: 3; -fx-border-radius: 3; -fx-padding: 0 0 1 0;" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="12.0">
          <children>
-            <TextField prefHeight="31.0" prefWidth="205.0" style="-fx-padding: 2 10;" />
-            <Label styleClass="h3" text="1-1 de 1" />
-            <Button mnemonicParsing="false" styleClass="button-pagination-nav">
+            <Button fx:id="buttonPagNavLeft" mnemonicParsing="false" styleClass="button-quantity-left">
                <graphic>
-                  <ImageView fitHeight="9.0" fitWidth="6.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="14.0" fitWidth="9.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/chevron-left-dark.png" />
+                        <Image url="@../img/pag-button-disable-left.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Button mnemonicParsing="false" styleClass="button-pagination-nav">
+            <Label fx:id="labelPagination" prefHeight="31.0" prefWidth="56.0" style="-fx-text-fill: #009DE1;" styleClass="h3" text="1-1 de 1" />
+            <Button fx:id="buttonPagNavRight" mnemonicParsing="false" styleClass="button-quantity-right">
                <graphic>
-                  <ImageView fitHeight="9.0" fitWidth="6.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="12.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/chevron-right-dark.png" />
+                        <Image url="@../img/pag-button-enable-right.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
          </children>
       </HBox>
-      <AnchorPane layoutX="17.0" layoutY="8.0" prefHeight="23.0" prefWidth="500.0" style="-fx-background-color: #DBE8F2;" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="55.0">
+      <AnchorPane fx:id="anchorListHeader" layoutX="17.0" layoutY="8.0" prefHeight="23.0" prefWidth="500.0" style="-fx-background-color: #DBE8F2;" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="55.0">
          <children>
             <Label layoutX="38.0" layoutY="3.0" text="NOME" AnchorPane.leftAnchor="50.0" />
             <Label layoutX="269.0" layoutY="3.0" text="COD." />
             <Label layoutX="507.0" layoutY="3.0" text="QUANT." />
             <Label layoutX="692.0" layoutY="3.0" text="PREÇO VENDA" />
          </children></AnchorPane>
+      <TextField fx:id="inputSearch" layoutX="598.0" layoutY="13.0" prefHeight="31.0" prefWidth="205.0" style="-fx-padding: 2 10;" AnchorPane.rightAnchor="200.0" />
+      <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="774.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="210.0">
+         <image>
+            <Image url="@../img/search-icon-dark.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

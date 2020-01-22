@@ -2,51 +2,56 @@ package model.entity;
 
 import java.util.ArrayList;
 import model.dao.ListableEntity;
+import model.exception.EmptyArrayListException;
 
 public class EntityList {
 	private int offset = 1;
 	private int limit = 15;
 	private int total = 0;
+	private ListableEntity listable;
 	
 	public EntityList(ListableEntity listable) {
-		// TODO Auto-generated constructor stub
+		this.total = listable.getNumberRegisters();
+		this.listable = listable;
 	}
 	
-	ArrayList<?> getItems(){
+	public ArrayList<?> getItems() throws EmptyArrayListException{
+		ArrayList<?> items = null;
+		items = this.listable.getItems(offset, limit);
+		
+		if(items.isEmpty() || items==null) 
+			throw new EmptyArrayListException(items);
+		else	
+			return items;
+	}
+	
+	public ArrayList<?> loadNextPage(){
 		//TODO
 		return null;
 	}
 	
-	ArrayList<?> loadNextPage(){
+	public ArrayList<?> loadPreviousPage(){
 		//TODO
 		return null;
 	}
 	
-	ArrayList<?> loadPreviousPage(){
+	public ArrayList<?> findItems(String keyword){
 		//TODO
 		return null;
 	}
 	
-	ArrayList<?> findItems(String keyword){
+	public String getPaginationInfo() {
 		//TODO
-		return null;
+		return ""+total;
 	}
 	
-	String getPaginationInfo() {
-		//TODO
-		return "";
-	}
-	
-	boolean isFirstPage() {
+	public boolean isFirstPage() {
 		//TODO
 		return true;
 	}
 	
-	boolean isLastPage() {
+	public boolean isLastPage() {
 		//TODO
 		return true;
-	}
-	
-	
-	
+	}	
 }

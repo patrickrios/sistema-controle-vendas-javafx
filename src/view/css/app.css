@@ -56,9 +56,9 @@
 	.main-menu-subitens:hover{-fx-text-fill:#068FFF;}	
 
     	/** Quantify/pagination buttons*/
-    	.button-pagination-nav{-fx-border-color:transparent;-fx-border-radius:3;}
-	.button-quantity-right{-fx-border-color:#CCC;-fx-border-radius:0 3 3 0;}
-	.button-quantity-left{-fx-border-color:#CCC;-fx-border-radius:3 0 0 3;}
+	.button-quantity-right,.button-quantity-left{-fx-background-color:#FAFAFA;}
+	.button-quantity-right{-fx-border-color:#d2d2d2;-fx-border-width:0 0 0 1;-fx-border-radius:0 3 3 0;}
+	.button-quantity-left{-fx-border-color:#d2d2d2;-fx-border-width:0 1 0 0;-fx-border-radius:3 0 0 3;}
 
 	/** Textos*/
 	.h1, .h2, .h3, .h4{-fx-font-family:"Lato", sans-serif;-fx-text-fill:#3A454B;}
