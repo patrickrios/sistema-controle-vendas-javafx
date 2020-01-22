@@ -125,6 +125,9 @@ public class Product implements PersistentEntity{
 	public float getSalePrice() {
 		return salePrice;
 	}
+	public String formattedSalePrice() {
+		return MoneyRealFormat.floatToRealString(salePrice);
+	}
 	public int getQuantiy() {
 		return quantiy;
 	}

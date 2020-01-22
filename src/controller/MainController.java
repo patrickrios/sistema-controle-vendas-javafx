@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import model.dao.ProductDAO;
 import view.util.FadeEffectTransition;
 import java.io.IOException;
 import java.net.URL;
@@ -35,6 +36,7 @@ public class MainController implements Initializable
         try{
             Parent parent = loader.load();
             ListController c = loader.getController();
+            c.initi(new ProductDAO(),"Nome","Cod","Preço de venda","Quantidade");
             this.anchorpaneMainContent.getChildren().setAll(parent);
             c.initiAfterAdded(this.scrollContent.getWidth(),this.scrollContent.getHeight());
         }

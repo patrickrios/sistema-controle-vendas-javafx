@@ -146,4 +146,9 @@ public class ProductDAO implements  PersistentDAO, ListableEntity{
 		}
 		return count;
 	}
+
+	@Override
+	public String itemLayoutPath() {
+		return "/view/fxml/FXMLListItemProduct.fxml";
+	}
 }

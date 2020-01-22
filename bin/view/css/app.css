@@ -72,6 +72,7 @@
 	.home-avatar{-fx-border-radius:100;-fx-background-radius:100;}
 
 	/** List view*/
+	.label-header-column{-fx-font-size:14;}
 	.list-item{-fx-background-color:#FFF;-fx-border-color:transparent transparent #DDD transparent;-fx-border-width:0 0 1 1;-fx-border-style:dashed;-fx-cursor:hand;}
 	.list-item:hover{-fx-border-color:transparent transparent #DDD #0078D7;-fx-border-width:0 0 1 1 ;-fx-border-style:dashed solid;}
 	.list-item .label{-fx-text-fill:#666;}

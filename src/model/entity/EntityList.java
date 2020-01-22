@@ -41,17 +41,18 @@ public class EntityList {
 	}
 	
 	public String getPaginationInfo() {
-		//TODO
-		return ""+total;
+		return offset+"-"+limit+" de "+total;
 	}
 	
 	public boolean isFirstPage() {
-		//TODO
-		return true;
+		boolean yep = false;
+		if(offset==1) yep=true;
+		return yep;
 	}
 	
 	public boolean isLastPage() {
-		//TODO
-		return true;
+		boolean yep = false;
+		if((offset+15)>=total) yep = true;
+		return yep;
 	}	
 }
