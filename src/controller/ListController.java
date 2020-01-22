@@ -54,6 +54,7 @@ public class ListController{
 	@FXML
     void nextPage() {
 		this.list.loadNextPage();
+		loadList();
 		updatePaginationControls();
 		updatePaginationInfo();
     }
@@ -61,6 +62,7 @@ public class ListController{
     @FXML
     void previousPage() {
     	this.list.loadPreviousPage();
+    	loadList();
     	updatePaginationControls();
     	updatePaginationInfo();
     }
@@ -97,6 +99,7 @@ public class ListController{
 	
 	private void loadList() {
 		int index=0;
+		this.vboxList.getChildren().clear();
 		try {
 			for(Object obj : this.list.getItems()) {
 				PersistentEntity entity = (PersistentEntity)obj;
@@ -105,12 +108,12 @@ public class ListController{
 				ListItemController c = loader.getController();
 				c.initi(entity);
 				this.vboxList.getChildren().add(item);
-				c.initiAfterAdded(itemWidth, index);
+				c.initiAfterAdded(itemWidth,index);
 				index++;
 			}
 		} 
 		catch (EmptyArrayListException e) {
-			e.printStackTrace();
+			e.toString();
 		} 
 		catch (IOException e) {
 			e.printStackTrace();

@@ -12,7 +12,7 @@ public class EmptyArrayListException extends Exception{
 	
 	@Override
 	public String toString() {
-		return this.list.toString();
+		return this.list.toString()+" está vazia.";
 	}
 
 }

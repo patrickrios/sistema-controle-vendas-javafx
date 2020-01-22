@@ -74,14 +74,14 @@
 	/** List view*/
 	.label-header-column{-fx-font-size:14;}
 	.list-item{-fx-background-color:#FFF;-fx-border-color:transparent transparent #DDD transparent;-fx-border-width:0 0 1 1;-fx-border-style:dashed;-fx-cursor:hand;}
-	.list-item:hover{-fx-border-color:transparent transparent #DDD #0078D7;-fx-border-width:0 0 1 1 ;-fx-border-style:dashed solid;}
+	.list-item:hover{-fx-border-color:transparent transparent #DDD #0078D7;-fx-border-width:0 0 1 1 ; -fx-background-color:#EEF7FD;-fx-border-style:dashed solid;}
 	.list-item .label{-fx-text-fill:#666;}
 	.list-item:hover .label{-fx-text-fill:#0078D7;}
 	.list-item-option-pane{visibility:hidden;}
 	.list-item:hover .list-item-option-pane{visibility:visible;}
-	.list-item-option-button{-fx-background-color:#F7F7F7;-fx-padding:3 6;-fx-border-radius:0;-fx-background-radius:0;-fx-border-width:0 0 0 1;-fx-border-color:#EEE;}
+	.list-item-option-button{-fx-background-color:linear-gradient(to top,#F7F7F7,#FFFFFF);-fx-padding:3 6;-fx-border-radius:0;-fx-background-radius:0;-fx-border-width:0 0 0 1;-fx-border-color:#EEE;}
 	.list-item-option-button:hover{-fx-background-color:#EEE;}
-	.list-item-pair{-fx-background-color:#FCFCFC !important;}
+	.list-item-pair{-fx-background-color:#FCFCFC;}
 
 	/** New Product*/
 	.label-confirm-sucess{-fx-text-fill:#44AD7A;}

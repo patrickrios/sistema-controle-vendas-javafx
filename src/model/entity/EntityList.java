@@ -9,32 +9,32 @@ public class EntityList {
 	private int limit = 15;
 	private int total = 0;
 	private ListableEntity listable;
+	private ArrayList<?> items;
 	
 	public EntityList(ListableEntity listable) {
 		this.total = listable.getNumberRegisters();
 		this.listable = listable;
+		this.items = this.listable.getItems(offset, limit);
 	}
 	
 	public ArrayList<?> getItems() throws EmptyArrayListException{
-		ArrayList<?> items = null;
-		items = this.listable.getItems(offset, limit);
-		
 		if(items.isEmpty() || items==null) 
 			throw new EmptyArrayListException(items);
 		else	
-			return items;
+			return this.items;
 	}
 	
 	public ArrayList<?> loadNextPage(){
-		//TODO
 		incrementOffset();
-		return null;
+		this.items = this.listable.getItems(offset, limit);
+		return this.items;
 	}
 	
 	public ArrayList<?> loadPreviousPage(){
 		//TODO
 		decrementOffset();
-		return null;
+		this.items = this.listable.getItems(offset, limit);
+		return this.items;
 	}
 	
 	public ArrayList<?> findItems(String keyword){
@@ -43,9 +43,10 @@ public class EntityList {
 	}
 	
 	public String getPaginationInfo() {
-		String pagination = offset+"-"+(offset+limit-1)+" de "+total;
-		if(offset+limit >= total) pagination = offset+"-"+total+" de "+total;
-		return pagination;
+		if(offset+limit >= total)
+			return String.format("%02d-%02d de %02d", offset,total,total);
+		else
+			return String.format("%02d-%02d de %02d", offset,(offset+limit-1),total);
 	}
 	
 	public boolean isFirstPage() {

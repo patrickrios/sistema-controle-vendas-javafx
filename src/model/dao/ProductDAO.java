@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import model.entity.Category;
 import model.entity.PersistentEntity;
 import model.entity.Product;
-import model.exception.EmptyArrayListException;
 
 public class ProductDAO implements  PersistentDAO, ListableEntity{
 	
@@ -106,7 +105,7 @@ public class ProductDAO implements  PersistentDAO, ListableEntity{
 	}
 
 	@Override
-	public ArrayList<Product> getItems(int offset, int limit) throws EmptyArrayListException {
+	public ArrayList<Product> getItems(int offset, int limit){
 		ArrayList<Product> list = new ArrayList<>();
 		String query = "SELECT id_product,name,code,salePrice,quantity,minimum_quantity FROM ddb_product LIMIT "+limit+" OFFSET "+offset;
 		try {
@@ -120,8 +119,6 @@ public class ProductDAO implements  PersistentDAO, ListableEntity{
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		if(list.isEmpty())
-			throw new EmptyArrayListException(list);
 		return list;
 	}
 

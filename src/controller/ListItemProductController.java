@@ -43,6 +43,7 @@ public class ListItemProductController implements ListItemController {
     	labelProdName.setText(this.product.getName());
     	labelProdCode.setText(this.product.getCode());
     	labelSalePrice.setText(this.product.formattedSalePrice());
+    	labelProdQuanity.setText(String.format("%02d", this.product.getQuantiy()));
     }
     
     private void fullWidthSize(double width) {
