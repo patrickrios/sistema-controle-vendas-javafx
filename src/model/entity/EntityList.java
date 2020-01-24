@@ -57,7 +57,7 @@ public class EntityList {
 	
 	public boolean isLastPage() {
 		boolean yep = false;
-		if((offset+15)>=total) yep = true;
+		if((offset+limit)>=total) yep = true;
 		return yep;
 	}	
 	

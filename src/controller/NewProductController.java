@@ -14,8 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.VBox;
-import model.dao.CategoryDAO;
+import javafx.scene.layout.AnchorPane;
 import model.entity.Category;
 import model.entity.Product;
 import model.exception.EntityAlreadyExistException;
@@ -43,17 +42,12 @@ public class NewProductController implements Initializable{
     @FXML
     private TextField inputMinimus;
     @FXML
-    private TextField inputCategory;
-    @FXML
     private Label labelCharEx;
     @FXML
-    private Label labelCategoryEx;
-    @FXML
-    private VBox vboxCategories;
+    private AnchorPane anchorCategories;
     
     private String values[] = new String[6];
     private ArrayList<Category> categories = new ArrayList<>();
-    private ArrayList<Category> categoriesDB = new ArrayList<>();
     private int quantityValue=1;
     private int minInventValue=10;
     
@@ -66,7 +60,6 @@ public class NewProductController implements Initializable{
     
     private void initiInputValidations() {
     	labelCharEx.setVisible(false);
-    	labelCategoryEx.setVisible(false);
     	validateInput(inputName, new TextInputValidation(TextInputValidation.TEXT),0);
     	validateInput(inputCode, new TextInputValidation(TextInputValidation.NUMERIC),1);
     	validateInput(inputCostPrice,new TextInputValidation(TextInputValidation.DECIMAL),2);
@@ -82,10 +75,16 @@ public class NewProductController implements Initializable{
     }
     
     private void loadCategories() {
-    	this.categoriesDB = new CategoryDAO().getAll();
-    	for(Category cat : this.categoriesDB) {
-    		addCategoryListItem(cat);
-    	}
+    	//TODO
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLCategorySelection.fxml"));
+    	try {
+			Parent categorySelect = loader.load();
+			CategorySelectionController c = loader.getController();
+			c.initi(this.categories);
+			anchorCategories.getChildren().setAll(categorySelect);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
     }
     
     @FXML
@@ -115,22 +114,6 @@ public class NewProductController implements Initializable{
 		} 
     	catch (EntityAlreadyExistException e) {
 			showExceptionLabel(e.toString());
-		}
-    }
-    @FXML
-    void saveNewCategory() {
-    	try {
-			verifyEmptyInput(this.inputCategory);
-			Category newCat = new Category(inputCategory.getText());
-			newCat.createIfNotExist();
-			this.categoriesDB.add(newCat);
-			addCategoryListItem(newCat);
-			this.inputCategory.clear();
-		} catch (EmptyInputException e) {
-			e.markAsEmpty();
-		} catch (EntityAlreadyExistException e) {
-			this.labelCategoryEx.setText(e.toString());
-			this.labelCategoryEx.setVisible(true);
 		}
     }
     
@@ -220,17 +203,6 @@ public class NewProductController implements Initializable{
     	this.imageviewConfirmIcon.setImage(new Image(getClass().getResourceAsStream(path)));
     }
     
-    private void addCategoryListItem(Category cat) {
-    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLListItemCategory.fxml"));
-		try {
-			Parent item = loader.load();
-			ListItemCategoryController c = loader.getController();
-			c.initi(cat,this.categories);
-			this.vboxCategories.getChildren().add(item);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-    }
     
     private void resetForm() {
     	this.inputCode.setText("");
@@ -240,8 +212,5 @@ public class NewProductController implements Initializable{
     	this.inputQuantity.setText("1");
     	this.inputSalePrice.setText("");
     	this.categories.clear();
-    	this.vboxCategories.getChildren().clear();
-    	for(Category c : this.categoriesDB)
-    		addCategoryListItem(c);
     }
 }
