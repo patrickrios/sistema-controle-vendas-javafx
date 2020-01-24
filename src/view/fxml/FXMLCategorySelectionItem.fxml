@@ -4,7 +4,7 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="anchorCategoryItem" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="258.0" styleClass="list-category-item" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListItemCategoryController">
+<AnchorPane fx:id="anchorCategoryItem" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="285.0" styleClass="list-category-item" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CategorySelectionItemController">
    <children>
       <CheckBox fx:id="checkSelectCategory" layoutX="10.0" mnemonicParsing="false" onAction="#switchCheckboxStatus" prefHeight="34.0" prefWidth="261.0" style="-fx-label-padding: 0 10;" text="Categoria 01" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <opaqueInsets>

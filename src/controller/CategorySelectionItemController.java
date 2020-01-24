@@ -6,7 +6,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.layout.AnchorPane;
 import model.entity.Category;
 
-public class ListItemCategoryController {
+public class CategorySelectionItemController {
 	@FXML
     private AnchorPane anchorCategoryItem;
 	 @FXML
@@ -47,5 +47,9 @@ public class ListItemCategoryController {
 	 
 	 private void unmarkAsSelected() {
 		 this.anchorCategoryItem.getStyleClass().remove("list-category-item-selected");
+	 }
+	 
+	 public void markAsPair() {
+		 this.anchorCategoryItem.getStyleClass().add("list-item-pair");
 	 }
 }

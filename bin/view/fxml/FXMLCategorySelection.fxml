@@ -11,14 +11,13 @@
 
 <AnchorPane prefHeight="402.0" prefWidth="287.0" style="-fx-background-color: #fff;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CategorySelectionController">
    <children>
-      <Label layoutX="6.0" styleClass="h3" text="CATEGORIAS" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="4.0" />
-      <Label layoutY="45.0" style="-fx-text-fill: #999; -fx-font-size: 14;" text="Selecione categorias para este produto" AnchorPane.leftAnchor="0.0" />
+      <Label layoutX="55.0" layoutY="110.0" prefHeight="28.0" style="-fx-text-fill: #FF3366; -fx-padding: 3; -fx-background-color: linear-gradient(to bottom, #f9f9f9,#fff);" text="CATEGORIAS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <ScrollPane hbarPolicy="NEVER" layoutX="20.0" layoutY="71.0" pannable="true" style="-fx-background-color: transparent; -fx-border-color: #E1E1E1;" styleClass="scroll-list-category" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
          <content>
             <VBox fx:id="vboxCategories" fillWidth="false" style="-fx-background-color: #fff;" />
          </content>
       </ScrollPane>
-      <Button layoutX="263.0" layoutY="2.0" mnemonicParsing="false" onAction="#saveNewCategory" style="-fx-background-color: #3EBF8B; -fx-text-fill: #fff; -fx-padding: 1 5;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Button layoutX="245.0" layoutY="30.0" mnemonicParsing="false" onAction="#saveNewCategory" prefHeight="32.0" prefWidth="37.0" style="-fx-background-color: #3EBF8B; -fx-text-fill: #fff; -fx-padding: 1 5; -fx-border-radius: 0 3 3 0; -fx-background-radius: 0 3 3 0;" AnchorPane.rightAnchor="1.0">
          <graphic>
             <ImageView fitHeight="11.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -27,7 +26,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <TextField fx:id="inputCategory" layoutX="117.0" prefHeight="27.0" prefWidth="161.0" promptText="Adicionar nova" style="-fx-padding: 2 5; -fx-font-size: 12;" AnchorPane.rightAnchor="30.0" />
-      <Label fx:id="labelCategoryEx" layoutX="208.0" layoutY="28.0" style="-fx-font-size: 12;" styleClass="label-confirm-exception" text="cat exception" AnchorPane.rightAnchor="31.0" />
+      <TextField fx:id="inputCategory" layoutX="7.0" layoutY="30.0" prefHeight="33.0" prefWidth="249.0" promptText="Adicionar nova" style="-fx-padding: 2 5; -fx-font-size: 12; -fx-background-radius: 3 0 0 3; -fx-border-radius: 3 0 0 3;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="38.0" />
+      <Label fx:id="labelCategoryEx" layoutX="217.0" layoutY="6.0" style="-fx-font-size: 12;" styleClass="label-confirm-exception" text="cat exception" AnchorPane.rightAnchor="3.0" />
    </children>
 </AnchorPane>

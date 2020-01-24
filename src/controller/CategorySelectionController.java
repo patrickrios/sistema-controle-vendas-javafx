@@ -26,6 +26,8 @@ public class CategorySelectionController {
     
     private ArrayList<Category> categoriesOnDB;
     
+    private int index=0;
+    
     public void initi(ArrayList<Category> list) {
     	this.selectedCategories = list;
     	this.labelCategoryEx.setVisible(false);
@@ -57,11 +59,12 @@ public class CategorySelectionController {
     }
     
     private void addCategoryListItem(Category cat) {
-    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLListItemCategory.fxml"));
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLCategorySelectionItem.fxml"));
 		try {
 			Parent item = loader.load();
-			ListItemCategoryController c = loader.getController();
+			CategorySelectionItemController c = loader.getController();
 			c.initi(cat,this.selectedCategories);
+			if(isPair()) c.markAsPair();
 			this.vboxCategories.getChildren().add(item);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -75,5 +78,12 @@ public class CategorySelectionController {
     	else
     		input = this.inputCategory.getText();
     	return input;
+    }
+    
+    private boolean isPair() {
+    	boolean is=false;
+    	if(this.index%2!=0) is = true;
+    	this.index++;
+    	return is;
     }
 }

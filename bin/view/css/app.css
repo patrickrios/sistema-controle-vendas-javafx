@@ -86,10 +86,13 @@
 	/** New Product*/
 	.label-confirm-sucess{-fx-text-fill:#44AD7A;}
 	.label-confirm-exception{-fx-text-fill:#EE6969;}
+	.label-form{-fx-font-size:20;-fx-text-fill:#666;}
 	.textfield-form{-fx-border-color:#C0C0C0;}
 	.scroll-list-category > .viewport{-fx-background-color:transparent;}
 	.list-category-item{-fx-background-color:#FFF;-fx-border-color:#DDD;-fx-border-width:0 0 1 0;-fx-border-style:dashed solid;-fx-cursor:hand;}
-	.list-category-item .check-box{-fx-text-fill:#009CF0;}
+	.list-category-item:hover{-fx-background-color:#EEF7FD;}
+	.list-category-item .check-box{-fx-text-fill:#008FDD;}
+	.list-category-item .check-box .box{-fx-border-radius:30;-fx-background-radius:30;}
 	.list-category-item:hover .check-box{-fx-text-fill:#000;}
-	.list-category-item-selected{-fx-background-color:#1CAFFF !important;-fx-border-width:0 0 0 1; -fx-border-color:#006297;-fx-border-style:solid;}
+	.list-category-item-selected{-fx-background-color:#1CAFFF !important;}
 	.list-category-item-selected .check-box{-fx-text-fill:#fff !important;}
