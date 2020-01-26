@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane fx:id="anchorItem" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="1000.0" styleClass="list-item" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListItemProductController">
+<AnchorPane fx:id="anchorItem" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#loadEditingLayout" prefHeight="45.0" prefWidth="1000.0" styleClass="list-item" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListItemProductController">
    <children>
       <CheckBox fx:id="choiceboxProdItem" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" />
       <Label fx:id="labelProdName" layoutX="50.0" layoutY="13.0" styleClass="h4" text="Produto 01" />

@@ -1,9 +1,13 @@
 package controller;
 
+import java.io.IOException;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import model.entity.PersistentEntity;
 import model.entity.Product;
 
@@ -21,6 +25,8 @@ public class ListItemProductController implements ListItemController {
     @FXML
     private Label labelProdQuanity;
     
+    private StackPane stackList;
+    
     private Product product;
     
     private Label[] labels = new Label[4];//= {labelProdName,labelProdCode,labelSalePrice,labelProdQuanity};
@@ -37,6 +43,20 @@ public class ListItemProductController implements ListItemController {
     	fullWidthSize(width);
     	markAsPair(index);
     	defineLabelMarginLayout(width);
+    }
+    
+    @FXML
+    void loadEditingLayout() {
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/FXMLEditProduct.fxml"));
+    	try {
+			Parent editLayout = loader.load();
+	    	EditProductController c = loader.getController();
+	    	c.initi(this.product);
+	    	showEditLayout(editLayout);
+	    	c.fullSize();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
     }
     
     private void initiLabels() {
@@ -71,5 +91,10 @@ public class ListItemProductController implements ListItemController {
     		margin += space;
     	}
     	
+    }
+    
+    private void showEditLayout(Parent layout) {
+    	this.stackList = (StackPane)anchorItem.getScene().lookup("#stackListView");
+		this.stackList.getChildren().add(layout);
     }
 }

@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import model.dao.ListableEntity;
 import model.entity.EntityList;
@@ -18,6 +19,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class ListController{
+	@FXML
+    private StackPane stackListView;
     @FXML
     private AnchorPane anchorList;
     @FXML
