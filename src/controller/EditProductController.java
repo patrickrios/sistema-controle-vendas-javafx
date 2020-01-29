@@ -7,7 +7,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import model.entity.Category;
 import model.entity.Product;
-import view.util.FullSizeConteiner;
 import view.util.RealFormat;
 
 public class EditProductController {
@@ -43,15 +42,32 @@ public class EditProductController {
     	this.inputMinimum.setText(product.getMinimumQuantity()+"");
     	this.inputQuantity.setText(product.getQuantiy()+"");
     	
-    	//if(!product.getCategories().isEmpty()&&product.getCategories()!=null)
-    	//	for(Category cat : product.getCategories())
-    	//this.labelCategories.setText(this.labelCategories.getText()+", "+cat.getName());
+    	this.labelCategories.setText("");
+    	
+    	//TODO
     }
     
 	@FXML
 	void close() {
 		StackPane stack = (StackPane)anchorEditProduct.getScene().lookup("#stackListView");
 		stack.getChildren().remove(this.anchorEditProduct);
+	}
+	
+	@FXML
+	void incrementMinimum() {
+		
+	}
+	@FXML
+	void decrementMinimum() {
+		
+	}
+	@FXML
+	void incrementQuantity() {
+		
+	}
+	@FXML
+	void decrementQuantity() {
+		
 	}
 	
 	protected void fullSize() {
@@ -61,5 +77,4 @@ public class EditProductController {
 		
 		this.anchorEditProduct.setPrefSize(width,height);
 	}
-
 }

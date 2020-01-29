@@ -29,7 +29,7 @@ public class ListItemProductController implements ListItemController {
     
     private Product product;
     
-    private Label[] labels = new Label[4];//= {labelProdName,labelProdCode,labelSalePrice,labelProdQuanity};
+    private Label[] labels = new Label[4];
     
     @Override
     public void initi(PersistentEntity product) {

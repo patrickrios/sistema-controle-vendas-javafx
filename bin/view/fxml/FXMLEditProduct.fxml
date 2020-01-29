@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-
 <AnchorPane fx:id="anchorEditProduct" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: rgba(0,0,0,0.25);" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditProductController">
    <children>
       <AnchorPane layoutX="101.0" layoutY="51.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #fff;">
@@ -17,7 +16,7 @@
             <DropShadow color="#a4a2a2" height="12.1" radius="6.2925" width="15.07" />
          </effect>
          <children>
-            <TextField fx:id="inputName" layoutX="25.0" layoutY="28.0" prefHeight="55.0" prefWidth="650.0" promptText="Product name" style="-fx-font-size: 24;" styleClass="textfield-editing" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="25.0" />
+            <TextField fx:id="inputName" layoutX="25.0" layoutY="28.0" prefHeight="55.0" prefWidth="650.0" promptText="Product name" style="-fx-font-size: 24; -fx-padding: 20 30 10 30;" styleClass="textfield-editing" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             <Label layoutX="25.0" layoutY="101.0" style="-fx-text-fill: #999;" text="Código" AnchorPane.leftAnchor="30.0" />
             <TextField fx:id="inputCode" layoutX="25.0" layoutY="122.0" prefHeight="40.0" prefWidth="300.0" promptText="Somente números" styleClass="textfield-editing" AnchorPane.leftAnchor="30.0" />
             <Label layoutX="382.0" layoutY="101.0" style="-fx-text-fill: #999;" text="Categorias" />

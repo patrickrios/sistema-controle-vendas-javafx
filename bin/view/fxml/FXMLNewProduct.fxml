@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -10,19 +11,39 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #fff;" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewProductController">
    <children>
-      <Button layoutX="46.0" layoutY="533.0" mnemonicParsing="false" onAction="#saveNewProduct" prefHeight="62.0" prefWidth="168.0" style="-fx-background-color: #8B4D9F; -fx-text-fill: #FFF;" text="SALVAR" AnchorPane.leftAnchor="46.0" />
+      <Button layoutX="46.0" layoutY="503.0" mnemonicParsing="false" onAction="#saveNewProduct" prefHeight="62.0" prefWidth="168.0" style="-fx-background-color: #8B4D9F; -fx-text-fill: #FFF;" text="SALVAR" AnchorPane.leftAnchor="46.0" />
       <AnchorPane fx:id="anchorCategories" layoutX="655.0" layoutY="92.0" AnchorPane.topAnchor="100.0" />
-      <TextField fx:id="inputName" layoutX="45.0" layoutY="158.0" prefHeight="47.0" prefWidth="580.0" promptText="Insira um nome..." styleClass="textfield-form" AnchorPane.leftAnchor="45.0" />
-      <Label layoutX="45.0" layoutY="135.0" styleClass="label-form" text="Nome do produto *" AnchorPane.leftAnchor="45.0" />
-      <TextField fx:id="inputCode" layoutX="45.0" layoutY="241.0" prefHeight="47.0" prefWidth="580.0" promptText="Inisira um código válido" styleClass="textfield-form" AnchorPane.leftAnchor="45.0" />
-      <Label layoutX="45.0" layoutY="218.0" styleClass="label-form" text="Código do produto *" AnchorPane.leftAnchor="45.0" />
-      <TextField fx:id="inputCostPrice" layoutX="45.0" layoutY="377.0" prefHeight="43.0" prefWidth="270.0" promptText="R$ 00,00" styleClass="textfield-form" AnchorPane.leftAnchor="45.0" />
-      <Label layoutX="45.0" layoutY="352.0" styleClass="label-form" text="Preço de custo" AnchorPane.leftAnchor="45.0" />
-      <TextField fx:id="inputSalePrice" layoutX="355.0" layoutY="377.0" prefHeight="43.0" prefWidth="270.0" promptText="R$ 00,00" styleClass="textfield-form" />
-      <Label layoutX="355.0" layoutY="352.0" style="-fx-text-fill: #444;" text="Preço de venda *" />
-      <TextField fx:id="inputQuantity" layoutX="356.0" layoutY="463.0" prefHeight="45.0" prefWidth="237.0" styleClass="textfield-form" text="1" />
-      <Label layoutX="355.0" layoutY="441.0" style="-fx-text-fill: #444;" text="Quantidade *" />
-      <VBox layoutX="599.0" layoutY="460.0" prefHeight="43.0" prefWidth="26.0">
+      <TextField fx:id="inputName" layoutX="45.0" layoutY="128.0" prefHeight="47.0" prefWidth="580.0" promptText="Insira um nome..." AnchorPane.leftAnchor="45.0">
+         <styleClass>
+            <String fx:value="textfield-editing" />
+            <String fx:value="textfield-form" />
+         </styleClass></TextField>
+      <Label layoutX="45.0" layoutY="105.0" styleClass="label-form" text="Nome do produto *" AnchorPane.leftAnchor="45.0" />
+      <TextField fx:id="inputCode" layoutX="45.0" layoutY="211.0" prefHeight="47.0" prefWidth="580.0" promptText="Inisira um código válido" AnchorPane.leftAnchor="45.0">
+         <styleClass>
+            <String fx:value="textfield-editing" />
+            <String fx:value="textfield-form" />
+         </styleClass></TextField>
+      <Label layoutX="45.0" layoutY="188.0" styleClass="label-form" text="Código do produto *" AnchorPane.leftAnchor="45.0" />
+      <TextField fx:id="inputCostPrice" layoutX="45.0" layoutY="347.0" prefHeight="43.0" prefWidth="270.0" promptText="R$ 00,00" AnchorPane.leftAnchor="45.0">
+         <styleClass>
+            <String fx:value="textfield-editing" />
+            <String fx:value="textfield-form" />
+         </styleClass></TextField>
+      <Label layoutX="45.0" layoutY="322.0" styleClass="label-form" text="Preço de custo" AnchorPane.leftAnchor="45.0" />
+      <TextField fx:id="inputSalePrice" layoutX="355.0" layoutY="347.0" prefHeight="43.0" prefWidth="270.0" promptText="R$ 00,00">
+         <styleClass>
+            <String fx:value="textfield-editing" />
+            <String fx:value="textfield-form" />
+         </styleClass></TextField>
+      <Label layoutX="355.0" layoutY="322.0" style="-fx-text-fill: #444;" text="Preço de venda *" />
+      <TextField fx:id="inputQuantity" layoutX="356.0" layoutY="433.0" prefHeight="45.0" prefWidth="237.0" text="1">
+         <styleClass>
+            <String fx:value="textfield-editing" />
+            <String fx:value="textfield-form" />
+         </styleClass></TextField>
+      <Label layoutX="355.0" layoutY="411.0" style="-fx-text-fill: #444;" text="Quantidade *" />
+      <VBox layoutX="599.0" layoutY="430.0" prefHeight="43.0" prefWidth="26.0">
          <children>
             <Button mnemonicParsing="false" onAction="#incrementQuantity" style="-fx-padding: 2 7; -fx-border-color: #ccc; -fx-border-width: 0 0 1 0; -fx-background-color: #e4e4e4;">
                <graphic>
@@ -44,10 +65,14 @@
             </Button>
          </children>
       </VBox>
-      <TextField fx:id="inputMinimus" layoutX="46.0" layoutY="465.0" prefHeight="43.0" prefWidth="270.0" styleClass="textfield-form" text="1" AnchorPane.leftAnchor="46.0" />
-      <Label layoutX="46.0" layoutY="441.0" style="-fx-text-fill: #444;" text="Estoque mínimo" AnchorPane.leftAnchor="46.0" />
-      <Label fx:id="labelCharEx" layoutX="371.0" layoutY="70.0" style="-fx-font-size: 11; -fx-text-fill: #fff; -fx-background-color: #ee6969; -fx-padding: 1 4;" text="Caracter inválido" />
-      <Label fx:id="labelConfirmRegister" alignment="CENTER" layoutX="32.0" layoutY="64.0" style="-fx-background-color: #f9f9f9; -fx-padding: 2 4;" text="Confirm sucess" AnchorPane.leftAnchor="45.0">
+      <TextField fx:id="inputMinimus" layoutX="46.0" layoutY="435.0" prefHeight="43.0" prefWidth="270.0" text="1" AnchorPane.leftAnchor="46.0">
+         <styleClass>
+            <String fx:value="textfield-editing" />
+            <String fx:value="textfield-form" />
+         </styleClass></TextField>
+      <Label layoutX="46.0" layoutY="411.0" style="-fx-text-fill: #444;" text="Estoque mínimo" AnchorPane.leftAnchor="46.0" />
+      <Label fx:id="labelCharEx" layoutX="535.0" layoutY="52.0" style="-fx-font-size: 11; -fx-text-fill: #fff; -fx-background-color: #ee6969; -fx-padding: 1 4;" text="Caracter inválido" />
+      <Label fx:id="labelConfirmRegister" alignment="CENTER" layoutX="272.0" layoutY="30.0" style="-fx-background-color: #f9f9f9; -fx-padding: 2 4;" text="Confirm sucess" AnchorPane.leftAnchor="272.0">
          <graphic>
             <ImageView fx:id="imageviewConfirmIcon" fitHeight="12.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -57,7 +82,7 @@
          </graphic>
       </Label>
       <Label layoutX="30.0" layoutY="25.0" style="-fx-text-fill: #3399CC; -fx-font-size: 25;" text="Cadastrar produto" AnchorPane.leftAnchor="45.0" />
-      <Label layoutX="45.0" layoutY="100.0" prefHeight="28.0" prefWidth="580.0" style="-fx-text-fill: #FF3366; -fx-padding: 7 3; -fx-background-color: linear-gradient(to bottom, #f9f9f9,#fff);" text="IDENTIFICAÇÃO" AnchorPane.leftAnchor="45.0" />
-      <Label layoutX="45.0" layoutY="317.0" prefHeight="28.0" prefWidth="580.0" style="-fx-text-fill: #FF3366; -fx-padding: 7 3; -fx-background-color: linear-gradient(to bottom, #f9f9f9,#fff);" text="VALORES" />
+      <Label layoutX="45.0" layoutY="70.0" prefHeight="28.0" style="-fx-text-fill: #FF3366;" text="IDENTIFICAÇÃO" AnchorPane.leftAnchor="45.0" />
+      <Label layoutX="45.0" layoutY="282.0" prefHeight="28.0" style="-fx-text-fill: #FF3366;" text="VALORES" />
    </children>
 </AnchorPane>
