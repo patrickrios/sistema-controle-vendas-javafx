@@ -10,14 +10,14 @@
 
 <AnchorPane fx:id="anchorItem" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#loadEditingLayout" prefHeight="45.0" prefWidth="1000.0" styleClass="list-item" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListItemProductController">
    <children>
-      <CheckBox fx:id="choiceboxProdItem" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" />
-      <Label fx:id="labelProdName" layoutX="50.0" layoutY="13.0" styleClass="h4" text="Produto 01" />
+      <CheckBox fx:id="choiceboxProdItem" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" />
+      <Label fx:id="labelProdName" layoutX="100.0" layoutY="12.0" styleClass="h4" text="Produto 01" />
       <Label fx:id="labelProdCode" layoutX="270.0" layoutY="13.0" styleClass="h4" text="79823670431" />
       <Label fx:id="labelSalePrice" layoutX="507.0" layoutY="13.0" styleClass="h4" text="R$ 00,00" />
       <Label fx:id="labelProdQuanity" layoutX="694.0" layoutY="13.0" styleClass="h4" text="01" />
-      <Pane layoutX="810.0" prefHeight="44.0" styleClass="list-item-option-pane" AnchorPane.rightAnchor="0.0">
+      <Pane layoutX="32.0" styleClass="list-item-option-pane" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="9.0">
          <children>
-            <Button layoutX="43.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="43.0" styleClass="list-item-option-button">
+            <Button layoutX="28.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="28.0" styleClass="list-item-option-button">
                <graphic>
                   <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -26,7 +26,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="43.0" styleClass="list-item-option-button">
+            <Button mnemonicParsing="false" onAction="#loadEditingLayout" prefHeight="21.0" prefWidth="23.0" styleClass="list-item-option-button">
                <graphic>
                   <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>

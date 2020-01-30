@@ -84,7 +84,7 @@ public class ListItemProductController implements ListItemController {
     
     private void defineLabelMarginLayout(double width) {
     	double space = (width-160)/this.labels.length;
-    	double margin = 60.0;
+    	double margin = 100.0;
     	
     	for(int i=0;i<labels.length; i++) {
     		this.labels[i].setLayoutX(margin);

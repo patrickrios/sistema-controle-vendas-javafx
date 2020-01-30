@@ -79,8 +79,8 @@
 	.list-item:hover .label{-fx-text-fill:#0078D7;}
 	.list-item-option-pane{visibility:hidden;}
 	.list-item:hover .list-item-option-pane{visibility:visible;}
-	.list-item-option-button{-fx-background-color:linear-gradient(to top,#F7F7F7,#FFFFFF);-fx-padding:3 6;-fx-border-radius:0;-fx-background-radius:0;-fx-border-width:0 0 0 1;-fx-border-color:#EEE;}
-	.list-item-option-button:hover{-fx-background-color:#EEE;}
+	.list-item-option-button{-fx-background-color:transparent;-fx-padding:3 6;-fx-border-radius:0;-fx-background-radius:0;}
+	.list-item-option-button:hover{-fx-background-color:#DDEFFB;}
 	.list-item-pair{-fx-background-color:#FCFCFC;}
 
 	/** Editing/details product*/
@@ -91,7 +91,7 @@
 	/** New Product*/
 	.label-confirm-sucess{-fx-text-fill:#44AD7A;}
 	.label-confirm-exception{-fx-text-fill:#EE6969;}
-	.label-form{-fx-font-size:20;-fx-text-fill:#666;}
+	.label-form{-fx-font-size:20;-fx-text-fill:#444;}
 	.textfield-form{-fx-background-color:#FAFAFA;-fx-padding:8;}
 	.textfield-form:focused{-fx-background-color:#fff;}
 	.scroll-list-category > .viewport{-fx-background-color:transparent;}

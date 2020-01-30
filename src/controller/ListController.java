@@ -73,7 +73,7 @@ public class ListController{
     private void initiHeader() {
     	if(columns.length>0 && columns!=null) {
 	    	double eachColumn = (itemWidth-160)/columns.length;
-	    	double margin = 60.0;
+	    	double margin = 100.0;
 	    	for(int i=0;i<columns.length;i++) {
 	    		Label column = new Label(columns[i].toUpperCase());
 	    		column.setLayoutX(margin);
